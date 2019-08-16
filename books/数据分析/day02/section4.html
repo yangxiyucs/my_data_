@@ -1,0 +1,1112 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>ndarray运算 | 数据挖掘基础定位、目标</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../day02/section5.html" />
+    
+    
+    <link rel="prev" href="../day02/section3.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="3.4"
+        data-chapter-title="ndarray运算"
+        data-filepath="day02/section4.md"
+        data-basepath=".."
+        data-revision="Thu Jun 28 2018 22:40:55 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        数据挖掘基础
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="env/index.html">
+            
+                
+                    <a href="../env/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        数据挖掘基础环境安装与使用
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="env/section1.html">
+            
+                
+                    <a href="../env/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        库的安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="env/section2.html">
+            
+                
+                    <a href="../env/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        jupyter notebook使用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="day01/index.html">
+            
+                
+                    <a href="../day01/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Matplotlib
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="day01/section1.html">
+            
+                
+                    <a href="../day01/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Matplotlib之HelloWorld
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="day01/section2.html">
+            
+                
+                    <a href="../day01/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        折线图(plot)与基础绘图功能
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="day01/section3.html">
+            
+                
+                    <a href="../day01/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        散点图(scatter)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="day01/section4.html">
+            
+                
+                    <a href="../day01/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        柱状图(bar)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="day01/section5.html">
+            
+                
+                    <a href="../day01/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        直方图(histogram)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="day01/section6.html">
+            
+                
+                    <a href="../day01/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        饼图(pie)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="day01/section7.html">
+            
+                
+                    <a href="../day01/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="day01/section8.html">
+            
+                
+                    <a href="../day01/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="day02/index.html">
+            
+                
+                    <a href="../day02/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Numpy
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="day02/section1.html">
+            
+                
+                    <a href="../day02/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Numpy的优势
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="day02/section2.html">
+            
+                
+                    <a href="../day02/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        N维数组-ndarray
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="day02/section3.html">
+            
+                
+                    <a href="../day02/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        基本操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.4" data-path="day02/section4.html">
+            
+                
+                    <a href="../day02/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        ndarray运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="day02/section5.html">
+            
+                
+                    <a href="../day02/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        数组间的运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="day02/section6.html">
+            
+                
+                    <a href="../day02/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        合并、分割
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="day02/section7.html">
+            
+                
+                    <a href="../day02/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        IO操作与数据处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="day02/section8.html">
+            
+                
+                    <a href="../day02/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="day02/section9.html">
+            
+                
+                    <a href="../day02/section9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="day0304/index.html">
+            
+                
+                    <a href="../day0304/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Pandas
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="day0304/section1.html">
+            
+                
+                    <a href="../day0304/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Pandas介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="day0304/section2.html">
+            
+                
+                    <a href="../day0304/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        基本数据操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="day0304/section3.html">
+            
+                
+                    <a href="../day0304/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        DataFrame运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="day0304/section4.html">
+            
+                
+                    <a href="../day0304/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Pandas画图
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="day0304/section5.html">
+            
+                
+                    <a href="../day0304/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        文件读取与存储
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="day0304/section6.html">
+            
+                
+                    <a href="../day0304/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        高级处理-缺失值处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="day0304/section7.html">
+            
+                
+                    <a href="../day0304/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        高级处理-数据离散化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="day0304/section8.html">
+            
+                
+                    <a href="../day0304/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        高级处理-合并
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="day0304/section9.html">
+            
+                
+                    <a href="../day0304/section9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        高级处理-交叉表与透视表
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="day0304/section10.html">
+            
+                
+                    <a href="../day0304/section10.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.</b>
+                        
+                        高级处理-分组与聚合
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="day0304/section11.html">
+            
+                
+                    <a href="../day0304/section11.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.11.</b>
+                        
+                        综合案例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.12" data-path="day0304/section12.html">
+            
+                
+                    <a href="../day0304/section12.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.12.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.13" data-path="day0304/section13.html">
+            
+                
+                    <a href="../day0304/section13.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.13.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="day05/index.html">
+            
+                
+                    <a href="../day05/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        金融数据分析与挖掘1
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="day05/section1.html">
+            
+                
+                    <a href="../day05/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        金融市场基础知识
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="day05/section2.html">
+            
+                
+                    <a href="../day05/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        股票基础知识
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="day05/section3.html">
+            
+                
+                    <a href="../day05/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        股票数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="day05/section4.html">
+            
+                
+                    <a href="../day05/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        时间序列数据处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="day05/section5.html">
+            
+                
+                    <a href="../day05/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="day05/section6.html">
+            
+                
+                    <a href="../day05/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="day06/index.html">
+            
+                
+                    <a href="../day06/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        金融数据分析与挖掘2
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="day06/section1.html">
+            
+                
+                    <a href="../day06/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        (量化)投资的方法基础分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="day06/section2.html">
+            
+                
+                    <a href="../day06/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        趋势追踪
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="day06/section3.html">
+            
+                
+                    <a href="../day06/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        MACD分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="day06/section4.html">
+            
+                
+                    <a href="../day06/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        RSI分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="day06/section5.html">
+            
+                
+                    <a href="../day06/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        布林线
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="day06/section6.html">
+            
+                
+                    <a href="../day06/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        行情软件演示
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="day06/section7.html">
+            
+                
+                    <a href="../day06/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="day06/section8.html">
+            
+                
+                    <a href="../day06/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >数据挖掘基础定位、目标</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="34-ndarray&#x8FD0;&#x7B97;">3.4 ndarray&#x8FD0;&#x7B97;</h1>
+<h2 id="&#x5B66;&#x4E60;&#x76EE;&#x6807;">&#x5B66;&#x4E60;&#x76EE;&#x6807;</h2>
+<ul>
+<li>&#x76EE;&#x6807;<ul>
+<li>&#x5E94;&#x7528;&#x6570;&#x7EC4;&#x7684;&#x901A;&#x7528;&#x5224;&#x65AD;&#x51FD;&#x6570;</li>
+<li>&#x5E94;&#x7528;np.where&#x5B9E;&#x73B0;&#x6570;&#x7EC4;&#x7684;&#x4E09;&#x5143;&#x8FD0;&#x7B97;</li>
+</ul>
+</li>
+<li>&#x5E94;&#x7528;<ul>
+<li>&#x80A1;&#x7968;&#x6DA8;&#x8DCC;&#x5E45;&#x6570;&#x636E;&#x903B;&#x8F91;&#x8FD0;&#x7B97;</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x95EE;&#x9898;">&#x95EE;&#x9898;</h2>
+<p><strong>&#x5982;&#x679C;&#x60F3;&#x8981;&#x64CD;&#x4F5C;&#x7B26;&#x5408;&#x67D0;&#x4E00;&#x6761;&#x4EF6;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5E94;&#x8BE5;&#x600E;&#x4E48;&#x505A;&#xFF1F;</strong></p>
+<h2 id="341-&#x903B;&#x8F91;&#x8FD0;&#x7B97;">3.4.1 &#x903B;&#x8F91;&#x8FD0;&#x7B97;</h2>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x91CD;&#x65B0;&#x751F;&#x6210;8&#x53EA;&#x80A1;&#x7968;10&#x4E2A;&#x4EA4;&#x6613;&#x65E5;&#x7684;&#x6DA8;&#x8DCC;&#x5E45;&#x6570;&#x636E;</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>stock_change = np.random.normal(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, (<span class="hljs-number">8</span>, <span class="hljs-number">10</span>))
+<span class="hljs-prompt">&gt;&gt;&gt; </span>stock_change = stock_change[<span class="hljs-number">0</span>:<span class="hljs-number">5</span>, <span class="hljs-number">0</span>:<span class="hljs-number">5</span>]
+<span class="hljs-comment"># &#x903B;&#x8F91;&#x5224;&#x65AD;, &#x5982;&#x679C;&#x6DA8;&#x8DCC;&#x5E45;&#x5927;&#x4E8E;0.5&#x5C31;&#x6807;&#x8BB0;&#x4E3A;True &#x5426;&#x5219;&#x4E3A;False</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>stock_change &gt; <span class="hljs-number">0.5</span>
+array([[ <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>, <span class="hljs-keyword">False</span>,  <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>],
+       [ <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>, <span class="hljs-keyword">False</span>, <span class="hljs-keyword">False</span>],
+       [ <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>,  <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>,  <span class="hljs-keyword">True</span>],
+       [<span class="hljs-keyword">False</span>,  <span class="hljs-keyword">True</span>, <span class="hljs-keyword">False</span>, <span class="hljs-keyword">False</span>, <span class="hljs-keyword">False</span>],
+       [<span class="hljs-keyword">False</span>, <span class="hljs-keyword">False</span>, <span class="hljs-keyword">False</span>,  <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span>]])
+<span class="hljs-comment"># BOOL&#x8D4B;&#x503C;, &#x5C06;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x8BBE;&#x7F6E;&#x4E3A;&#x6307;&#x5B9A;&#x7684;&#x503C;-&#x5E03;&#x5C14;&#x7D22;&#x5F15;</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>stock_change[stock_change &gt; <span class="hljs-number">0.5</span>] = <span class="hljs-number">1</span>
+array([[ <span class="hljs-number">1.</span>        , -<span class="hljs-number">0.72404879</span>, -<span class="hljs-number">1.33045773</span>,  <span class="hljs-number">1.</span>        ,  <span class="hljs-number">0.3869043</span> ],
+       [ <span class="hljs-number">1.</span>        ,  <span class="hljs-number">1.</span>        ,  <span class="hljs-number">0.20815446</span>, -<span class="hljs-number">1.67860823</span>,  <span class="hljs-number">0.06612823</span>],
+       [ <span class="hljs-number">1.</span>        ,  <span class="hljs-number">0.42753488</span>,  <span class="hljs-number">1.</span>        , -<span class="hljs-number">0.24375089</span>,  <span class="hljs-number">1.</span>        ],
+       [-<span class="hljs-number">0.971945</span>  ,  <span class="hljs-number">1.</span>        , -<span class="hljs-number">0.95444661</span>, -<span class="hljs-number">0.2602084</span> , -<span class="hljs-number">0.48736497</span>],
+       [-<span class="hljs-number">0.32183056</span>, -<span class="hljs-number">0.92544956</span>, -<span class="hljs-number">0.42126604</span>,  <span class="hljs-number">1.</span>        ,  <span class="hljs-number">1.</span>        ]])
+</code></pre>
+<h2 id="342-&#x901A;&#x7528;&#x5224;&#x65AD;&#x51FD;&#x6570;">3.4.2 &#x901A;&#x7528;&#x5224;&#x65AD;&#x51FD;&#x6570;</h2>
+<ul>
+<li>np.all()</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x5224;&#x65AD;stock_change[0:2, 0:5]&#x662F;&#x5426;&#x5168;&#x662F;&#x4E0A;&#x6DA8;&#x7684;</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>np.all(stock_change[<span class="hljs-number">0</span>:<span class="hljs-number">2</span>, <span class="hljs-number">0</span>:<span class="hljs-number">5</span>] &gt; <span class="hljs-number">0</span>)
+<span class="hljs-keyword">False</span>
+</code></pre>
+<ul>
+<li>np.any()</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x5224;&#x65AD;&#x524D;5&#x53EA;&#x80A1;&#x7968;&#x8FD9;&#x6BB5;&#x671F;&#x95F4;&#x662F;&#x5426;&#x6709;&#x4E0A;&#x6DA8;&#x7684;</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>np.any(stock_change[<span class="hljs-number">0</span>:<span class="hljs-number">5</span>, :] &gt; <span class="hljs-number">0</span> )
+<span class="hljs-keyword">True</span>
+</code></pre>
+<h2 id="343-npwhere&#xFF08;&#x4E09;&#x5143;&#x8FD0;&#x7B97;&#x7B26;&#xFF09;">3.4.3 np.where&#xFF08;&#x4E09;&#x5143;&#x8FD0;&#x7B97;&#x7B26;&#xFF09;</h2>
+<p>&#x901A;&#x8FC7;&#x4F7F;&#x7528;np.where&#x80FD;&#x591F;&#x8FDB;&#x884C;&#x66F4;&#x52A0;&#x590D;&#x6742;&#x7684;&#x8FD0;&#x7B97;</p>
+<ul>
+<li>np.where()</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x5224;&#x65AD;&#x524D;&#x56DB;&#x4E2A;&#x80A1;&#x7968;&#x524D;&#x56DB;&#x5929;&#x7684;&#x6DA8;&#x8DCC;&#x5E45; &#x5927;&#x4E8E;0&#x7684;&#x7F6E;&#x4E3A;1&#xFF0C;&#x5426;&#x5219;&#x4E3A;0</span>
+temp = stock_change[:<span class="hljs-number">4</span>, :<span class="hljs-number">4</span>]
+np.where(temp &gt; <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>)
+</code></pre>
+<ul>
+<li>&#x590D;&#x5408;&#x903B;&#x8F91;&#x9700;&#x8981;&#x7ED3;&#x5408;np.logical_and&#x548C;np.logical_or&#x4F7F;&#x7528;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x5224;&#x65AD;&#x524D;&#x56DB;&#x4E2A;&#x80A1;&#x7968;&#x524D;&#x56DB;&#x5929;&#x7684;&#x6DA8;&#x8DCC;&#x5E45; &#x5927;&#x4E8E;0.5&#x5E76;&#x4E14;&#x5C0F;&#x4E8E;1&#x7684;&#xFF0C;&#x6362;&#x4E3A;1&#xFF0C;&#x5426;&#x5219;&#x4E3A;0</span>
+<span class="hljs-comment"># &#x5224;&#x65AD;&#x524D;&#x56DB;&#x4E2A;&#x80A1;&#x7968;&#x524D;&#x56DB;&#x5929;&#x7684;&#x6DA8;&#x8DCC;&#x5E45; &#x5927;&#x4E8E;0.5&#x6216;&#x8005;&#x5C0F;&#x4E8E;-0.5&#x7684;&#xFF0C;&#x6362;&#x4E3A;1&#xFF0C;&#x5426;&#x5219;&#x4E3A;0</span>
+np.where(np.logical_and(temp &gt; <span class="hljs-number">0.5</span>, temp &lt; <span class="hljs-number">1</span>), <span class="hljs-number">1</span>, <span class="hljs-number">0</span>)
+np.where(np.logical_or(temp &gt; <span class="hljs-number">0.5</span>, temp &lt; -<span class="hljs-number">0.5</span>), <span class="hljs-number">1</span>, <span class="hljs-number">0</span>)
+</code></pre>
+<h2 id="344--&#x7EDF;&#x8BA1;&#x8FD0;&#x7B97;">3.4.4  &#x7EDF;&#x8BA1;&#x8FD0;&#x7B97;</h2>
+<p><strong>&#x5982;&#x679C;&#x60F3;&#x8981;&#x77E5;&#x9053;&#x6DA8;&#x5E45;&#x6216;&#x8005;&#x8DCC;&#x5E45;&#x6700;&#x5927;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5E94;&#x8BE5;&#x600E;&#x4E48;&#x505A;&#xFF1F;</strong></p>
+<h3 id="1-&#x7EDF;&#x8BA1;&#x6307;&#x6807;">1 &#x7EDF;&#x8BA1;&#x6307;&#x6807;</h3>
+<p>&#x5728;&#x6570;&#x636E;&#x6316;&#x6398;/&#x673A;&#x5668;&#x5B66;&#x4E60;&#x9886;&#x57DF;&#xFF0C;&#x7EDF;&#x8BA1;&#x6307;&#x6807;&#x7684;&#x503C;&#x4E5F;&#x662F;&#x6211;&#x4EEC;&#x5206;&#x6790;&#x95EE;&#x9898;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x3002;&#x5E38;&#x7528;&#x7684;&#x6307;&#x6807;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>min(a[, axis, out, keepdims])<ul>
+<li>Return the minimum of an array or minimum along an axis.</li>
+</ul>
+</li>
+<li>max(a[, axis, out, keepdims])<ul>
+<li>Return the maximum of an array or maximum along an axis.</li>
+</ul>
+</li>
+<li>median(a[, axis, out, overwrite_input, keepdims])<ul>
+<li>Compute the median along the specified axis.</li>
+</ul>
+</li>
+<li>mean(a[, axis, dtype, out, keepdims])<ul>
+<li>Compute the arithmetic mean along the specified axis.</li>
+</ul>
+</li>
+<li>std(a[, axis, dtype, out, ddof, keepdims])    <ul>
+<li>Compute the standard deviation along the specified axis.</li>
+</ul>
+</li>
+<li>var(a[, axis, dtype, out, ddof, keepdims])    <ul>
+<li>Compute the variance along the specified axis.</li>
+</ul>
+</li>
+</ul>
+<h2 id="2--&#x80A1;&#x7968;&#x6DA8;&#x8DCC;&#x5E45;&#x7EDF;&#x8BA1;&#x8FD0;&#x7B97;">2  &#x80A1;&#x7968;&#x6DA8;&#x8DCC;&#x5E45;&#x7EDF;&#x8BA1;&#x8FD0;&#x7B97;</h2>
+<p>&#x8FDB;&#x884C;&#x7EDF;&#x8BA1;&#x7684;&#x65F6;&#x5019;&#xFF0C;<strong>axis &#x8F74;&#x7684;&#x53D6;&#x503C;&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#xFF0C;Numpy&#x4E2D;&#x4E0D;&#x540C;&#x7684;API&#x8F74;&#x7684;&#x503C;&#x90FD;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;axis 0&#x4EE3;&#x8868;&#x5217;,  axis 1&#x4EE3;&#x8868;&#x884C;&#x53BB;&#x8FDB;&#x884C;&#x7EDF;&#x8BA1;</strong></p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x63A5;&#x4E0B;&#x6765;&#x5BF9;&#x4E8E;&#x8FD9;4&#x53EA;&#x80A1;&#x7968;&#x7684;4&#x5929;&#x6570;&#x636E;&#xFF0C;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x7EDF;&#x8BA1;&#x8FD0;&#x7B97;</span>
+<span class="hljs-comment"># &#x6307;&#x5B9A;&#x884C; &#x53BB;&#x7EDF;&#x8BA1;</span>
+print(<span class="hljs-string">&quot;&#x524D;&#x56DB;&#x53EA;&#x80A1;&#x7968;&#x524D;&#x56DB;&#x5929;&#x7684;&#x6700;&#x5927;&#x6DA8;&#x5E45;{}&quot;</span>.format(np.max(temp, axis=<span class="hljs-number">1</span>)))
+<span class="hljs-comment"># &#x4F7F;&#x7528;min, std, mean</span>
+print(<span class="hljs-string">&quot;&#x524D;&#x56DB;&#x53EA;&#x80A1;&#x7968;&#x524D;&#x56DB;&#x5929;&#x7684;&#x6700;&#x5927;&#x8DCC;&#x5E45;{}&quot;</span>.format(np.min(temp, axis=<span class="hljs-number">1</span>)))
+print(<span class="hljs-string">&quot;&#x524D;&#x56DB;&#x53EA;&#x80A1;&#x7968;&#x524D;&#x56DB;&#x5929;&#x7684;&#x6CE2;&#x52A8;&#x7A0B;&#x5EA6;{}&quot;</span>.format(np.std(temp, axis=<span class="hljs-number">1</span>)))
+print(<span class="hljs-string">&quot;&#x524D;&#x56DB;&#x53EA;&#x80A1;&#x7968;&#x524D;&#x56DB;&#x5929;&#x7684;&#x5E73;&#x5747;&#x6DA8;&#x8DCC;&#x5E45;{}&quot;</span>.format(np.mean(temp, axis=<span class="hljs-number">1</span>)))
+</code></pre>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x7EDF;&#x8BA1;&#x51FA;&#x54EA;&#x4E00;&#x53EA;&#x80A1;&#x7968;&#x5728;&#x67D0;&#x4E2A;&#x4EA4;&#x6613;&#x65E5;&#x7684;&#x6DA8;&#x5E45;&#x6700;&#x5927;&#x6216;&#x8005;&#x6700;&#x5C0F;&#xFF1F;</p>
+<ul>
+<li>np.argmax(temp, axis=)</li>
+<li>np.argmin(temp, axis=)</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x83B7;&#x53D6;&#x80A1;&#x7968;&#x6307;&#x5B9A;&#x54EA;&#x4E00;&#x5929;&#x7684;&#x6DA8;&#x5E45;&#x6700;&#x5927;</span>
+print(<span class="hljs-string">&quot;&#x524D;&#x56DB;&#x53EA;&#x80A1;&#x7968;&#x524D;&#x56DB;&#x5929;&#x5185;&#x6DA8;&#x5E45;&#x6700;&#x5927;{}&quot;</span>.format(np.argmax(temp, axis=<span class="hljs-number">1</span>)))
+print(<span class="hljs-string">&quot;&#x524D;&#x56DB;&#x5929;&#x4E00;&#x5929;&#x5185;&#x6DA8;&#x5E45;&#x6700;&#x5927;&#x7684;&#x80A1;&#x7968;{}&quot;</span>.format(np.argmax(temp, axis=<span class="hljs-number">0</span>)))
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../day02/section3.html" class="navigation navigation-prev " aria-label="Previous page: 基本操作"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../day02/section5.html" class="navigation navigation-next " aria-label="Next page: 数组间的运算"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"katex":{},"expandable-chapters-small":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

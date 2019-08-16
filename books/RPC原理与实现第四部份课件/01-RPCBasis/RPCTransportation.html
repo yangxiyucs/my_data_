@@ -1,0 +1,702 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>RPC传输 | RPC原理与实践</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../01-RPCBasis/RPCImplementation.html" />
+    
+    
+    <link rel="prev" href="../01-RPCBasis/BinaryMessageProtocol.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.5"
+        data-chapter-title="RPC传输"
+        data-filepath="01-RPCBasis/RPCTransportation.md"
+        data-basepath=".."
+        data-revision="Mon Oct 22 2018 06:42:43 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        RPC原理与实践
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="01-RPCBasis/index.html">
+            
+                
+                    <a href="../01-RPCBasis/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        RPC基本原理
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="01-RPCBasis/RPCIntroduction.html">
+            
+                
+                    <a href="../01-RPCBasis/RPCIntroduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        RPC简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01-RPCBasis/RPCArchitecture.html">
+            
+                
+                    <a href="../01-RPCBasis/RPCArchitecture.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        RPC结构
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01-RPCBasis/RPCMessageProtocol.html">
+            
+                
+                    <a href="../01-RPCBasis/RPCMessageProtocol.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        RPC消息协议
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="01-RPCBasis/BinaryMessageProtocol.html">
+            
+                
+                    <a href="../01-RPCBasis/BinaryMessageProtocol.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        二进制消息协议实现
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="01-RPCBasis/RPCTransportation.html">
+            
+                
+                    <a href="../01-RPCBasis/RPCTransportation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        RPC传输
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="01-RPCBasis/RPCImplementation.html">
+            
+                
+                    <a href="../01-RPCBasis/RPCImplementation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        RPC完整实现
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="01-RPCBasis/RPCServer.html">
+            
+                
+                    <a href="../01-RPCBasis/RPCServer.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        RPC服务器
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="02-DistributedRPCSystem/index.html">
+            
+                
+                    <a href="../02-DistributedRPCSystem/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        分布式RPC
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="02-DistributedRPCSystem/DistributedSystemBasis.html">
+            
+                
+                    <a href="../02-DistributedRPCSystem/DistributedSystemBasis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        分布式系统基础
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="02-DistributedRPCSystem/ZooKeeper.html">
+            
+                
+                    <a href="../02-DistributedRPCSystem/ZooKeeper.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        ZooKeeper
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="02-DistributedRPCSystem/ZooKeeperInstall.html">
+            
+                
+                    <a href="../02-DistributedRPCSystem/ZooKeeperInstall.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        ZooKeeper安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="02-DistributedRPCSystem/Kazoo.html">
+            
+                
+                    <a href="../02-DistributedRPCSystem/Kazoo.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Kazoo
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="02-DistributedRPCSystem/Server.html">
+            
+                
+                    <a href="../02-DistributedRPCSystem/Server.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        服务端
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="02-DistributedRPCSystem/Client.html">
+            
+                
+                    <a href="../02-DistributedRPCSystem/Client.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        客户端
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="03-Thrift/index.html">
+            
+                
+                    <a href="../03-Thrift/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Thrift
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="03-Thrift/Introduction.html">
+            
+                
+                    <a href="../03-Thrift/Introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="03-Thrift/Steps.html">
+            
+                
+                    <a href="../03-Thrift/Steps.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Thrift架构与使用方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="03-Thrift/Install.html">
+            
+                
+                    <a href="../03-Thrift/Install.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="03-Thrift/IDL.html">
+            
+                
+                    <a href="../03-Thrift/IDL.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        接口定义语言IDL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="03-Thrift/ProtocolAndTransport.html">
+            
+                
+                    <a href="../03-Thrift/ProtocolAndTransport.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        协议与传输选择
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="03-Thrift/Server.html">
+            
+                
+                    <a href="../03-Thrift/Server.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        服务器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="03-Thrift/Client.html">
+            
+                
+                    <a href="../03-Thrift/Client.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        客户端
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="04-gRPC/index.html">
+            
+                
+                    <a href="../04-gRPC/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        gRPC
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="04-gRPC/Introduction.html">
+            
+                
+                    <a href="../04-gRPC/Introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="04-gRPC/HTTP2.html">
+            
+                
+                    <a href="../04-gRPC/HTTP2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        HTTP/2
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="04-gRPC/gRPCType.html">
+            
+                
+                    <a href="../04-gRPC/gRPCType.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        gRPC接口类型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="04-gRPC/ProtocolBuffers.html">
+            
+                
+                    <a href="../04-gRPC/ProtocolBuffers.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Protocol Buffers
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="04-gRPC/DemoAndCompile.html">
+            
+                
+                    <a href="../04-gRPC/DemoAndCompile.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        接口案例与代码生成
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="04-gRPC/ServerAndClient.html">
+            
+                
+                    <a href="../04-gRPC/ServerAndClient.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        服务器与客户端编写
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >RPC原理与实践</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="rpc&#x4F20;&#x8F93;">RPC&#x4F20;&#x8F93;</h1>
+<p>&#x5728;&#x6784;&#x9020;&#x597D;RPC&#x6D88;&#x606F;&#x6570;&#x636E;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7F51;&#x7EDC;&#x5728;&#x8C03;&#x7528;&#x53CC;&#x65B9;&#x8FDB;&#x884C;&#x4F20;&#x9012;&#x4E86;&#x3002;</p>
+<p>&#x4F20;&#x9012;&#x6D88;&#x606F;&#x6570;&#x636E;&#x5E38;&#x7528;&#x7684;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;<strong>TCP</strong> &#x548C; <strong>HTTP</strong></p>
+<h3 id="1--tcp">1.  TCP</h3>
+<p>&#x7531;&#x4E8E;TCP&#x7684;&#x53EF;&#x9760;&#x6027;&#xFF0C;&#x6240;&#x4EE5;TCP&#x662F;&#x6700;&#x5E38;&#x7528;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x501F;&#x52A9;socket&#x5DE5;&#x5177;&#x8FDB;&#x884C;TCP&#x5F00;&#x53D1;&#x3002;</p>
+<p>TCP&#x670D;&#x52A1;&#x7AEF;&#x7F16;&#x5199;</p>
+<pre><code class="lang-python">sock = socket.socket()  <span class="hljs-comment"># &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5957;&#x63A5;&#x5B57;</span>
+sock.bind()  <span class="hljs-comment"># &#x7ED1;&#x5B9A;&#x7AEF;&#x53E3;</span>
+sock.listen()  <span class="hljs-comment"># &#x76D1;&#x542C;&#x8FDE;&#x63A5;</span>
+sock.accept()  <span class="hljs-comment"># &#x63A5;&#x53D7;&#x65B0;&#x8FDE;&#x63A5;</span>
+sock.close()  <span class="hljs-comment"># &#x5173;&#x95ED;&#x670D;&#x52A1;&#x5668;&#x5957;&#x63A5;&#x5B57;</span>
+</code></pre>
+<p>TCP&#x5BA2;&#x6237;&#x7AEF;&#x7F16;&#x5199;</p>
+<pre><code class="lang-python">sock = socket.socket()  <span class="hljs-comment"># &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5957;&#x63A5;&#x5B57;</span>
+sock.connect()  <span class="hljs-comment"># &#x8FDE;&#x63A5;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;</span>
+sock.recv() <span class="hljs-comment"># &#x8BFB;</span>
+sock.send()  <span class="hljs-comment"># &#x5C3D;&#x53EF;&#x80FD;&#x5730;&#x5199;</span>
+sock.sendall()  <span class="hljs-comment"># &#x5B8C;&#x5168;&#x5199;</span>
+sock.close()  <span class="hljs-comment"># &#x5173;&#x95ED;</span>
+</code></pre>
+<h3 id="2-http">2. HTTP</h3>
+<p>&#x867D;&#x7136;HTTP&#x5C5E;&#x4E8E;&#x7F51;&#x7EDC;&#x5C42;&#x7EA7;&#x4E2D;&#x5E94;&#x7528;&#x5C42;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x4ECD;&#x7136;&#x53EF;&#x4EE5;&#x501F;&#x52A9;HTTP&#x6765;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x4F20;&#x9012;RPC&#x6D88;&#x606F;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x6784;&#x9020;&#x597D;&#x7684;RPC&#x6D88;&#x606F;&#x6570;&#x636E;&#x5D4C;&#x5165;&#x5230;HTTP&#x62A5;&#x6587;&#x4E2D;&#x7684;body&#x90E8;&#x5206;&#xFF0C;&#x800C;&#x5BF9;&#x4E8E;HTTP&#x7684;path&#x8DEF;&#x5F84;&#x7B49;&#x90FD;&#x65E0;&#x9700;&#x5173;&#x5FC3;&#x3002;</p>
+<pre><code class="lang-http"><span class="hljs-status">HTTP/1.0 POST /</span>
+<span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">binary</span>
+<span class="hljs-attribute">Content-Length</span>: <span class="hljs-string">5096</span>
+
+<span class="vala"><span class="hljs-preprocessor"># &#x6B64;&#x5904;&#x653E;&#x7F6E;RPC&#x6D88;&#x606F;&#x6570;&#x636E;</span>
+</span></code></pre>
+<p>&#x4F7F;&#x7528;HTTP&#x4F5C;&#x4E3A;&#x4F20;&#x8F93;&#x5DE5;&#x5177;&#x7684;&#x597D;&#x5904;&#x662F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5229;&#x7528;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&#x4E2D;&#x5DF2;&#x6709;&#x7684;http&#x5E93;&#x6765;&#x8FDB;&#x884C;&#x901A;&#x8BAF;&#xFF0C;&#x65E0;&#x9700;&#x81EA;&#x5DF1;&#x64CD;&#x4F5C;socket&#x7684;&#x8BFB;&#x5199;&#x3002;&#x4F46;&#x662F;&#x901A;&#x8BAF;&#x6548;&#x7387;&#x4E0D;&#x5982;TCP&#x9AD8;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x5E38;&#x7528;&#x3002;</p>
+<h3 id="3-rpc&#x4F20;&#x8F93;&#x5B9E;&#x73B0;">3. RPC&#x4F20;&#x8F93;&#x5B9E;&#x73B0;</h3>
+<p>&#x6211;&#x4EEC;&#x4F7F;&#x7528;TCP&#x6765;&#x8FDB;&#x884C;&#x5B9E;&#x73B0;&#x4F20;&#x8F93;&#x63A7;&#x5236;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> socket
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Channel</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x8FDE;&#x63A5;&#x901A;&#x9053;
+    &quot;&quot;&quot;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, host, port)</span>:</span>
+        self.host = host
+        self.port = port
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_connection</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        &#x83B7;&#x53D6;&#x4E00;&#x4E2A;tcp&#x8FDE;&#x63A5;
+        &quot;&quot;&quot;</span>
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.connect((self.host, self.port))
+        <span class="hljs-keyword">return</span> sock
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Server</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x670D;&#x52A1;&#x5668;
+    &quot;&quot;&quot;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, host, port)</span>:</span>
+        self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, <span class="hljs-number">1</span>)
+        self.host = host
+        self.port = port
+        self.sock.bind((host, port))
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../01-RPCBasis/BinaryMessageProtocol.html" class="navigation navigation-prev " aria-label="Previous page: 二进制消息协议实现"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../01-RPCBasis/RPCImplementation.html" class="navigation navigation-next " aria-label="Next page: RPC完整实现"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

@@ -1,0 +1,964 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Yaml数据存储文件 | &lt;center&gt;移动端测试介绍&lt;/center&gt;</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../06day/section6.2.html" />
+    
+    
+    <link rel="prev" href="../06day/index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="6.1"
+        data-chapter-title="Yaml数据存储文件"
+        data-filepath="06day/section6.1.md"
+        data-basepath=".."
+        data-revision="Sat Aug 18 2018 17:42:46 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        移动端测试 介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="01day/index.html">
+            
+                
+                    <a href="../01day/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        第一阶段 移动端测试环境搭建
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="01day/section1.1.html">
+            
+                
+                    <a href="../01day/section1.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Java环境安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01day/section1.2.html">
+            
+                
+                    <a href="../01day/section1.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Android sdk的环境配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01day/section1.3.html">
+            
+                
+                    <a href="../01day/section1.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Android虚拟机的安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="01day/section1.4.html">
+            
+                
+                    <a href="../01day/section1.4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        ADB命令简介
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="02day/index.html">
+            
+                
+                    <a href="../02day/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        第二阶段 移动端自动化工具讲解以及安装
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="02day/section2.1.html">
+            
+                
+                    <a href="../02day/section2.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        主流的移动端自动化工具
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="02day/section2.2.html">
+            
+                
+                    <a href="../02day/section2.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Appium环境搭建
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="02day/section2.4.html">
+            
+                
+                    <a href="../02day/section2.4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Appium入门的第一个例子
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="03day/index.html">
+            
+                
+                    <a href="../03day/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        第三阶段 appium基础API讲解
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="03day/section3.1.html">
+            
+                
+                    <a href="../03day/section3.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        App基础操作API
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="03day/section3.2.html">
+            
+                
+                    <a href="../03day/section3.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Uiautomatorviewer工具
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="03day/section3.3.html">
+            
+                
+                    <a href="../03day/section3.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        APP元素定位操作API
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="03day/section3.4.html">
+            
+                
+                    <a href="../03day/section3.4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        APP元素获取信息操作API
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="03day/section3.5.html">
+            
+                
+                    <a href="../03day/section3.5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        APP元素事件操作API
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="03day/section3.6.html">
+            
+                
+                    <a href="../03day/section3.6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        APP模拟手势高级操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="03day/section3.7.html">
+            
+                
+                    <a href="../03day/section3.7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        手机操作API
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="04day/index.html">
+            
+                
+                    <a href="../04day/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        第四阶段 pytest入门
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="04day/section4.1.html">
+            
+                
+                    <a href="../04day/section4.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        pytest安装和介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="04day/section4.2.html">
+            
+                
+                    <a href="../04day/section4.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Pytest的setup和teardown函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="04day/section4.3.html">
+            
+                
+                    <a href="../04day/section4.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Pytest配置文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="04day/section4.4.html">
+            
+                
+                    <a href="../04day/section4.4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Pytest常用插件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="04day/section4.5.html">
+            
+                
+                    <a href="../04day/section4.5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Pytest高阶用法(一)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="04day/section4.6.html">
+            
+                
+                    <a href="../04day/section4.6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Pytest高阶用法(二)
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="05day/index.html">
+            
+                
+                    <a href="../05day/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        第五阶段 PO模式
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="05day/section5.1.html">
+            
+                
+                    <a href="../05day/section5.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        PO基本介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="05day/section5.2.html">
+            
+                
+                    <a href="../05day/section5.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Appium方法二次封装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="05day/section5.3.html">
+            
+                
+                    <a href="../05day/section5.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        页面元素操作封装(一)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="05day/section5.4.html">
+            
+                
+                    <a href="../05day/section5.4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        页面元素操作封装(二)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="05day/section5.5.html">
+            
+                
+                    <a href="../05day/section5.5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        PO模式项目管理
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="06day/index.html">
+            
+                
+                    <a href="../06day/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        第六阶段 数据驱动
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="6.1" data-path="06day/section6.1.html">
+            
+                
+                    <a href="../06day/section6.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Yaml数据存储文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="06day/section6.2.html">
+            
+                
+                    <a href="../06day/section6.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Python解析yaml文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="06day/section6.3.html">
+            
+                
+                    <a href="../06day/section6.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        Yaml数据驱动应用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="07day/index.html">
+            
+                
+                    <a href="../07day/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        第七阶段 Allure报告和Jenkins集成
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="07day/section7.1.html">
+            
+                
+                    <a href="../07day/section7.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        Allure安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="07day/section7.2.html">
+            
+                
+                    <a href="../07day/section7.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        Allure之Pytest
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="07day/section7.3.html">
+            
+                
+                    <a href="../07day/section7.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        Jenkins安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="07day/section7.4.html">
+            
+                
+                    <a href="../07day/section7.4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        Jenkins持续集成配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="07day/section7.5.html">
+            
+                
+                    <a href="../07day/section7.5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        Git
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="08day/index.html">
+            
+                
+                    <a href="../08day/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        附件
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="capabilities/index.html">
+            
+                
+                    <a href="../capabilities/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        capabilities启动参数列表
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="kevent/index.html">
+            
+                
+                    <a href="../kevent/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        keyevent常用键列表
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >&lt;center&gt;移动端测试介绍&lt;/center&gt;</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="61yaml&#x6570;&#x636E;&#x5B58;&#x50A8;&#x6587;&#x4EF6;">6.1.Yaml&#x6570;&#x636E;&#x5B58;&#x50A8;&#x6587;&#x4EF6;</h1>
+<hr>
+<h3 id="&#x4E3A;&#x4EC0;&#x4E48;&#x5B66;&#x4E60;yaml&#x6570;&#x636E;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#xFF1F;">&#x4E3A;&#x4EC0;&#x4E48;&#x5B66;&#x4E60;Yaml&#x6570;&#x636E;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#xFF1F;</h3>
+<pre><code>1. &#x4ECE;yaml&#x4E2D;&#x8BFB;&#x53D6;&#x51FA;&#x7684;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4E3A;json&#x6216;&#x5217;&#x8868;
+2. &#x7F16;&#x5199;&#x6570;&#x636E;&#x8BED;&#x6CD5;&#x7B80;&#x5355;
+</code></pre><h3 id="&#x4EC0;&#x4E48;&#x662F;yaml">&#x4EC0;&#x4E48;&#x662F;YAML</h3>
+<pre><code>    YAML &#x4E0D;&#x662F;&#x4E00;&#x79CD;&#x6807;&#x8BB0;&#x8BED;&#x8A00;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x76F4;&#x89C2;&#x7684;&#x80FD;&#x591F;&#x88AB;&#x7535;&#x8111;&#x8BC6;&#x522B;&#x7684;&#x6570;&#x636E;&#x5E8F;&#x5217;&#x5316;&#x683C;&#x5F0F;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x8BFB;&#x6027;&#x9AD8;&#x5E76;&#x4E14;&#x5BB9;&#x6613;&#x88AB;&#x4EBA;&#x7C7B;&#x9605;&#x8BFB;&#xFF0C;
+    &#x5BB9;&#x6613;&#x548C;&#x811A;&#x672C;&#x8BED;&#x8A00;&#x4EA4;&#x4E92;&#xFF1B;
+</code></pre><ul>
+<li>&#x8BED;&#x6CD5;&#x89C4;&#x5219;</li>
+</ul>
+<pre><code>    1.&#x5927;&#x5C0F;&#x5199;&#x654F;&#x611F;
+    2.&#x4F7F;&#x7528;&#x7F29;&#x8FDB;&#x8868;&#x793A;&#x5C42;&#x7EA7;&#x5173;&#x7CFB;
+    3.&#x7F29;&#x8FDB;&#x65F6;&#x4E0D;&#x5141;&#x8BB8;&#x4F7F;&#x7528;Tab&#x952E;&#xFF0C;&#x53EA;&#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x7A7A;&#x683C;&#x3002;
+    4.&#x7F29;&#x8FDB;&#x7684;&#x7A7A;&#x683C;&#x6570;&#x76EE;&#x4E0D;&#x91CD;&#x8981;&#xFF0C;&#x53EA;&#x8981;&#x76F8;&#x540C;&#x5C42;&#x7EA7;&#x7684;&#x5143;&#x7D20;&#x5DE6;&#x4FA7;&#x5BF9;&#x9F50;&#x5373;&#x53EF;
+</code></pre><ul>
+<li>&#x652F;&#x6301;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;</li>
+</ul>
+<pre><code>    1.&#x5BF9;&#x8C61;&#xFF1A;&#x952E;&#x503C;&#x5BF9;&#x7684;&#x96C6;&#x5408;
+    2.&#x6570;&#x7EC4;&#xFF1A;&#x4E00;&#x7EC4;&#x6309;&#x6B21;&#x5E8F;&#x6392;&#x5217;&#x7684;&#x503C;&#xFF0C;&#x53C8;&#x79F0;&#x4E3A;&#x5217;&#x8868;&#xFF08;list&#xFF09;
+    3.&#x7EAF;&#x91CF;&#xFF08;scalars&#xFF09;&#xFF1A;&#x5355;&#x4E2A;&#x7684;&#x3001;&#x4E0D;&#x53EF;&#x518D;&#x5206;&#x7684;&#x503C;
+</code></pre><ul>
+<li><p>1.&#x5BF9;&#x8C61;</p>
+<ul>
+<li><p>&#x503C;&#x4E3A;&#x5B57;&#x7B26;</p>
+<pre><code>  data.yaml
+   animal: pets
+
+  &#x8F6C;&#x6362;&#x4E3A;python&#x4EE3;&#x7801;
+   {&apos;animal&apos;: &apos;pets&apos;}
+</code></pre></li>
+<li><p>&#x503C;&#x4E3A;&#x5B57;&#x5178;</p>
+<pre><code>  data.yaml
+   animal: {&quot;ke1&quot;:&quot;pets&quot;,&quot;key2&quot;:&quot;app&quot;} # python&#x5B57;&#x5178;
+
+  &#x8F6C;&#x6362;&#x4E3A;python&#x4EE3;&#x7801;
+   {animal: {&quot;ke1&quot;:&quot;pets&quot;,&quot;key2&quot;:&quot;app&quot;}} # &#x5D4C;&#x5957;&#x5B57;&#x5178;&#x7ED3;&#x6784;
+</code></pre></li>
+</ul>
+</li>
+<li><p>2.&#x6570;&#x7EC4;</p>
+<ul>
+<li><p>&#x65B9;&#x5F0F;&#x4E00;</p>
+<pre><code>  data.yaml
+   animal: 
+     - data1
+     - data2
+  &#x8F6C;&#x6362;&#x4E3A;python&#x4EE3;&#x7801;
+   {&apos;animal&apos;: [&apos;data1&apos;, &apos;data2&apos;]}
+</code></pre></li>
+<li><p>&#x65B9;&#x5F0F;&#x4E8C;</p>
+<pre><code>  data.yaml
+   animal: [&apos;data1&apos;, &apos;data2&apos;] # python&#x5217;&#x8868;
+
+  &#x8F6C;&#x6362;&#x4E3A;python&#x4EE3;&#x7801;
+   {&apos;animal&apos;: [&apos;data1&apos;, &apos;data2&apos;]} # &#x5B57;&#x5178;&#x5D4C;&#x5957;&#x5217;&#x8868;
+</code></pre></li>
+</ul>
+</li>
+<li><p>&#x7EAF;&#x91CF;</p>
+</li>
+</ul>
+<pre><code>    &#x5305;&#x542B;&#xFF1A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x6574;&#x6570;&#xFF0C;&#x6D6E;&#x70B9;&#x6570;&#xFF0C;Null&#xFF0C;&#x65E5;&#x671F;
+</code></pre><pre><code>    &#x5B57;&#x7B26;&#x4E32;
+    data.yaml
+     value: &quot;hello&quot;
+
+    &#x8F6C;&#x6362;&#x4E3A;python&#x4EE3;&#x7801;
+     {&quot;value&quot;:&quot;hello&quot;}
+</code></pre><pre><code>    &#x5E03;&#x5C14;&#x503C;
+    data.yaml
+     value1: true
+     value2: false
+
+    &#x8F6C;&#x6362;&#x4E3A;python&#x4EE3;&#x7801;
+     {&apos;value1&apos;: True, &apos;value2&apos;: False}
+</code></pre><pre><code>    &#x6574;&#x6570;&#xFF0C;&#x6D6E;&#x70B9;&#x6570;
+    data.yaml
+     value1: 12
+     value2: 12.102
+
+    &#x8F6C;&#x6362;&#x4E3A;python&#x4EE3;&#x7801;
+     {&apos;value1&apos;: 12, &apos;value2&apos;: 12.102}
+</code></pre><pre><code>    &#x7A7A;(Null)
+    data.yaml
+     value1: ~ &#x6216;null #  &#x8868;&#x793A;&#x4E3A;&#x7A7A;
+    &#x8F6C;&#x6362;&#x4E3A;python&#x4EE3;&#x7801;
+     {&apos;value1&apos;: None}
+</code></pre><pre><code>    &#x65E5;&#x671F;
+    data.yaml
+     value1: 2017-10-11 15:12:12.111
+    &#x8F6C;&#x6362;&#x4E3A;python&#x4EE3;&#x7801;
+     {&apos;date&apos;: datetime.datetime(2017, 10, 11, 15, 12, 12, 111000)}
+</code></pre><ul>
+<li>&#x951A;&#x70B9;&amp;&#x548C;&#x5F15;&#x7528;*</li>
+</ul>
+<pre><code>    &#x951A;&#x70B9;&#xFF1A;&#x6807;&#x6CE8;&#x4E00;&#x4E2A;&#x5185;&#x5BB9;&#xFF0C;&#x951A;&#x70B9;&#x540D;&#x79F0;&#x81EA;&#x5B9A;&#x4E49;
+    &#x5F15;&#x7528;&#xFF1A;&#x4F7F;&#x7528;&#x88AB;&#x6807;&#x6CE8;&#x7684;&#x5185;&#x5BB9;&lt;&lt;: *&#x951A;&#x70B9;&#x540D;
+</code></pre><pre><code>    data.yaml
+     data: &amp;imp
+        value: 456
+     name:
+      value1: 123
+      &lt;&lt;: *imp # &quot;&lt;&lt;:&quot; &#x5408;&#x5E76;&#x5230;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#xFF0C;&quot;*imp&quot; &#x5F15;&#x7528;&#x951A;&#x70B9;imp
+    &#x8F6C;&#x6362;&#x4E3A;python&#x4EE3;&#x7801;
+     {&apos;data&apos;: {&apos;value&apos;: 456}, &apos;name&apos;: {&apos;value&apos;: 456, &apos;value1&apos;: 123}}
+</code></pre>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../06day/index.html" class="navigation navigation-prev " aria-label="Previous page: 第六阶段 数据驱动"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../06day/section6.2.html" class="navigation navigation-next " aria-label="Next page: Python解析yaml文件"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

@@ -1,0 +1,1063 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>二进制消息协议实现 | RPC原理与实践</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../01-RPCBasis/RPCTransportation.html" />
+    
+    
+    <link rel="prev" href="../01-RPCBasis/RPCMessageProtocol.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.4"
+        data-chapter-title="二进制消息协议实现"
+        data-filepath="01-RPCBasis/BinaryMessageProtocol.md"
+        data-basepath=".."
+        data-revision="Mon Oct 22 2018 06:42:43 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        RPC原理与实践
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="01-RPCBasis/index.html">
+            
+                
+                    <a href="../01-RPCBasis/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        RPC基本原理
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="01-RPCBasis/RPCIntroduction.html">
+            
+                
+                    <a href="../01-RPCBasis/RPCIntroduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        RPC简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01-RPCBasis/RPCArchitecture.html">
+            
+                
+                    <a href="../01-RPCBasis/RPCArchitecture.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        RPC结构
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01-RPCBasis/RPCMessageProtocol.html">
+            
+                
+                    <a href="../01-RPCBasis/RPCMessageProtocol.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        RPC消息协议
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="01-RPCBasis/BinaryMessageProtocol.html">
+            
+                
+                    <a href="../01-RPCBasis/BinaryMessageProtocol.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        二进制消息协议实现
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="01-RPCBasis/RPCTransportation.html">
+            
+                
+                    <a href="../01-RPCBasis/RPCTransportation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        RPC传输
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="01-RPCBasis/RPCImplementation.html">
+            
+                
+                    <a href="../01-RPCBasis/RPCImplementation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        RPC完整实现
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="01-RPCBasis/RPCServer.html">
+            
+                
+                    <a href="../01-RPCBasis/RPCServer.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        RPC服务器
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="02-DistributedRPCSystem/index.html">
+            
+                
+                    <a href="../02-DistributedRPCSystem/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        分布式RPC
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="02-DistributedRPCSystem/DistributedSystemBasis.html">
+            
+                
+                    <a href="../02-DistributedRPCSystem/DistributedSystemBasis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        分布式系统基础
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="02-DistributedRPCSystem/ZooKeeper.html">
+            
+                
+                    <a href="../02-DistributedRPCSystem/ZooKeeper.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        ZooKeeper
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="02-DistributedRPCSystem/ZooKeeperInstall.html">
+            
+                
+                    <a href="../02-DistributedRPCSystem/ZooKeeperInstall.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        ZooKeeper安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="02-DistributedRPCSystem/Kazoo.html">
+            
+                
+                    <a href="../02-DistributedRPCSystem/Kazoo.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Kazoo
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="02-DistributedRPCSystem/Server.html">
+            
+                
+                    <a href="../02-DistributedRPCSystem/Server.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        服务端
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="02-DistributedRPCSystem/Client.html">
+            
+                
+                    <a href="../02-DistributedRPCSystem/Client.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        客户端
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="03-Thrift/index.html">
+            
+                
+                    <a href="../03-Thrift/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Thrift
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="03-Thrift/Introduction.html">
+            
+                
+                    <a href="../03-Thrift/Introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="03-Thrift/Steps.html">
+            
+                
+                    <a href="../03-Thrift/Steps.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Thrift架构与使用方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="03-Thrift/Install.html">
+            
+                
+                    <a href="../03-Thrift/Install.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="03-Thrift/IDL.html">
+            
+                
+                    <a href="../03-Thrift/IDL.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        接口定义语言IDL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="03-Thrift/ProtocolAndTransport.html">
+            
+                
+                    <a href="../03-Thrift/ProtocolAndTransport.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        协议与传输选择
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="03-Thrift/Server.html">
+            
+                
+                    <a href="../03-Thrift/Server.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        服务器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="03-Thrift/Client.html">
+            
+                
+                    <a href="../03-Thrift/Client.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        客户端
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="04-gRPC/index.html">
+            
+                
+                    <a href="../04-gRPC/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        gRPC
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="04-gRPC/Introduction.html">
+            
+                
+                    <a href="../04-gRPC/Introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="04-gRPC/HTTP2.html">
+            
+                
+                    <a href="../04-gRPC/HTTP2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        HTTP/2
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="04-gRPC/gRPCType.html">
+            
+                
+                    <a href="../04-gRPC/gRPCType.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        gRPC接口类型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="04-gRPC/ProtocolBuffers.html">
+            
+                
+                    <a href="../04-gRPC/ProtocolBuffers.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Protocol Buffers
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="04-gRPC/DemoAndCompile.html">
+            
+                
+                    <a href="../04-gRPC/DemoAndCompile.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        接口案例与代码生成
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="04-gRPC/ServerAndClient.html">
+            
+                
+                    <a href="../04-gRPC/ServerAndClient.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        服务器与客户端编写
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >RPC原理与实践</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x4E8C;&#x8FDB;&#x5236;&#x6D88;&#x606F;&#x534F;&#x8BAE;&#x5B9E;&#x73B0;">&#x4E8C;&#x8FDB;&#x5236;&#x6D88;&#x606F;&#x534F;&#x8BAE;&#x5B9E;&#x73B0;</h1>
+<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x6765;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x4E8C;&#x8FDB;&#x5236;&#x6D88;&#x606F;&#x534F;&#x8BAE;&#x7684;&#x6848;&#x4F8B;&#xFF0C;&#x8FD9;&#x4E2A;&#x6848;&#x4F8B;&#x4E5F;&#x662F;&#x6211;&#x4EEC;&#x540E;&#x9762;&#x81EA;&#x5DF1;&#x5B9E;&#x73B0;RPC&#x901A;&#x8BAF;&#x6848;&#x4F8B;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;RPC&#x7684;&#x670D;&#x52A1;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#xFF0C;&#x8FD9;&#x4E2A;RPC&#x8C03;&#x7528;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x9664;&#x6CD5;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x5B9E;&#x73B0;&#x672C;&#x5730;&#x8C03;&#x7528;&#x7684;&#x8BDD;&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#xFF0C;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x51FD;&#x6570;divide&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InvalidOperation</span><span class="hljs-params">(Exception)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x81EA;&#x5B9A;&#x4E49;&#x975E;&#x6CD5;&#x64CD;&#x4F5C;&#x5F02;&#x5E38;
+    &quot;&quot;&quot;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, message=None)</span>:</span>
+        self.message = message <span class="hljs-keyword">or</span> <span class="hljs-string">&apos;invalid operation&apos;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">divide</span><span class="hljs-params">(num1, num2=<span class="hljs-number">1</span>)</span>:</span>
+     <span class="hljs-string">&quot;&quot;&quot;
+     &#x9664;&#x6CD5;
+     :param num1: int
+     :param num2: int, &#x9ED8;&#x8BA4;&#x503C;&#x4E3A;1
+     :return: float &#x5546; &#x6216; InvalidOperation&#x5F02;&#x5E38;
+     &quot;&quot;&quot;</span>
+     <span class="hljs-keyword">if</span> num2 == <span class="hljs-number">0</span>:
+         <span class="hljs-keyword">raise</span> InvalidOperation()
+     val = num1 / num2
+     <span class="hljs-keyword">return</span> val
+</code></pre>
+<p>&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8C03;&#x7528;divde&#x51FD;&#x6570;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">try</span>:
+    val = divide(<span class="hljs-number">200</span>, <span class="hljs-number">100</span>)
+<span class="hljs-keyword">except</span> InvalidOperation <span class="hljs-keyword">as</span> e:
+    print(e.message)
+<span class="hljs-keyword">else</span>:
+    print(val)
+</code></pre>
+<p>&#x4F46;&#x662F;&#x5982;&#x679C;&#x53D8;&#x6210;RPC&#x8C03;&#x7528;&#x7684;&#x8BDD;&#xFF0C;&#x8C03;&#x7528;&#x53CC;&#x65B9;&#x8BE5;&#x4EE5;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x65B9;&#x5F0F;&#x4F20;&#x9012;&#x54EA;&#x4E9B;&#x6D88;&#x606F;&#x6570;&#x636E;&#x5462;&#xFF1F;</p>
+<p>&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x7684;&#x5B66;&#x4E60;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x91C7;&#x7528;&#x4E8C;&#x8FDB;&#x5236;&#x65B9;&#x5F0F;&#x4F20;&#x9012;&#x6D88;&#x606F;&#x6570;&#x636E;&#x7684;&#x8BDD;&#xFF0C;&#x6548;&#x7387;&#x66F4;&#x9AD8;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4E48;&#x4F7F;&#x7528;&#x4E8C;&#x8FDB;&#x5236;&#x65B9;&#x5F0F;&#x6765;&#x5B9E;&#x73B0;&#x6D88;&#x606F;&#x534F;&#x8BAE;&#x3002;&#x4E3A;&#x4E86;&#x7A81;&#x51FA;&#x6D88;&#x606F;&#x534F;&#x8BAE;&#x672C;&#x8EAB;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x518D;&#x8FDB;&#x884C;&#x989D;&#x5916;&#x538B;&#x7F29;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5C06;&#x4E0A;&#x9762;&#x7684;&#x8FC7;&#x7A0B;&#x62BD;&#x8C61;&#x6210;&#x63A5;&#x53E3;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">float</span> <span class="hljs-title">divide</span><span class="hljs-params">(<span class="hljs-number">1</span>:<span class="hljs-keyword">int</span> num1, <span class="hljs-number">2</span>:<span class="hljs-keyword">int</span> num2=<span class="hljs-number">1</span>)</span> </span>=&gt; InvalidOperation
+</code></pre>
+<p>&#x6D88;&#x606F;&#x534F;&#x8BAE;&#x5206;&#x4E3A;&#x4E24;&#x90E8;&#x5206;&#x8BF4;&#x660E;&#xFF1A;</p>
+<h5 id="&#x8C03;&#x7528;&#x8BF7;&#x6C42;&#x6D88;&#x606F;">&#x8C03;&#x7528;&#x8BF7;&#x6C42;&#x6D88;&#x606F;</h5>
+<ul>
+<li>&#x65B9;&#x6CD5;&#x540D;&#x4E3A;divide</li>
+<li>&#x7B2C;1&#x4E2A;&#x8C03;&#x7528;&#x53C2;&#x6570;&#x4E3A;&#x6574;&#x578B;int&#xFF0C;&#x540D;&#x4E3A;num1</li>
+<li>&#x7B2C;2&#x4E2A;&#x8C03;&#x7528;&#x53C2;&#x6570;&#x4E3A;&#x6574;&#x578B;int&#xFF0C;&#x540D;&#x4E3A;num2&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;1</li>
+</ul>
+<p><img src="../images/&#x8C03;&#x7528;&#x53C2;&#x6570;&#x6D88;&#x606F;&#x683C;&#x5F0F;.png" alt="&#x8C03;&#x7528;&#x53C2;&#x6570;&#x6D88;&#x606F;&#x683C;&#x5F0F;"></p>
+<h5 id="&#x8C03;&#x7528;&#x8FD4;&#x56DE;&#x6D88;&#x606F;">&#x8C03;&#x7528;&#x8FD4;&#x56DE;&#x6D88;&#x606F;</h5>
+<ul>
+<li>&#x6B63;&#x5E38;&#x8FD4;&#x56DE;float&#x7C7B;&#x578B;</li>
+<li>&#x9519;&#x8BEF;&#x4F1A;&#x629B;&#x51FA;InvalidOperation&#x5F02;&#x5E38;</li>
+</ul>
+<p><img src="../images/&#x8C03;&#x7528;&#x8FD4;&#x56DE;&#x503C;&#x6D88;&#x606F;&#x683C;&#x5F0F;.png" alt="&#x8C03;&#x7528;&#x8FD4;&#x56DE;&#x503C;&#x6D88;&#x606F;&#x683C;&#x5F0F;"></p>
+<h3 id="struct&#x6A21;&#x5757;">struct&#x6A21;&#x5757;</h3>
+<p>struct&#x662F;Python&#x6807;&#x51C6;&#x5E93;&#x63D0;&#x4F9B;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x7F16;&#x7801;&#x89E3;&#x7801;&#x5E93;&#xFF0C;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x5C06;&#x5404;&#x79CD;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x8F6C;&#x6362;&#x4E3A;bytes&#x5B57;&#x8282;&#x7C7B;&#x578B;&#xFF0C;&#x6216;&#x8005;&#x5C06;bytes&#x5B57;&#x8282;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x53D8;&#x91CF;&#x3002;&#x901A;&#x8FC7;struct&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x64CD;&#x4F5C;&#x4E8C;&#x8FDB;&#x5236;&#x5B57;&#x8282;&#x3002;</p>
+<h4 id="1-&#x5C06;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;bytes&#x7C7B;&#x578B;">1. &#x5C06;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;bytes&#x7C7B;&#x578B;</h4>
+<pre><code class="lang-python">struct.pack(&#x683C;&#x5F0F;, &#x6570;&#x636E;)
+</code></pre>
+<p>&#x5982;</p>
+<pre><code class="lang-python"><span class="hljs-prompt">&gt;&gt;&gt; </span>struct.pack(<span class="hljs-string">&apos;!I&apos;</span>, <span class="hljs-number">6</span>)
+<span class="hljs-string">b&apos;\x00\x00\x00\x06&apos;</span>
+</code></pre>
+<p><code>!</code>&#x8868;&#x793A;&#x9002;&#x7528;&#x4E8E;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x7684;&#x5B57;&#x8282;&#x987A;&#x5E8F;</p>
+<p><code>I</code>&#x8868;&#x793A;&#x65E0;&#x7B26;&#x53F7;4&#x5B57;&#x8282;&#x6574;&#x6570;</p>
+<p>struct&#x652F;&#x6301;&#x7684;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>C Type</th>
+<th>Python</th>
+<th>&#x5B57;&#x8282;&#x6570;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x</code></td>
+<td>pad byte</td>
+<td>no value</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>c</code></td>
+<td><code>char</code></td>
+<td>string of length 1</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>b</code></td>
+<td><code>signed char</code></td>
+<td>integer</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>B</code></td>
+<td><code>unsigned char</code></td>
+<td>integer</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td><code>_Bool</code></td>
+<td>bool</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>h</code></td>
+<td><code>short</code></td>
+<td>integer</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>H</code></td>
+<td><code>unsigned short</code></td>
+<td>integer</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>i</code></td>
+<td><code>int</code></td>
+<td>integer</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>I</code></td>
+<td><code>unsigned int</code></td>
+<td>integer or long</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>l</code></td>
+<td><code>long</code></td>
+<td>integer</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>L</code></td>
+<td><code>unsigned long</code></td>
+<td>long</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>q</code></td>
+<td><code>long long</code></td>
+<td>long</td>
+<td>8</td>
+</tr>
+<tr>
+<td><code>Q</code></td>
+<td><code>unsigned long long</code></td>
+<td>long</td>
+<td>8</td>
+</tr>
+<tr>
+<td><code>f</code></td>
+<td><code>float</code></td>
+<td>float</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>d</code></td>
+<td><code>double</code></td>
+<td>float</td>
+<td>8</td>
+</tr>
+<tr>
+<td><code>s</code></td>
+<td><code>char[]</code></td>
+<td>string</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td><code>char[]</code></td>
+<td>string</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>P</code></td>
+<td><code>void *</code></td>
+<td>long</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-&#x5C06;bytes&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x5176;&#x4ED6;&#x7C7B;&#x578B;">2. &#x5C06;bytes&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x5176;&#x4ED6;&#x7C7B;&#x578B;</h4>
+<pre><code class="lang-python">struct.unpack(&#x683C;&#x5F0F;, &#x6570;&#x636E;)
+</code></pre>
+<p>&#x5982;</p>
+<pre><code class="lang-python"><span class="hljs-prompt">&gt;&gt;&gt; </span>a = <span class="hljs-string">b&apos;\x00\x00\x00\x06&apos;</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>a
+<span class="hljs-string">b&apos;\x00\x00\x00\x06&apos;</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>struct.unpack(<span class="hljs-string">&apos;!I&apos;</span>, a)
+(<span class="hljs-number">6</span>,)
+</code></pre>
+<p>&#x6CE8;&#x610F;unpack&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x5143;&#x7EC4;</p>
+<h3 id="&#x4EE3;&#x7801;&#x5B9E;&#x73B0;">&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h3>
+<h4 id="1-divide&#x6D88;&#x606F;&#x534F;&#x8BAE;&#x5B9E;&#x73B0;">1. divide&#x6D88;&#x606F;&#x534F;&#x8BAE;&#x5B9E;&#x73B0;</h4>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> struct
+<span class="hljs-keyword">from</span> io <span class="hljs-keyword">import</span> BytesIO
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DivideProtocol</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    float divide(1:int num1, 2:int num2=1)
+    &quot;&quot;&quot;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_read_all</span><span class="hljs-params">(self, size)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        &#x8BFB;&#x53D6;&#x6307;&#x5B9A;&#x957F;&#x5EA6;&#x7684;&#x5B57;&#x8282;
+        :param size: &#x957F;&#x5EA6;
+        :return: &#x8BFB;&#x53D6;&#x51FA;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;
+        &quot;&quot;&quot;</span>
+        <span class="hljs-keyword">if</span> isinstance(self.conn, BytesIO):
+            <span class="hljs-comment"># BytesIO&#x7C7B;&#x578B;&#xFF0C;&#x7528;&#x4E8E;&#x6F14;&#x793A;</span>
+            buff = <span class="hljs-string">b&apos;&apos;</span>
+            have = <span class="hljs-number">0</span>
+            <span class="hljs-keyword">while</span> have &lt; size:
+                chunk = self.conn.read(size - have)
+                have += len(chunk)
+                buff += chunk
+            <span class="hljs-keyword">return</span> buff
+
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-comment"># socket&#x7C7B;&#x578B;</span>
+            buff = <span class="hljs-string">b&apos;&apos;</span>
+            have = <span class="hljs-number">0</span>
+            <span class="hljs-keyword">while</span> have &lt; size:
+                chunk = self.conn.recv(size - have)
+                have += len(chunk)
+                buff += chunk
+                <span class="hljs-comment"># &#x5BA2;&#x6237;&#x7AEF;&#x5173;&#x95ED;&#x4E86;&#x8FDE;&#x63A5;</span>
+                <span class="hljs-keyword">if</span> len(chunk) == <span class="hljs-number">0</span>:
+                    <span class="hljs-keyword">raise</span> EOFError()
+            <span class="hljs-keyword">return</span> buff
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">args_encode</span><span class="hljs-params">(self, num1, num2=<span class="hljs-number">1</span>)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        &#x5BF9;&#x8C03;&#x7528;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x7F16;&#x7801;
+        :param num1: int
+        :param num2: int
+        :return: &#x7F16;&#x7801;&#x540E;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;
+        &quot;&quot;&quot;</span>
+        <span class="hljs-comment"># &#x5904;&#x7406;&#x53C2;&#x6570;num1, 4&#x5B57;&#x8282;&#x6574;&#x578B;</span>
+        buff = struct.pack(<span class="hljs-string">&apos;!B&apos;</span>, <span class="hljs-number">1</span>)
+        buff += struct.pack(<span class="hljs-string">&apos;!i&apos;</span>, num1)
+
+        <span class="hljs-comment"># &#x5904;&#x7406;&#x53C2;&#x6570;num2, 4&#x5B57;&#x8282;&#x6574;&#x578B;&#xFF0C;&#x5982;&#x4E3A;&#x9ED8;&#x8BA4;&#x503C;1&#xFF0C;&#x5219;&#x4E0D;&#x518D;&#x653E;&#x5230;&#x6D88;&#x606F;&#x4E2D;</span>
+        <span class="hljs-keyword">if</span> num2 != <span class="hljs-number">1</span>:
+            buff += struct.pack(<span class="hljs-string">&apos;!B&apos;</span>, <span class="hljs-number">2</span>)
+            buff += struct.pack(<span class="hljs-string">&apos;!i&apos;</span>, num2)
+
+        <span class="hljs-comment"># &#x5904;&#x7406;&#x6D88;&#x606F;&#x603B;&#x957F;&#x5EA6;&#xFF0C;4&#x5B57;&#x8282;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x578B;</span>
+        length = len(buff)
+
+        <span class="hljs-comment"># &#x5904;&#x7406;&#x65B9;&#x6CD5;&#x540D;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;</span>
+        name = <span class="hljs-string">&apos;divide&apos;</span>
+        <span class="hljs-comment"># &#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;&#xFF0C;4&#x5B57;&#x8282;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x578B;</span>
+        msg = struct.pack(<span class="hljs-string">&apos;!I&apos;</span>, len(name))
+        msg += name.encode()
+
+        msg += struct.pack(<span class="hljs-string">&apos;!I&apos;</span>, length) + buff
+
+        <span class="hljs-keyword">return</span> msg
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">args_decode</span><span class="hljs-params">(self, connection)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        &#x83B7;&#x53D6;&#x8C03;&#x7528;&#x53C2;&#x6570;&#x5E76;&#x8FDB;&#x884C;&#x89E3;&#x7801;
+        :param connection: &#x4F20;&#x8F93;&#x5DE5;&#x5177;&#x5BF9;&#x8C61;&#xFF0C;&#x5982;socket&#x5BF9;&#x8C61;&#x6216;&#x8005;BytesIO&#x5BF9;&#x8C61;&#xFF0C;&#x4ECE;&#x4E2D;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;&#x6D88;&#x606F;&#x6570;&#x636E;
+        :return: &#x89E3;&#x7801;&#x540E;&#x7684;&#x53C2;&#x6570;&#x5B57;&#x5178;
+        &quot;&quot;&quot;</span>
+        <span class="hljs-comment"># &#x4FDD;&#x5B58;&#x5230;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x4F9B;_read_all&#x65B9;&#x5F0F;&#x4F7F;&#x7528;</span>
+        self.conn = connection
+        param_name_map = {
+            <span class="hljs-number">1</span>: <span class="hljs-string">&apos;num1&apos;</span>,
+            <span class="hljs-number">2</span>: <span class="hljs-string">&apos;num2&apos;</span>
+        }
+        param_len_map = {
+            <span class="hljs-number">1</span>: <span class="hljs-number">4</span>,
+            <span class="hljs-number">2</span>: <span class="hljs-number">4</span>
+        }
+        <span class="hljs-comment"># &#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x89E3;&#x7801;&#x540E;&#x7684;&#x53C2;&#x6570;&#x5B57;&#x5178;</span>
+        args = dict()
+
+        <span class="hljs-comment"># &#x8BFB;&#x53D6;&#x6D88;&#x606F;&#x603B;&#x957F;&#x5EA6;&#xFF0C;4&#x5B57;&#x65E0;&#x8282;&#x7B26;&#x53F7;&#x6574;&#x6570;</span>
+        buff = self._read_all(<span class="hljs-number">4</span>)
+        length = struct.unpack(<span class="hljs-string">&apos;!I&apos;</span>, buff)[<span class="hljs-number">0</span>]
+
+        <span class="hljs-comment"># &#x8BB0;&#x5F55;&#x5DF2;&#x8BFB;&#x53D6;&#x7684;&#x957F;&#x5EA6;</span>
+        have = <span class="hljs-number">0</span>
+
+        <span class="hljs-comment"># &#x8BFB;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;4&#x5B57;&#x8282;&#x6574;&#x578B;</span>
+        buff = self._read_all(<span class="hljs-number">1</span>)
+        have += <span class="hljs-number">1</span>
+        param_seq = struct.unpack(<span class="hljs-string">&apos;!B&apos;</span>, buff)[<span class="hljs-number">0</span>]
+        param_len = param_len_map[param_seq]
+        buff = self._read_all(param_len)
+        have += param_len
+        args[param_name_map[param_seq]] = struct.unpack(<span class="hljs-string">&apos;!i&apos;</span>, buff)[<span class="hljs-number">0</span>]
+
+        <span class="hljs-keyword">if</span> have &gt;= length:
+            <span class="hljs-keyword">return</span> args
+
+        <span class="hljs-comment"># &#x8BFB;&#x53D6;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;4&#x5B57;&#x8282;&#x6574;&#x578B;</span>
+        buff = self._read_all(<span class="hljs-number">1</span>)
+        have += <span class="hljs-number">1</span>
+        param_seq = struct.unpack(<span class="hljs-string">&apos;!B&apos;</span>, buff)[<span class="hljs-number">0</span>]
+        param_len = param_len_map[param_seq]
+        buff = self._read_all(param_len)
+        have += param_len
+        args[param_name_map[param_seq]] = struct.unpack(<span class="hljs-string">&apos;!i&apos;</span>, buff)[<span class="hljs-number">0</span>]
+
+        <span class="hljs-keyword">return</span> args
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">result_encode</span><span class="hljs-params">(self, result)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        &#x5BF9;&#x8C03;&#x7528;&#x7684;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x7F16;&#x7801;
+        :param result: float &#x6216; InvalidOperation&#x5BF9;&#x8C61;
+        :return: &#x7F16;&#x7801;&#x540E;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;
+        &quot;&quot;&quot;</span>
+        <span class="hljs-keyword">if</span> isinstance(result, float):
+            <span class="hljs-comment"># &#x6CA1;&#x6709;&#x5F02;&#x5E38;&#xFF0C;&#x6B63;&#x5E38;&#x6267;&#x884C;</span>
+            <span class="hljs-comment"># &#x5904;&#x7406;&#x7ED3;&#x679C;&#x7C7B;&#x578B;&#xFF0C;1&#x5B57;&#x8282;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;</span>
+            buff = struct.pack(<span class="hljs-string">&apos;!B&apos;</span>, <span class="hljs-number">1</span>)
+
+            <span class="hljs-comment"># &#x5904;&#x7406;&#x7ED3;&#x679C;&#x503C;, 4&#x5B57;&#x8282;float</span>
+            buff += struct.pack(<span class="hljs-string">&apos;!f&apos;</span>, result)
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-comment"># &#x53D1;&#x751F;&#x4E86;InvalidOperation&#x5F02;&#x5E38;</span>
+            <span class="hljs-comment"># &#x5904;&#x7406;&#x7ED3;&#x679C;&#x7C7B;&#x578B;&#xFF0C;1&#x5B57;&#x8282;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;</span>
+            buff = struct.pack(<span class="hljs-string">&apos;!B&apos;</span>, <span class="hljs-number">2</span>)
+
+            <span class="hljs-comment"># &#x5904;&#x7406;&#x5F02;&#x5E38;&#x7ED3;&#x679C;&#x503C;, &#x5B57;&#x7B26;&#x4E32;</span>
+            <span class="hljs-comment"># &#x5904;&#x7406;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;, 4&#x5B57;&#x8282;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;</span>
+            buff += struct.pack(<span class="hljs-string">&apos;!I&apos;</span>, len(result.message))
+            <span class="hljs-comment"># &#x5904;&#x7406;&#x5B57;&#x7B26;&#x4E32;&#x5185;&#x5BB9;</span>
+            buff += result.message.encode()
+
+        <span class="hljs-keyword">return</span> buff
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">result_decode</span><span class="hljs-params">(self, connection)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        &#x5BF9;&#x8C03;&#x7528;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x89E3;&#x7801;
+        :param connection: &#x4F20;&#x8F93;&#x5DE5;&#x5177;&#x5BF9;&#x8C61;&#xFF0C;&#x5982;socket&#x5BF9;&#x8C61;&#x6216;&#x8005;BytesIO&#x5BF9;&#x8C61;&#xFF0C;&#x4ECE;&#x4E2D;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;&#x6D88;&#x606F;&#x6570;&#x636E;
+        :return: &#x7ED3;&#x679C;&#x6570;&#x636E;
+        &quot;&quot;&quot;</span>
+        self.conn = connection
+
+        <span class="hljs-comment"># &#x53D6;&#x51FA;&#x7ED3;&#x679C;&#x7C7B;&#x578B;, 1&#x5B57;&#x8282;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;</span>
+        buff = self._read_all(<span class="hljs-number">1</span>)
+        result_type = struct.unpack(<span class="hljs-string">&apos;!B&apos;</span>, buff)[<span class="hljs-number">0</span>]
+        <span class="hljs-keyword">if</span> result_type == <span class="hljs-number">1</span>:
+            <span class="hljs-comment"># float&#x7684;&#x7ED3;&#x679C;&#x503C;&#xFF0C; 4&#x5B57;&#x8282;float</span>
+            buff = self._read_all(<span class="hljs-number">4</span>)
+            result = struct.unpack(<span class="hljs-string">&apos;!f&apos;</span>, buff)[<span class="hljs-number">0</span>]
+            <span class="hljs-keyword">return</span> result
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-comment"># InvalidOperation&#x5BF9;&#x8C61;</span>
+            <span class="hljs-comment"># &#x53D6;&#x51FA;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;, 4&#x5B57;&#x8282;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;</span>
+            buff = self._read_all(<span class="hljs-number">4</span>)
+            str_len = struct.unpack(<span class="hljs-string">&apos;!I&apos;</span>, buff)[<span class="hljs-number">0</span>]
+            buff = self._read_all(str_len)
+            message = buff.decode()
+            <span class="hljs-keyword">return</span> InvalidOperation(message)
+</code></pre>
+<h4 id="2-&#x89E3;&#x6790;&#x65B9;&#x6CD5;&#x540D;&#x5B9E;&#x73B0;">2. &#x89E3;&#x6790;&#x65B9;&#x6CD5;&#x540D;&#x5B9E;&#x73B0;</h4>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MethodProtocol</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, connection)</span>:</span>
+        self.conn = connection
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_read_all</span><span class="hljs-params">(self, size)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        &#x8BFB;&#x53D6;&#x6307;&#x5B9A;&#x957F;&#x5EA6;&#x7684;&#x5B57;&#x8282;
+        :param size: &#x957F;&#x5EA6;
+        :return: &#x8BFB;&#x53D6;&#x51FA;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;
+        &quot;&quot;&quot;</span>
+        <span class="hljs-keyword">if</span> isinstance(self.conn, BytesIO):
+            <span class="hljs-comment"># BytesIO&#x7C7B;&#x578B;&#xFF0C;&#x7528;&#x4E8E;&#x6F14;&#x793A;</span>
+            buff = <span class="hljs-string">b&apos;&apos;</span>
+            have = <span class="hljs-number">0</span>
+            <span class="hljs-keyword">while</span> have &lt; size:
+                chunk = self.conn.read(size - have)
+                have += len(chunk)
+                buff += chunk
+
+            <span class="hljs-keyword">return</span> buff
+
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-comment"># socket&#x7C7B;&#x578B;</span>
+            buff = <span class="hljs-string">b&apos;&apos;</span>
+            have = <span class="hljs-number">0</span>
+            <span class="hljs-keyword">while</span> have &lt; size:
+                print(<span class="hljs-string">&apos;have=%d size=%d&apos;</span> % (have, size))
+                chunk = self.conn.recv(size - have)
+                have += len(chunk)
+                buff += chunk
+
+                <span class="hljs-keyword">if</span> len(chunk) == <span class="hljs-number">0</span>:
+                    <span class="hljs-keyword">raise</span> EOFError()
+
+            <span class="hljs-keyword">return</span> buff
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_method_name</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-comment"># &#x83B7;&#x53D6;&#x65B9;&#x6CD5;&#x540D;</span>
+        <span class="hljs-comment"># &#x8BFB;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;&#xFF0C;4&#x5B57;&#x8282;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x578B;</span>
+        buff = self._read_all(<span class="hljs-number">4</span>)
+        str_len = struct.unpack(<span class="hljs-string">&apos;!I&apos;</span>, buff)[<span class="hljs-number">0</span>]
+
+        <span class="hljs-comment"># &#x8BFB;&#x53D6;&#x5B57;&#x7B26;&#x4E32;</span>
+        buff = self._read_all(str_len)
+        name = buff.decode()
+        <span class="hljs-keyword">return</span> name
+</code></pre>
+<h3 id="&#x6D4B;&#x8BD5;">&#x6D4B;&#x8BD5;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    proto = DivideProtocol()
+
+    <span class="hljs-comment"># &#x6784;&#x9020;&#x6D88;&#x606F;</span>
+    buff = BytesIO()
+    <span class="hljs-comment"># buff.write(proto.args_encode(100, 200))</span>
+    buff.write(proto.args_encode(<span class="hljs-number">100</span>))
+
+    <span class="hljs-comment"># &#x89E3;&#x8BFB;&#x6D88;&#x606F;</span>
+    buff.seek(<span class="hljs-number">0</span>)
+    name = MethodProtocol(buff).get_method_name()
+    print(name)
+    args = proto.args_decode(buff)
+    print(args)
+    buff.close()
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../01-RPCBasis/RPCMessageProtocol.html" class="navigation navigation-prev " aria-label="Previous page: RPC消息协议"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../01-RPCBasis/RPCTransportation.html" class="navigation navigation-next " aria-label="Next page: RPC传输"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

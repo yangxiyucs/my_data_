@@ -1,0 +1,1285 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>时间序列数据处理 | 数据挖掘基础定位、目标</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../day05/section5.html" />
+    
+    
+    <link rel="prev" href="../day05/section3.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="5.4"
+        data-chapter-title="时间序列数据处理"
+        data-filepath="day05/section4.md"
+        data-basepath=".."
+        data-revision="Thu Jun 28 2018 22:40:55 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        数据挖掘基础
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="env/index.html">
+            
+                
+                    <a href="../env/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        数据挖掘基础环境安装与使用
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="env/section1.html">
+            
+                
+                    <a href="../env/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        库的安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="env/section2.html">
+            
+                
+                    <a href="../env/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        jupyter notebook使用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="day01/index.html">
+            
+                
+                    <a href="../day01/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Matplotlib
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="day01/section1.html">
+            
+                
+                    <a href="../day01/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Matplotlib之HelloWorld
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="day01/section2.html">
+            
+                
+                    <a href="../day01/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        折线图(plot)与基础绘图功能
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="day01/section3.html">
+            
+                
+                    <a href="../day01/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        散点图(scatter)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="day01/section4.html">
+            
+                
+                    <a href="../day01/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        柱状图(bar)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="day01/section5.html">
+            
+                
+                    <a href="../day01/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        直方图(histogram)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="day01/section6.html">
+            
+                
+                    <a href="../day01/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        饼图(pie)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="day01/section7.html">
+            
+                
+                    <a href="../day01/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="day01/section8.html">
+            
+                
+                    <a href="../day01/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="day02/index.html">
+            
+                
+                    <a href="../day02/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Numpy
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="day02/section1.html">
+            
+                
+                    <a href="../day02/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Numpy的优势
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="day02/section2.html">
+            
+                
+                    <a href="../day02/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        N维数组-ndarray
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="day02/section3.html">
+            
+                
+                    <a href="../day02/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        基本操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="day02/section4.html">
+            
+                
+                    <a href="../day02/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        ndarray运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="day02/section5.html">
+            
+                
+                    <a href="../day02/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        数组间的运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="day02/section6.html">
+            
+                
+                    <a href="../day02/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        合并、分割
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="day02/section7.html">
+            
+                
+                    <a href="../day02/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        IO操作与数据处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="day02/section8.html">
+            
+                
+                    <a href="../day02/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="day02/section9.html">
+            
+                
+                    <a href="../day02/section9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="day0304/index.html">
+            
+                
+                    <a href="../day0304/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Pandas
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="day0304/section1.html">
+            
+                
+                    <a href="../day0304/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Pandas介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="day0304/section2.html">
+            
+                
+                    <a href="../day0304/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        基本数据操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="day0304/section3.html">
+            
+                
+                    <a href="../day0304/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        DataFrame运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="day0304/section4.html">
+            
+                
+                    <a href="../day0304/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Pandas画图
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="day0304/section5.html">
+            
+                
+                    <a href="../day0304/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        文件读取与存储
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="day0304/section6.html">
+            
+                
+                    <a href="../day0304/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        高级处理-缺失值处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="day0304/section7.html">
+            
+                
+                    <a href="../day0304/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        高级处理-数据离散化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="day0304/section8.html">
+            
+                
+                    <a href="../day0304/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        高级处理-合并
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="day0304/section9.html">
+            
+                
+                    <a href="../day0304/section9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        高级处理-交叉表与透视表
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="day0304/section10.html">
+            
+                
+                    <a href="../day0304/section10.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.</b>
+                        
+                        高级处理-分组与聚合
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="day0304/section11.html">
+            
+                
+                    <a href="../day0304/section11.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.11.</b>
+                        
+                        综合案例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.12" data-path="day0304/section12.html">
+            
+                
+                    <a href="../day0304/section12.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.12.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.13" data-path="day0304/section13.html">
+            
+                
+                    <a href="../day0304/section13.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.13.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="day05/index.html">
+            
+                
+                    <a href="../day05/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        金融数据分析与挖掘1
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="day05/section1.html">
+            
+                
+                    <a href="../day05/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        金融市场基础知识
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="day05/section2.html">
+            
+                
+                    <a href="../day05/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        股票基础知识
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="day05/section3.html">
+            
+                
+                    <a href="../day05/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        股票数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.4" data-path="day05/section4.html">
+            
+                
+                    <a href="../day05/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        时间序列数据处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="day05/section5.html">
+            
+                
+                    <a href="../day05/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="day05/section6.html">
+            
+                
+                    <a href="../day05/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="day06/index.html">
+            
+                
+                    <a href="../day06/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        金融数据分析与挖掘2
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="day06/section1.html">
+            
+                
+                    <a href="../day06/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        (量化)投资的方法基础分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="day06/section2.html">
+            
+                
+                    <a href="../day06/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        趋势追踪
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="day06/section3.html">
+            
+                
+                    <a href="../day06/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        MACD分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="day06/section4.html">
+            
+                
+                    <a href="../day06/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        RSI分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="day06/section5.html">
+            
+                
+                    <a href="../day06/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        布林线
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="day06/section6.html">
+            
+                
+                    <a href="../day06/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        行情软件演示
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="day06/section7.html">
+            
+                
+                    <a href="../day06/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="day06/section8.html">
+            
+                
+                    <a href="../day06/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >数据挖掘基础定位、目标</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="54-&#x80A1;&#x7968;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x5904;&#x7406;">5.4 &#x80A1;&#x7968;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x5904;&#x7406;</h1>
+<h2 id="&#x5B66;&#x4E60;&#x76EE;&#x6807;">&#x5B66;&#x4E60;&#x76EE;&#x6807;</h2>
+<ul>
+<li>&#x76EE;&#x6807;<ul>
+<li>&#x4E86;&#x89E3;Pandas&#x7684;&#x65F6;&#x95F4;&#x7C7B;&#x578B;</li>
+<li>&#x5E94;&#x7528;pd.to_datetime&#x548C;pd.DatetimeIndex&#x5B9E;&#x73B0;&#x65F6;&#x95F4;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</li>
+<li>&#x5E94;&#x7528;pd.date_range&#x5B9E;&#x73B0;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x7684;&#x751F;&#x6210;</li>
+<li>&#x4E86;&#x89E3;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;(&#x80A1;&#x7968;)&#x7684;&#x5206;&#x6790;&#x65B9;&#x6CD5;</li>
+<li>&#x4E86;&#x89E3;&#x79FB;&#x52A8;&#x7A97;&#x53E3;&#x7684;&#x5B9A;&#x4E49;</li>
+<li>&#x77E5;&#x9053;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x7684;&#x4F5C;&#x7528;</li>
+<li>&#x77E5;&#x9053;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x6309;&#x7167;&#x5468;&#x671F;&#x548C;&#x7B97;&#x6CD5;&#x5212;&#x5206;&#x7684;&#x7C7B;&#x522B;</li>
+<li>&#x8BB0;&#x5FC6;sma&#x7684;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;</li>
+<li>&#x5E94;&#x7528;pd.rolling_mean&#x5B9E;&#x73B0;K&#x7EBF;&#x56FE;&#x7684;&#x5747;&#x7EBF;&#x56FE;&#x7ED8;&#x5236;</li>
+<li>&#x77E5;&#x9053;wma&#x548C;ewma&#x7684;&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;</li>
+<li>&#x5E94;&#x7528;pd.ewma&#x5B9E;&#x73B0;&#x6307;&#x6570;&#x5E73;&#x6ED1;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x7ED8;&#x5236;</li>
+<li>&#x8BF4;&#x660E;&#x4E24;&#x4E24;&#x6307;&#x6807;&#x6563;&#x70B9;&#x56FE;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;</li>
+</ul>
+</li>
+<li>&#x5E94;&#x7528;<ul>
+<li>&#x80A1;&#x7968;&#x7684;&#x65E5;&#x7EBF;&#x6570;&#x636E;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x89C2;&#x5BDF;</li>
+</ul>
+</li>
+</ul>
+<p>&#x524D;&#x9762;&#x5176;&#x5B9E;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;&#x4E00;&#x4E9B;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x63A5;&#x53E3;&#xFF0C;&#x56DE;&#x5FC6;&#x6211;&#x4EEC;&#x5728;&#x80A1;&#x7968;&#x6DA8;&#x8DCC;&#x5E45;&#x4F7F;&#x7528;&#x7684;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x5217;&#x8868;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5C31;&#x53BB;&#x770B;&#x770B;Pandas&#x5F53;&#x4E2D;&#x7684;&#x65F6;&#x95F4;&#x7C7B;&#x578B;&#x7B49;&#x3002;</p>
+<h2 id="541-&#x4EC0;&#x4E48;&#x662F;&#x65F6;&#x95F4;&#x5E8F;&#x5217;">5.4.1 &#x4EC0;&#x4E48;&#x662F;&#x65F6;&#x95F4;&#x5E8F;&#x5217;</h2>
+<p><strong>&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x662F;&#x4E00;&#x7EC4;&#x6309;&#x7167;&#x65F6;&#x95F4;&#x53D1;&#x751F;&#x5148;&#x540E;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x6392;&#x5217;&#x7684;&#x6570;&#x636E;&#x70B9;&#x5E8F;&#x5217;&#x3002;</strong>&#x901A;&#x5E38;&#x4E00;&#x7EC4;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x4E3A;&#x4E00;&#x6052;&#x5B9A;&#x503C;&#xFF08;&#x5982;1&#x79D2;&#xFF0C;5&#x5206;&#x949F;&#xFF0C;12&#x5C0F;&#x65F6;&#xFF0C;7&#x5929;&#xFF0C;1&#x5E74;&#xFF09;&#xFF0C;&#x56E0;&#x6B64;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x79BB;&#x6563;&#x65F6;&#x95F4;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;&#x67D0;&#x76D1;&#x63A7;&#x7CFB;&#x7EDF;&#x7684;&#x6298;&#x7EBF;&#x56FE;&#x8868;&#xFF0C;&#x663E;&#x793A;&#x4E86;&#x8BF7;&#x6C42;&#x6B21;&#x6570;&#x548C;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x968F;&#x65F6;&#x95F4;&#x7684;&#x53D8;&#x5316;&#x8D8B;&#x52BF;</p>
+<p><img src="../images/&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x56FE;.png" alt="&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x56FE;"></p>
+<h2 id="542-pandas&#x7684;&#x65F6;&#x95F4;&#x7C7B;&#x578B;">5.4.2 Pandas&#x7684;&#x65F6;&#x95F4;&#x7C7B;&#x578B;</h2>
+<ul>
+<li>pd.to_datetime()&#xFF1A;&#x8F6C;&#x6362;&#x6210;pandas&#x7684;&#x65F6;&#x95F4;&#x7C7B;&#x578B; Timestamp(&apos;2018-03-02 00:00:00&apos;)</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># pd&#x5C06;&#x65F6;&#x95F4;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x6210;pandas&#x65F6;&#x95F4;&#x7C7B;&#x578B;</span>
+<span class="hljs-comment"># 1&#x3001;&#x586B;&#x5165;&#x65F6;&#x95F4;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x683C;&#x5F0F;&#x6709;&#x51E0;&#x79CD;, &quot;2018-01-01&quot; &#xFF0C;&#x201D;01/02/2018&#x201C;</span>
+pd.to_datetime(<span class="hljs-string">&quot;01/02/2017&quot;</span>)
+</code></pre>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4F20;&#x5165;&#x7684;&#x662F;&#x591A;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x662F;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#xFF1F;</p>
+<h2 id="543-pandas&#x7684;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x7C7B;&#x578B;">5.4.3 Pandas&#x7684;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x7C7B;&#x578B;</h2>
+<ul>
+<li>1&#x3001;&#x8F6C;&#x6362;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x7C7B;&#x578B;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x4F20;&#x5165;&#x65F6;&#x95F4;&#x7684;&#x5217;&#x8868;</span>
+pd.to_datetime([<span class="hljs-string">&quot;2017-01-01&quot;</span>, <span class="hljs-string">&quot;2017-02-01&quot;</span>, <span class="hljs-string">&quot;2017-03-01&quot;</span>])
+
+<span class="hljs-comment"># &#x6216;&#x8005;</span>
+date = [datetime(<span class="hljs-number">2018</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>), datetime(<span class="hljs-number">2018</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>), datetime(<span class="hljs-number">2018</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>), datetime(<span class="hljs-number">2018</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>), datetime(<span class="hljs-number">2018</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>)]
+date = pd.to_datetime(date)
+
+<span class="hljs-comment"># &#x5982;&#x679C;&#x5176;&#x4E2D;&#x6709;&#x7A7A;&#x503C;</span>
+date = [datetime(<span class="hljs-number">2018</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>), datetime(<span class="hljs-number">2018</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>), np.nan, datetime(<span class="hljs-number">2018</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>), datetime(<span class="hljs-number">2018</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>)]
+date = pd.to_datetime(date)
+<span class="hljs-comment"># &#x7ED3;&#x679C;&#x4F1A;&#x53D8;&#x6210;NaT&#x7C7B;&#x578B;</span>
+DatetimeIndex([<span class="hljs-string">&apos;2018-03-01&apos;</span>, <span class="hljs-string">&apos;2018-03-02&apos;</span>, <span class="hljs-string">&apos;NaT&apos;</span>, <span class="hljs-string">&apos;2018-03-04&apos;</span>, <span class="hljs-string">&apos;2018-03-05&apos;</span>], dtype=<span class="hljs-string">&apos;datetime64[ns]&apos;</span>, freq=<span class="hljs-keyword">None</span>)
+</code></pre>
+<ul>
+<li>2&#x3001;Pandas&#x7684;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x7C7B;&#x578B;&#xFF1A;DatetimeIndex</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># DateTimeIndex</span>
+pd.to_datetime(date)
+DatetimeIndex([<span class="hljs-string">&apos;2018-03-01&apos;</span>, <span class="hljs-string">&apos;2018-03-02&apos;</span>, <span class="hljs-string">&apos;2018-03-03&apos;</span>, <span class="hljs-string">&apos;2018-03-04&apos;</span>,
+               <span class="hljs-string">&apos;2018-03-05&apos;</span>],
+              dtype=<span class="hljs-string">&apos;datetime64[ns]&apos;</span>, freq=<span class="hljs-keyword">None</span>)
+
+pd.to_datetime(date).values
+
+array([<span class="hljs-string">&apos;2018-03-01T00:00:00.000000000&apos;</span>, <span class="hljs-string">&apos;2018-03-02T00:00:00.000000000&apos;</span>,
+       <span class="hljs-string">&apos;2018-03-03T00:00:00.000000000&apos;</span>, <span class="hljs-string">&apos;2018-03-04T00:00:00.000000000&apos;</span>,
+       <span class="hljs-string">&apos;2018-03-05T00:00:00.000000000&apos;</span>], dtype=<span class="hljs-string">&apos;datetime64[ns]&apos;</span>)
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;DatetimeIndex&#x6765;&#x8F6C;&#x6362;</p>
+<ul>
+<li>3&#x3001;&#x901A;&#x8FC7;pd.DatetimeIndex&#x8FDB;&#x884C;&#x8F6C;&#x6362;</li>
+</ul>
+<pre><code class="lang-python">pd.DatetimeIndex(date)
+</code></pre>
+<h4 id="&#x77E5;&#x9053;&#x4E86;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x7C7B;&#x578B;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x4E2A;&#x5F53;&#x505A;&#x7D22;&#x5F15;&#xFF0C;&#x83B7;&#x53D6;&#x6570;&#x636E;">&#x77E5;&#x9053;&#x4E86;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x7C7B;&#x578B;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x4E2A;&#x5F53;&#x505A;&#x7D22;&#x5F15;&#xFF0C;&#x83B7;&#x53D6;&#x6570;&#x636E;</h4>
+<h2 id="544-pandas&#x7684;&#x57FA;&#x7840;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x7ED3;&#x6784;">5.4.4 Pandas&#x7684;&#x57FA;&#x7840;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x7ED3;&#x6784;</h2>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x6700;&#x57FA;&#x7840;&#x7684;pandas&#x7684;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x7ED3;&#x6784;,&#x4EE5;&#x65F6;&#x95F4;&#x4E3A;&#x7D22;&#x5F15;&#x7684;&#xFF0C;Series&#x5E8F;&#x5217;&#x7ED3;&#x6784;</span>
+<span class="hljs-comment"># &#x4EE5;&#x65F6;&#x95F4;&#x4E3A;&#x7D22;&#x5F15;&#x7684;DataFrame&#x7ED3;&#x6784;</span>
+series_date = pd.Series(<span class="hljs-number">3.0</span>, index=date)
+
+pd.to_datetime(series_date)
+pd.DatetimeIndex(series_date)
+</code></pre>
+<p>pandas&#x65F6;&#x95F4;&#x5E8F;&#x5217;series&#x7684;index&#x5FC5;&#x987B;&#x662F;DatetimeIndex</p>
+<ul>
+<li><strong>DatetimeIndex&#x7684;&#x5C5E;&#x6027;</strong><ul>
+<li>year,month,weekday,day,hour&#x2026;.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-python">time.year
+time.month
+time.weekday
+</code></pre>
+<h2 id="545-pandas&#x751F;&#x6210;&#x6307;&#x5B9A;&#x9891;&#x7387;&#x7684;&#x65F6;&#x95F4;&#x5E8F;&#x5217;">5.4.5 Pandas&#x751F;&#x6210;&#x6307;&#x5B9A;&#x9891;&#x7387;&#x7684;&#x65F6;&#x95F4;&#x5E8F;&#x5217;</h2>
+<ul>
+<li>pandas.date_range(start=None, end=None, periods=None, freq=&apos;D&apos;, tz=None, normalize=False, name=None, closed=None, **kwargs)<ul>
+<li>Returna fixed frequency DatetimeIndex, with day (calendar) as the default frequency</li>
+<li>start:&#x5F00;&#x59CB;&#x65F6;&#x95F4;</li>
+<li>end:&#x7ED3;&#x675F;&#x65F6;&#x95F4;</li>
+<li>periods:&#x4EA7;&#x751F;&#x591A;&#x957F;&#x7684;&#x5E8F;&#x5217;</li>
+<li>freq:&#x9891;&#x7387; D,H,Q&#x7B49;</li>
+<li>tz:&#x65F6;&#x533A;</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x53C2;&#x6570;</th>
+<th style="text-align:center">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">D</td>
+<td style="text-align:center">&#x6BCF;&#x65E5;</td>
+</tr>
+<tr>
+<td style="text-align:center">B</td>
+<td style="text-align:center">&#x6BCF;&#x5DE5;&#x4F5C;&#x65E5;</td>
+</tr>
+<tr>
+<td style="text-align:center">H&#x3001;T&#x6216;&#x8005;min&#x3001;S</td>
+<td style="text-align:center">&#x65F6;&#x3001;&#x5206;&#x3001;&#x79D2;</td>
+</tr>
+<tr>
+<td style="text-align:center">M</td>
+<td style="text-align:center">&#x6BCF;&#x6708;&#x6700;&#x540E;&#x4E00;&#x5929;</td>
+</tr>
+<tr>
+<td style="text-align:center">BM</td>
+<td style="text-align:center">&#x6BCF;&#x6708;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x65E5;</td>
+</tr>
+<tr>
+<td style="text-align:center">WOM-1MON,  WOM-3FRI</td>
+<td style="text-align:center">&#x6BCF;&#x6708;&#x7B2C;&#x51E0;&#x5468;&#x7684;&#x661F;&#x671F;&#x51E0;</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x751F;&#x6210;&#x6307;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x5E8F;&#x5217;</span>
+<span class="hljs-comment"># 1&#x3001;&#x751F;&#x6210;2017-01-02~2017-12-30&#xFF0C;&#x751F;&#x6210;&#x9891;&#x7387;&#x4E3A;1&#x5929;, &#x4E0D;&#x8DF3;&#x8FC7;&#x5468;&#x516D;&#x5468;&#x65E5;</span>
+pd.date_range(<span class="hljs-string">&quot;2017-01-02&quot;</span>, <span class="hljs-string">&quot;2017-12-30&quot;</span>, freq=<span class="hljs-string">&quot;D&quot;</span>)
+
+<span class="hljs-comment"># 2&#x3001;&#x751F;&#x6210;2017-01-02~2017-12-30&#xFF0C;&#x751F;&#x6210;&#x9891;&#x7387;&#x4E3A;1&#x5929;, &#x8DF3;&#x8FC7;&#x5468;&#x516D;&#x5468;&#x65E5;, &#x80FD;&#x591F;&#x7528;&#x5728;&#x91D1;&#x878D;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x65E5;&#x7EBF;&#x7684;&#x6570;&#x636E;</span>
+pd.date_range(<span class="hljs-string">&quot;2017-01-02&quot;</span>, <span class="hljs-string">&quot;2017-12-30&quot;</span>, freq=<span class="hljs-string">&quot;B&quot;</span>)
+
+<span class="hljs-comment"># 3&#x3001;&#x53EA;&#x77E5;&#x9053;&#x5F00;&#x59CB;&#x65F6;&#x95F4;&#x65E5;&#x671F;&#xFF0C;&#x6211;&#x4E5F;&#x77E5;&#x9053;&#x603B;&#x5171;&#x5929;&#x6570;&#x591A;&#x5C11;&#xFF0C;&#x751F;&#x6210;&#x5E8F;&#x5217;&#xFF0C; &#x4ECE;&quot;2016-01-01&quot;, &#x5171;504&#x5929;&#xFF0C;&#x8DF3;&#x8FC7;&#x5468;&#x672B;</span>
+pd.date_range(<span class="hljs-string">&quot;2016-01-01&quot;</span>, periods=<span class="hljs-number">504</span>, freq=<span class="hljs-string">&quot;B&quot;</span>)
+
+<span class="hljs-comment"># 4&#x3001;&#x751F;&#x6210;&#x6309;&#x7167;&#x5C0F;&#x65F6;&#x6392;&#x5217;&#x7684;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;</span>
+pd.date_range(<span class="hljs-string">&quot;2017-01-02&quot;</span>, <span class="hljs-string">&quot;2017-12-30&quot;</span>, freq=<span class="hljs-string">&apos;H&apos;</span>)
+
+<span class="hljs-comment"># 5&#x3001;&#x6309;&#x7167;3H&#x53BB;&#x8FDB;&#x884C;&#x751F;&#x6210;</span>
+pd.date_range(<span class="hljs-string">&quot;2017-01-02&quot;</span>, <span class="hljs-string">&quot;2017-12-30&quot;</span>, freq=<span class="hljs-string">&apos;3H&apos;</span>)
+
+<span class="hljs-comment"># 6&#x3001;&#x6309;&#x7167;1H30&#x5206;&#x949F;&#x53BB;&#x8FDB;&#x884C;&#x751F;&#x6210;&#x65F6;&#x95F4;&#x5E8F;&#x5217;</span>
+pd.date_range(<span class="hljs-string">&quot;2017-01-02&quot;</span>, <span class="hljs-string">&quot;2017-12-30&quot;</span>, freq=<span class="hljs-string">&apos;1H30min&apos;</span>)
+
+<span class="hljs-comment"># 7&#x3001;&#x6309;&#x7167;&#x6BCF;&#x6708;&#x6700;&#x540E;&#x4E00;&#x5929;</span>
+pd.date_range(<span class="hljs-string">&quot;2017-01-02&quot;</span>, <span class="hljs-string">&quot;2017-12-30&quot;</span>, freq=<span class="hljs-string">&apos;BM&apos;</span>)
+
+<span class="hljs-comment"># 8&#x3001;&#x6309;&#x7167;&#x6BCF;&#x4E2A;&#x6708;&#x7684;&#x7B2C;&#x51E0;&#x4E2A;&#x661F;&#x671F;&#x51E0;</span>
+pd.date_range(<span class="hljs-string">&quot;2017-01-02&quot;</span>, <span class="hljs-string">&quot;2017-12-30&quot;</span>, freq=<span class="hljs-string">&apos;WOM-3FRI&apos;</span>)
+</code></pre>
+<h2 id="546&#x4EC0;&#x4E48;&#x662F;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x5206;&#x6790;">5.4.6&#x4EC0;&#x4E48;&#x662F;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x5206;&#x6790;</h2>
+<p>&#x5BF9;&#x4E8E;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x7C7B;&#x578B;&#xFF0C;&#x6709;&#x7279;&#x6709;&#x7684;&#x5206;&#x6790;&#x65B9;&#x6CD5;&#x3002;&#x540C;&#x6837;&#x80A1;&#x7968;&#x672C;&#x8EAB;&#x4E5F;&#x662F;&#x4E00;&#x79CD;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x7C7B;&#x578B;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4EE5;&#x80A1;&#x7968;&#x7684;&#x6570;&#x636E;&#x6765;&#x8FDB;&#x884C;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x7684;&#x5206;&#x6790;</p>
+<p>&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x5206;&#x6790;( time series analysis)&#x65B9;&#x6CD5;,&#x5F3A;&#x8C03;&#x7684;&#x662F;&#x901A;&#x8FC7;&#x5BF9;&#x4E00;&#x4E2A;&#x533A;&#x57DF;&#x8FDB;&#x884C;&#x4E00;&#x5B9A;&#x65F6;&#x95F4;&#x6BB5;&#x5185;&#x7684;&#x8FDE;&#x7EED;&#x89C2;&#x5BDF;&#x8BA1;&#x7B97;&#xFF0C;&#x63D0;&#x53D6;&#x76F8;&#x5173;&#x7279;&#x5F81;&#xFF0C;&#x5E76;&#x5206;&#x6790;&#x5176;&#x53D8;&#x5316;&#x8FC7;&#x7A0B;&#x3002;</p>
+<p><strong>&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x5206;&#x6790;&#x4E3B;&#x8981;&#x6709;&#x786E;&#x5B9A;&#x6027;&#x53D8;&#x5316;&#x5206;&#x6790;</strong></p>
+<ul>
+<li><strong>&#x786E;&#x5B9A;&#x6027;&#x53D8;&#x5316;&#x5206;&#x6790;&#xFF1A;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x6CD5;&#xFF0C; &#x79FB;&#x52A8;&#x65B9;&#x5DEE;&#x548C;&#x6807;&#x51C6;&#x5DEE;&#x3001;&#x79FB;&#x52A8;&#x76F8;&#x5173;&#x7CFB;&#x6570;</strong></li>
+</ul>
+<h2 id="547-&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x6CD5;">5.4.7 &#x79FB;&#x52A8;&#x5E73;&#x5747;&#x6CD5;</h2>
+<h3 id="5471-&#x79FB;&#x52A8;&#x7A97;&#x53E3;">5.4.7.1 &#x79FB;&#x52A8;&#x7A97;&#x53E3;</h3>
+<p>&#x4E3B;&#x8981;&#x7528;&#x5728;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x7684;&#x6570;&#x7EC4;&#x53D8;&#x6362;&#xFF0C; &#x4E0D;&#x540C;&#x4F5C;&#x7528;&#x7684;&#x51FD;&#x6570;&#x5C06;&#x5B83;&#x4EEC;&#x7EDF;&#x79F0;&#x4E3A;&#x79FB;&#x52A8;&#x7A97;&#x53E3;&#x51FD;&#x6570;</p>
+<p><img src="../images/&#x79FB;&#x52A8;&#x7A97;&#x53E3;.png" alt="&#x79FB;&#x52A8;&#x7A97;&#x53E3;"></p>
+<h3 id="5472-&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;">5.4.7.2 &#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;</h3>
+<p>&#x90A3;&#x4E48;&#x4F1A;&#x6709;&#x5404;&#x79CD;&#x89C2;&#x5BDF;&#x7A97;&#x53E3;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5176;&#x4E2D;&#x6700;&#x5E38;&#x7528;&#x7684;&#x5C31;&#x662F;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x6CD5;</p>
+<ul>
+<li>&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;(Moving Average)&#x7B80;&#x79F0;&#x5747;&#x7EBF;, <strong>&#x5C06;&#x67D0;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x7684;&#x6536;&#x76D8;&#x4EF7;&#x4E4B;&#x548C;&#x9664;&#x4EE5;&#x8BE5;&#x5468;&#x671F;</strong></li>
+</ul>
+<p><img src="../images/&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x65B9;&#x6CD5;.png" alt="&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x65B9;&#x6CD5;"></p>
+<h3 id="5473-&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x7684;&#x5206;&#x7C7B;">5.4.7.3 &#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x7684;&#x5206;&#x7C7B;</h3>
+<ul>
+<li>&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x4F9D;&#x8BA1;&#x7B97;&#x5468;&#x671F;&#x5206;&#x4E3A;&#x77ED;&#x671F;(5&#x5929;)&#x3001;&#x4E2D;&#x671F;(20&#x5929;)&#x548C;&#x957F;&#x671F;(60&#x5929;&#x3001;120&#x5929;)&#xFF0C;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x6CA1;&#x6709;&#x56FA;&#x5B9A;&#x7684;&#x754C;&#x9650;</li>
+<li>&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x4F9D;&#x636E;&#x7B97;&#x6CD5;&#x5206;&#x4E3A;&#x7B97;&#x6570;&#x3001;&#x52A0;&#x6743;&#x6CD5;&#x548C;&#x6307;&#x6570;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;</li>
+</ul>
+<blockquote>
+<p>&#x6CE8;&#xFF1A;&#x4E0D;&#x540C;&#x7684;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x65B9;&#x6CD5;&#x4E0D;&#x4E00;&#x6837;</p>
+</blockquote>
+<h4 id="1-&#x7B80;&#x5355;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;">1 &#x7B80;&#x5355;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;</h4>
+<p><strong>&#x7B80;&#x5355;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;(SMA)&#xFF0C;&#x53C8;&#x79F0;&#x201C;&#x7B97;&#x6570;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x201D;&#xFF0C;&#x662F;&#x6307;&#x7279;&#x5B9A;&#x671F;&#x95F4;&#x7684;&#x6536;&#x76D8;&#x4EF7;&#x8FDB;&#x884C;&#x5E73;&#x5747;&#x5316;&#x6BD4;&#x5982;&#x8BF4;&#xFF0C;5&#x65E5;&#x7684;&#x5747;&#x7EBF;SMA=(C1+ C2 + C3 + C4 + C5) / 5</strong></p>
+<p><img src="../images/&#x516C;&#x5F0F;.png" alt="&#x516C;&#x5F0F;"></p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<p><img src="../images/&#x7B80;&#x5355;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x4F8B;&#x5B50;.png" alt="&#x7B80;&#x5355;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x4F8B;&#x5B50;"></p>
+<ul>
+<li>&#x6848;&#x4F8B;&#xFF1A;&#x5BF9;&#x80A1;&#x7968;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x8BA1;&#x7B97;</li>
+</ul>
+<p><img src="../images/&#x7B80;&#x5355;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x6548;&#x679C;.png" alt="&#x7B80;&#x5355;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x6548;&#x679C;"></p>
+<p>&#x62FF;&#x5230;&#x80A1;&#x7968;&#x6570;&#x636E;&#xFF0C;&#x753B;&#x51FA;K&#x7EBF;&#x56FE;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x62FF;&#x5230;&#x80A1;&#x7968;K&#x7EBF;&#x6570;&#x636E;</span>
+stock_day = pd.read_csv(<span class="hljs-string">&quot;./data/stock_day/stock_day.csv&quot;</span>)
+stock_day = stock_day.sort_index()
+stock_day[<span class="hljs-string">&quot;index&quot;</span>] = [i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(stock_day.shape[<span class="hljs-number">0</span>])]
+arr = stock_day[[<span class="hljs-string">&apos;index&apos;</span>, <span class="hljs-string">&apos;open&apos;</span>, <span class="hljs-string">&apos;close&apos;</span>, <span class="hljs-string">&apos;high&apos;</span>, <span class="hljs-string">&apos;low&apos;</span>]]
+values = arr.values[:<span class="hljs-number">200</span>]
+<span class="hljs-comment"># &#x753B;&#x51FA;K&#x7EBF;&#x56FE;</span>
+fig, axes = plt.subplots(nrows=<span class="hljs-number">1</span>, ncols=<span class="hljs-number">1</span>, figsize=(<span class="hljs-number">20</span>, <span class="hljs-number">8</span>), dpi=<span class="hljs-number">80</span>)
+candlestick_ochl(axes, values, width=<span class="hljs-number">0.2</span>, colorup=<span class="hljs-string">&apos;r&apos;</span>, colordown=<span class="hljs-string">&apos;g&apos;</span>)
+</code></pre>
+<h4 id="2-&#x8BA1;&#x7B97;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;">2 &#x8BA1;&#x7B97;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;</h4>
+<ul>
+<li><p>pandas.rolling_mean(arg, window, min_periods=None, freq=None, center=False, how=None, **kwargs)
+Moving mean.</p>
+<p>Parameters:    </p>
+<ul>
+<li>arg : Series, DataFrame</li>
+<li>window : &#x8BA1;&#x7B97;&#x5468;&#x671F;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x76F4;&#x63A5;&#x5BF9;&#x6BCF;&#x5929;&#x7684;&#x6536;&#x76D8;&#x4EF7;&#x8FDB;&#x884C;&#x6C42;&#x5E73;&#x5747;&#x503C;&#xFF0C; &#x7B80;&#x5355;&#x79FB;&#x52A8;&#x5E73;&#x5C40;&#x7EBF;(SMA)</span>
+<span class="hljs-comment"># &#x5206;&#x522B;&#x52A0;&#x4E0A;&#x77ED;&#x671F;&#x3001;&#x4E2D;&#x671F;&#x3001;&#x957F;&#x671F;&#x5C40;&#x5747;&#x7EBF;</span>
+pd.rolling_mean(stock_day[<span class="hljs-string">&quot;close&quot;</span>][:<span class="hljs-number">200</span>], window=<span class="hljs-number">5</span>).plot()
+pd.rolling_mean(stock_day[<span class="hljs-string">&quot;close&quot;</span>][:<span class="hljs-number">200</span>], window=<span class="hljs-number">10</span>).plot()
+pd.rolling_mean(stock_day[<span class="hljs-string">&quot;close&quot;</span>][:<span class="hljs-number">200</span>], window=<span class="hljs-number">20</span>).plot()
+pd.rolling_mean(stock_day[<span class="hljs-string">&quot;close&quot;</span>][:<span class="hljs-number">200</span>], window=<span class="hljs-number">30</span>).plot()
+pd.rolling_mean(stock_day[<span class="hljs-string">&quot;close&quot;</span>][:<span class="hljs-number">200</span>], window=<span class="hljs-number">60</span>).plot()
+pd.rolling_mean(stock_day[<span class="hljs-string">&quot;close&quot;</span>][:<span class="hljs-number">200</span>], window=<span class="hljs-number">120</span>).plot()
+</code></pre>
+<h3 id="3-&#x52A0;&#x6743;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;-wma">3 &#x52A0;&#x6743;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF; (WMA)</h3>
+<p>&#x52A0;&#x6743;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF; (WMA)&#x5C06;&#x8FC7;&#x53BB;&#x67D0;&#x7279;&#x5B9A;&#x65F6;&#x95F4;&#x5185;&#x7684;&#x4EF7;&#x683C;&#x53D6;&#x5176;&#x5E73;&#x5747;&#x503C;&#xFF0C;<strong>&#x5B83;&#x7684;&#x6BD4;&#x91CD;&#x4EE5;&#x5E73;&#x5747;&#x7EBF;&#x7684;&#x957F;&#x5EA6;&#x8BBE;&#x5B9A;&#xFF0C;&#x6108;&#x8FD1;&#x671F;&#x7684;&#x6536;&#x5E02;&#x4EF7;&#xFF0C;&#x5BF9;&#x5E02;&#x51B5;&#x5F71;&#x54CD;&#x6108;&#x91CD;&#x8981;&#x3002;</strong></p>
+<p><img src="../images/&#x52A0;&#x6743;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x516C;&#x5F0F;.png" alt="&#x52A0;&#x6743;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x516C;&#x5F0F;"></p>
+<p>&#x6B63;&#x56E0;&#x52A0;&#x6743;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x5F3A;&#x8C03;&#x5C06;&#x6108;&#x8FD1;&#x671F;&#x7684;&#x4EF7;&#x683C;&#x6BD4;&#x91CD;&#x63D0;&#x5347;&#xFF0C;&#x6545;&#x6B64;&#x5F53;&#x5E02;&#x51B5;&#x5012;&#x9000;&#x65F6;&#xFF0C;&#x52A0;&#x6743;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x6BD4;&#x8D77;&#x5176;&#x5B83;&#x5E73;&#x5747;&#x7EBF;&#x66F4;&#x5BB9;&#x6613;&#x9884;&#x6D4B;&#x4EF7;&#x683C;&#x6CE2;&#x52A8;&#x3002;<strong>&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x4E0D;&#x4F1A;&#x8F7B;&#x6613;&#x4F7F;&#x7528;&#x52A0;&#x6743;&#xFF0C;&#x5E94;&#x4E3A;&#x4ED6;&#x7684;&#x6BD4;&#x91CD;&#x8FC7;&#x5927;&#xFF01;&#xFF01;&#xFF01;&#xFF01;</strong></p>
+<h3 id="4-&#x6307;&#x6570;&#x5E73;&#x6ED1;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;ewma">4 &#x6307;&#x6570;&#x5E73;&#x6ED1;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;(EWMA)</h3>
+<p>&#x662F;&#x56E0;&#x5E94;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x88AB;&#x89C6;&#x4E3A;&#x843D;&#x540E;&#x6307;&#x6807;&#x7684;&#x7F3A;&#x5931;&#x800C;&#x53D1;&#x5C55;&#x51FA;&#x6765;&#x7684;&#xFF0C;&#x4E3A;&#x89E3;&#x51B3;&#x4E00;&#x65E6;&#x4EF7;&#x683C;&#x5DF2;&#x8131;&#x79BB;&#x5747;&#x7EBF;&#x5DEE;&#x503C;&#x6269;&#x5927;&#xFF0C;&#x800C;&#x5E73;&#x5747;&#x7EBF;&#x672A;&#x80FD;&#x7ACB;&#x5373;&#x53CD;&#x5E94;&#xFF0C;EWMA&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x7C7B;&#x4F3C;&#x7F3A;&#x70B9;&#x3002;</p>
+<p><img src="../images/&#x6307;&#x6570;&#x5E73;&#x6ED1;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x516C;&#x5F0F;.png" alt="&#x6307;&#x6570;&#x5E73;&#x6ED1;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x516C;&#x5F0F;"></p>
+<p>&#x603B;&#x7ED3;&#xFF1A;</p>
+<p><img src="../images/&#x6307;&#x6570;&#x5E73;&#x5747;&#x7EBF;&#x516C;&#x5F0F;&#x603B;&#x7ED3;.png" alt="&#x6307;&#x6570;&#x5E73;&#x5747;&#x7EBF;&#x516C;&#x5F0F;&#x603B;&#x7ED3;"></p>
+<ul>
+<li>pd.ewma(com=None,   span=one)<ul>
+<li>&#x6307;&#x6570;&#x5E73;&#x5747;&#x7EBF;</li>
+<li>span:&#x65F6;&#x95F4;&#x95F4;&#x9694;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x753B;&#x51FA;&#x6307;&#x6570;&#x5E73;&#x6ED1;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;</span>
+pd.ewma(stock_day[<span class="hljs-string">&apos;close&apos;</span>][:<span class="hljs-number">200</span>], span=<span class="hljs-number">10</span>).plot()
+pd.ewma(stock_day[<span class="hljs-string">&apos;close&apos;</span>][:<span class="hljs-number">200</span>], span=<span class="hljs-number">30</span>).plot()
+pd.ewma(stock_day[<span class="hljs-string">&apos;close&apos;</span>][:<span class="hljs-number">200</span>], span=<span class="hljs-number">60</span>).plot()
+</code></pre>
+<h2 id="548-&#x79FB;&#x52A8;&#x65B9;&#x5DEE;&#x548C;&#x6807;&#x51C6;&#x5DEE;">5.4.8 &#x79FB;&#x52A8;&#x65B9;&#x5DEE;&#x548C;&#x6807;&#x51C6;&#x5DEE;</h2>
+<ul>
+<li>&#x65B9;&#x5DEE;&#x548C;&#x6807;&#x51C6;&#x5DEE;&#xFF1A;&#x53CD;&#x5E94;&#x67D0;&#x4E00;&#x65F6;&#x671F;&#x7684;&#x5E8F;&#x5217;&#x7684;&#x7A33;&#x5B9A;&#x6027;</li>
+</ul>
+<p><img src="../images/&#x79FB;&#x52A8;&#x65B9;&#x5DEE;&#x56FE;.png" alt="&#x79FB;&#x52A8;&#x65B9;&#x5DEE;&#x56FE;"></p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x6C42;&#x51FA;&#x6307;&#x5B9A;&#x7A97;&#x53E3;&#x5927;&#x5C0F;&#x7684;&#x6536;&#x76D8;&#x4EF7;&#x6807;&#x51C6;&#x5DEE;&#x548C;&#x65B9;&#x5DEE;</span>
+pd.rolling_var(stock_day[<span class="hljs-string">&apos;close&apos;</span>][:<span class="hljs-number">200</span>], window=<span class="hljs-number">10</span>).plot()
+pd.rolling_std(stock_day[<span class="hljs-string">&apos;close&apos;</span>][:<span class="hljs-number">200</span>], window=<span class="hljs-number">10</span>).plot()
+</code></pre>
+<h2 id="549-&#x5404;&#x9879;&#x6307;&#x6807;&#x6570;&#x636E;&#x4E24;&#x4E24;&#x5173;&#x8054;&#x6563;&#x70B9;&#x56FE;">5.4.9 &#x5404;&#x9879;&#x6307;&#x6807;&#x6570;&#x636E;&#x4E24;&#x4E24;&#x5173;&#x8054;&#x6563;&#x70B9;&#x56FE;</h2>
+<ul>
+<li>pd.scatter_matrix(frame,  figsize=None)<ul>
+<li>frame:DataFrame</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-python">frame = data[[<span class="hljs-string">&apos;open&apos;</span>,<span class="hljs-string">&apos;volume&apos;</span>, <span class="hljs-string">&apos;ma20&apos;</span>, <span class="hljs-string">&apos;p_change&apos;</span>, <span class="hljs-string">&apos;turnover&apos;</span>]]
+pd.scatter_matrix(frame, figsize=(<span class="hljs-number">20</span>, <span class="hljs-number">8</span>))
+</code></pre>
+<p><img src="../images/&#x6307;&#x6807;&#x79BB;&#x6563;&#x5173;&#x7CFB;&#x56FE;.png" alt="&#x6307;&#x6807;&#x79BB;&#x6563;&#x5173;&#x7CFB;&#x56FE;"></p>
+<p>&#x4ECE;&#x4E2D;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x770B;&#x5230;&#x6210;&#x4EA4;&#x91CF;&#xFF08;volume&#xFF09;&#x548C;&#x6362;&#x624B;&#x7387;&#xFF08;turnover&#xFF09;&#x6709;&#x975E;&#x5E38;&#x660E;&#x663E;&#x7684;&#x7EBF;&#x6027;&#x5173;&#x7CFB;&#xFF0C;&#x56E0;&#x4E3A;&#x6362;&#x624B;&#x7387;&#x7684;&#x5B9A;&#x4E49;&#x5C31;&#x662F;&#xFF1A;&#x6210;&#x4EA4;&#x91CF;&#x9664;&#x4EE5;&#x53D1;&#x884C;&#x603B;&#x80A1;&#x6570;&#x3002;</p>
+<blockquote>
+<p>&#x901A;&#x8FC7;&#x4E00;&#x4E9B;&#x56FE;&#x6216;&#x8005;&#x76F8;&#x5173;&#x6027;&#x5206;&#x6790;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x5F3A;&#x76F8;&#x5173;&#x7684;&#x4E00;&#x4E9B;&#x6307;&#x6807;&#xFF0C;&#x5728;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x3001;&#x91CF;&#x5316;&#x4E2D;&#x4F1A;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;</p>
+<p>&#x76F8;&#x5173;&#x7CFB;&#x6570;&#xFF1A;&#x540E;&#x9762;&#x4F1A;&#x4ECB;&#x7ECD;&#xFF0C;&#x76EE;&#x524D;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x77E5;&#x9053;&#x4ED6;&#x662F;&#x53CD;&#x5E94;&#x4E24;&#x4E2A;&#x5E8F;&#x5217;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x5373;&#x53EF;</p>
+</blockquote>
+<h2 id="5410-&#x6848;&#x4F8B;&#xFF1A;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x6570;&#x636E;&#x672C;&#x5730;&#x4FDD;&#x5B58;">5.4.10 &#x6848;&#x4F8B;&#xFF1A;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x6570;&#x636E;&#x672C;&#x5730;&#x4FDD;&#x5B58;</h2>
+<pre><code class="lang-python">ma_list = [<span class="hljs-number">5</span>, <span class="hljs-number">20</span> ,<span class="hljs-number">60</span>]
+<span class="hljs-keyword">for</span> ma <span class="hljs-keyword">in</span> ma_list:
+    data[<span class="hljs-string">&apos;MA&apos;</span> + str(ma)] = pd.rolling_mean(data.close, ma)
+<span class="hljs-keyword">for</span> ma <span class="hljs-keyword">in</span> ma_list:
+    data[<span class="hljs-string">&apos;EMA&apos;</span> + str(ma)] = pd.ewma(data.close, span=ma)
+
+data.to_csv(<span class="hljs-string">&quot;EWMA.csv&quot;</span>)
+</code></pre>
+<h2 id="5411-&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x7684;&#x4F5C;&#x7528;">5.4.11 &#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x7684;&#x4F5C;&#x7528;</h2>
+<p>&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x7EBF;&#x7ECF;&#x5E38;&#x4F1A;&#x4F5C;&#x4E3A;&#x6280;&#x672F;&#x5206;&#x6790;&#x7684;&#x57FA;&#x7840;&#x7406;&#x8BBA;&#xFF0C;&#x4ECE;&#x4E2D;&#x884D;&#x751F;&#x51FA;&#x5404;&#x79CD;&#x6280;&#x672F;&#x6307;&#x6807;&#x7B56;&#x7565;&#x3002;&#x540E;&#x9762;&#x5C06;&#x4F1A;&#x4ECB;&#x7ECD;&#x7B80;&#x5355;&#x7684;&#x57FA;&#x4E8E;&#x5747;&#x7EBF;&#x7684;&#x7B56;&#x7565;&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../day05/section3.html" class="navigation navigation-prev " aria-label="Previous page: 股票数据"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../day05/section5.html" class="navigation navigation-next " aria-label="Next page: 总结"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"katex":{},"expandable-chapters-small":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

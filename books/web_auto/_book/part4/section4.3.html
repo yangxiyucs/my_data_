@@ -1,0 +1,1060 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>4.3 各种断言方法 | web自动化测试课程简介</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../part4/section4.4.html" />
+    
+    
+    <link rel="prev" href="../part4/section4.2.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="4.3"
+        data-chapter-title="4.3 各种断言方法"
+        data-filepath="part4/section4.3.md"
+        data-basepath=".."
+        data-revision="Tue Dec 26 2017 08:38:22 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="part1/index.html">
+            
+                
+                    <a href="../part1/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        1.认识web自动化测试
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="part1/section1.1.html">
+            
+                
+                    <a href="../part1/section1.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        1.1 什么是自动化测试
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="part1/section1.2.html">
+            
+                
+                    <a href="../part1/section1.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        1.2 为什么进行自动化测试
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="part1/section1.3.html">
+            
+                
+                    <a href="../part1/section1.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        1.3 自动化测试的分类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="part1/section1.4.html">
+            
+                
+                    <a href="../part1/section1.4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        1.4 web自动化条件和使用范围
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="part1/section1.5.html">
+            
+                
+                    <a href="../part1/section1.5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        1.5 web自动化常用的工具
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="part1/section1.6.html">
+            
+                
+                    <a href="../part1/section1.6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        1.6 web自动化的前景
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="part2/index.html">
+            
+                
+                    <a href="../part2/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        2.元素定位(重点)
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="part2/section2.1.html">
+            
+                
+                    <a href="../part2/section2.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        2.1 工具的安装与使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="part2/section2.2.html">
+            
+                
+                    <a href="../part2/section2.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        2.2 css选择器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="part2/section2.3.html">
+            
+                
+                    <a href="../part2/section2.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        2.3 xpath选择器
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="part2/section2.3.1.html">
+            
+                
+                    <a href="../part2/section2.3.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.1.</b>
+                        
+                        2.3.1 节点之间的关系
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="part2/section2.3.2.html">
+            
+                
+                    <a href="../part2/section2.3.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.2.</b>
+                        
+                        2.3.3 xpath路径表达式
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="part3/index.html">
+            
+                
+                    <a href="../part3/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        3.selenium自动化测试框架
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="part3/section3.1.html">
+            
+                
+                    <a href="../part3/section3.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        3.1 selenium的概述
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="part3/section3.1.1.html">
+            
+                
+                    <a href="../part3/section3.1.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.1.</b>
+                        
+                        1 Selenium的发展历史
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="part3/section3.1.2.html">
+            
+                
+                    <a href="../part3/section3.1.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.2.</b>
+                        
+                        2 Selenium的工作原理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="part3/section3.1.3.html">
+            
+                
+                    <a href="../part3/section3.1.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.3.</b>
+                        
+                        3 Selenium的环境搭建
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="part3/section3.2.html">
+            
+                
+                    <a href="../part3/section3.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        3.2 Selenium-ide
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="part3/section3.2.1.html">
+            
+                
+                    <a href="../part3/section3.2.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.1.</b>
+                        
+                        1 Selenium-IDE环境
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="part3/section3.2.2.html">
+            
+                
+                    <a href="../part3/section3.2.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.2.</b>
+                        
+                        2 Selenium-IDE常用功能
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="part3/section3.2.3.html">
+            
+                
+                    <a href="../part3/section3.2.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.3.</b>
+                        
+                        3 Selenium-IDE使用案例
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="part3/section3.3.html">
+            
+                
+                    <a href="../part3/section3.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        3.3 Selenium-API基础
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="part3/section3.3.1.html">
+            
+                
+                    <a href="../part3/section3.3.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.1.</b>
+                        
+                        1 浏览器驱动对象
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="part3/section3.3.2.html">
+            
+                
+                    <a href="../part3/section3.3.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.2.</b>
+                        
+                        2 页面操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="part3/section3.3.3.html">
+            
+                
+                    <a href="../part3/section3.3.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.3.</b>
+                        
+                        3 验证操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="part3/section3.3.4.html">
+            
+                
+                    <a href="../part3/section3.3.4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.4.</b>
+                        
+                        4 元素的定位
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="part3/section3.3.5.html">
+            
+                
+                    <a href="../part3/section3.3.5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.5.</b>
+                        
+                        5 元素操作操作
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="part3/section3.4.html">
+            
+                
+                    <a href="../part3/section3.4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        3.4 Selenium-API高级应用
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="part3/section3.4.1.html">
+            
+                
+                    <a href="../part3/section3.4.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.1.</b>
+                        
+                        1 多标签
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="part3/section3.4.2.html">
+            
+                
+                    <a href="../part3/section3.4.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.2.</b>
+                        
+                        2 多表单切换
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="part3/section3.4.3.html">
+            
+                
+                    <a href="../part3/section3.4.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.3.</b>
+                        
+                        3 鼠标操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.4" data-path="part3/section3.4.4.html">
+            
+                
+                    <a href="../part3/section3.4.4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.4.</b>
+                        
+                        4 弹出框
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.5" data-path="part3/section3.4.5.html">
+            
+                
+                    <a href="../part3/section3.4.5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.5.</b>
+                        
+                        5 下拉框
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.6" data-path="part3/section3.4.6.html">
+            
+                
+                    <a href="../part3/section3.4.6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.6.</b>
+                        
+                        6 调用JavaScript代码
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.7" data-path="part3/section3.4.7.html">
+            
+                
+                    <a href="../part3/section3.4.7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.7.</b>
+                        
+                        7 等待
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.8" data-path="part3/section3.4.8.html">
+            
+                
+                    <a href="../part3/section3.4.8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.8.</b>
+                        
+                        8 cookies
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="part3/section3.5.html">
+            
+                
+                    <a href="../part3/section3.5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        3.5 Selenium-API的简单封装
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="part3/section3.5.1.html">
+            
+                
+                    <a href="../part3/section3.5.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.1.</b>
+                        
+                        1 浏览器操作的封装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="part3/section3.5.2.html">
+            
+                
+                    <a href="../part3/section3.5.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.2.</b>
+                        
+                        2 定位操作的封装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.3" data-path="part3/section3.5.3.html">
+            
+                
+                    <a href="../part3/section3.5.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.3.</b>
+                        
+                        3 点击输入的封装
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="part4/index.html">
+            
+                
+                    <a href="../part4/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        unittest框架
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="part4/section4.1.html">
+            
+                
+                    <a href="../part4/section4.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        4.1 unittest基本概念
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="part4/section4.2.html">
+            
+                
+                    <a href="../part4/section4.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        4.2 unittest基本用法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.3" data-path="part4/section4.3.html">
+            
+                
+                    <a href="../part4/section4.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        4.3 各种断言方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="part4/section4.4.html">
+            
+                
+                    <a href="../part4/section4.4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        4.4 命令行接口
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="part4/section4.5.html">
+            
+                
+                    <a href="../part4/section4.5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        4.5 unittest与selenium
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >web自动化测试课程简介</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="3-&#x5404;&#x79CD;&#x65AD;&#x8A00;&#x65B9;&#x6CD5;">3 &#x5404;&#x79CD;&#x65AD;&#x8A00;&#x65B9;&#x6CD5;</h1>
+<h5 id="unittest&#x65AD;&#x8A00;">unittest&#x65AD;&#x8A00;</h5>
+<p>&#x65AD;&#x8A00;&#x662F;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x7684;&#x6838;&#x5FC3;&#x3002;&#x6211;&#x4EEC;&#x4F7F;&#x7528;assertEqual()&#x6765;&#x5224;&#x65AD;&#x9884;&#x671F;&#x7ED3;&#x679C;&#xFF0C;&#x7528;assertTrue()&#x548C;assertFalse&#x6765;&#x505A;&#x662F;&#x975E;&#x5224;&#x65AD;&#xFF0C;&#x4EE5;&#x53CA;&#x7528;assertRaises()&#x6765;&#x5224;&#x65AD;&#x9884;&#x671F;&#x7684;&#x5F02;&#x5E38;&#x662F;&#x5426;&#x6709;&#x88AB;&#x629B;&#x51FA;&#x3002;&#x8FD9;&#x4E9B;unittest&#x63D0;&#x4F9B;&#x7684;&#x4EE5;assert&#x5F00;&#x5934;&#x7684;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x65AD;&#x8A00;&#xFF0C;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;,&#x6BCF;&#x4E2A;&#x6D4B;&#x8BD5;&#x65B9;&#x6CD5;&#x91CC;&#x90FD;&#x5FC5;&#x987B;&#x6709;&#x65AD;&#x8A00;&#xFF0C;unittest&#x652F;&#x6301;&#x5404;&#x79CD;&#x65AD;&#x8A00;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code>import unittest
+
+class Test(unittest.TestCase):
+  def setUp(self):
+    print(&apos;hello&apos;)
+
+  def tearDown(self):
+    print(&apos;bye&apos;)
+
+  def test_001(self):
+    self.assertEqual(&apos;1&apos;, &apos;1&apos;)
+
+  def test_002(self):
+    self.assertEqual(&apos;0&apos;, &apos;1&apos;)
+
+if __name__ == &quot;__main__&quot;:
+  unittest.main()
+</code></pre><h5 id="&#x65AD;&#x8A00;&#x5217;&#x8868;">&#x65AD;&#x8A00;&#x5217;&#x8868;</h5>
+<p><a href="https://docs.python.org/2/library/unittest.html" target="_blank">&#x5B98;&#x65B9;&#x6587;&#x6863;</a></p>
+<h6 id="&#x65B9;&#x6CD5;--&#x68C0;&#x67E5;&#x70B9;">&#x65B9;&#x6CD5;  &#x68C0;&#x67E5;&#x70B9;</h6>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x65AD;&#x8A00;&#x65B9;&#x6CD5;</th>
+<th style="text-align:center">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">assertEqual(a, b)</td>
+<td style="text-align:center">a == b</td>
+</tr>
+<tr>
+<td style="text-align:center">assertNotEqual(a, b)</td>
+<td style="text-align:center">a != b</td>
+</tr>
+<tr>
+<td style="text-align:center">assertTrue(x)</td>
+<td style="text-align:center">bool(x) is True</td>
+</tr>
+<tr>
+<td style="text-align:center">assertFalse(x)</td>
+<td style="text-align:center">bool(x) is False</td>
+</tr>
+<tr>
+<td style="text-align:center">assertIs(a, b)</td>
+<td style="text-align:center">a is b</td>
+</tr>
+<tr>
+<td style="text-align:center">assertIsNot(a, b)</td>
+<td style="text-align:center">a is not b</td>
+</tr>
+<tr>
+<td style="text-align:center">assertIsNone(x)</td>
+<td style="text-align:center">x is None</td>
+</tr>
+<tr>
+<td style="text-align:center">assertIsNotNone(x)</td>
+<td style="text-align:center">x is not None</td>
+</tr>
+<tr>
+<td style="text-align:center">assertIn(a, b)</td>
+<td style="text-align:center">a in b</td>
+</tr>
+<tr>
+<td style="text-align:center">assertNotIn(a, b)</td>
+<td style="text-align:center">a not in b</td>
+</tr>
+<tr>
+<td style="text-align:center">assertIsInstance(a, b)</td>
+<td style="text-align:center">isinstance(a, b)</td>
+</tr>
+<tr>
+<td style="text-align:center">assertNotIsInstance(a, b)</td>
+<td style="text-align:center">not isinstance(a, b)</td>
+</tr>
+<tr>
+<td style="text-align:center">assertRaises(exc, fun, <em>args, *</em>kwds)</td>
+<td style="text-align:center">fun(<em>args, *</em>kwds) raises exc</td>
+</tr>
+<tr>
+<td style="text-align:center">assertRaisesRegexp(exc, r, fun, <em>args, *</em>kwds)</td>
+<td style="text-align:center">fun(<em>args, *</em>kwds) raises exc and the message matches egex r</td>
+</tr>
+<tr>
+<td style="text-align:center">assertAlmostEqual(a, b)</td>
+<td style="text-align:center">round(a-b, 7) == 0</td>
+</tr>
+<tr>
+<td style="text-align:center">assertNotAlmostEqual(a, b)</td>
+<td style="text-align:center">round(a-b, 7) != 0</td>
+</tr>
+<tr>
+<td style="text-align:center">assertGreater(a, b)</td>
+<td style="text-align:center">a &gt; b 2.7</td>
+</tr>
+<tr>
+<td style="text-align:center">assertGreaterEqual(a, b)</td>
+<td style="text-align:center">a &gt;= b</td>
+</tr>
+<tr>
+<td style="text-align:center">assertLess(a, b)</td>
+<td style="text-align:center">a &lt; b</td>
+</tr>
+<tr>
+<td style="text-align:center">assertLessEqual(a, b)</td>
+<td style="text-align:center">a &lt;= b</td>
+</tr>
+<tr>
+<td style="text-align:center">assertRegexpMatches(s, r)</td>
+<td style="text-align:center">r.search(s)</td>
+</tr>
+<tr>
+<td style="text-align:center">assertNotRegexpMatches(s, r)</td>
+<td style="text-align:center">not r.search(s)</td>
+</tr>
+<tr>
+<td style="text-align:center">assertItemsEqual(a, b)</td>
+<td style="text-align:center">sorted(a) == sorted(b) &#x4E5F;&#x652F;&#x6301;unhashable&#x5BF9;&#x8C61;</td>
+</tr>
+<tr>
+<td style="text-align:center">assertDictContainsSubset(a, b)</td>
+<td style="text-align:center">a&#x91CC;&#x9762;&#x6240;&#x6709;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x90FD;&#x5728;b&#x4E2D;&#x5B58;&#x5728;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x81EA;&#x5DF1;&#x52A8;&#x624B;<br>&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x52A8;&#x624B;&#x4EB2;&#x81EA;&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x65AD;&#x8A00;&#x65B9;&#x6CD5;&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../part4/section4.2.html" class="navigation navigation-prev " aria-label="Previous page: 4.2 unittest基本用法"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../part4/section4.4.html" class="navigation navigation-next " aria-label="Next page: 4.4 命令行接口"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

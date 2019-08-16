@@ -1,0 +1,1375 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>折线图(plot)与基础绘图功能 | 数据挖掘基础定位、目标</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../day01/section3.html" />
+    
+    
+    <link rel="prev" href="../day01/section1.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.2"
+        data-chapter-title="折线图(plot)与基础绘图功能"
+        data-filepath="day01/section2.md"
+        data-basepath=".."
+        data-revision="Thu Jun 28 2018 22:40:55 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        数据挖掘基础
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="env/index.html">
+            
+                
+                    <a href="../env/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        数据挖掘基础环境安装与使用
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="env/section1.html">
+            
+                
+                    <a href="../env/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        库的安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="env/section2.html">
+            
+                
+                    <a href="../env/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        jupyter notebook使用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="day01/index.html">
+            
+                
+                    <a href="../day01/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Matplotlib
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="day01/section1.html">
+            
+                
+                    <a href="../day01/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Matplotlib之HelloWorld
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="day01/section2.html">
+            
+                
+                    <a href="../day01/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        折线图(plot)与基础绘图功能
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="day01/section3.html">
+            
+                
+                    <a href="../day01/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        散点图(scatter)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="day01/section4.html">
+            
+                
+                    <a href="../day01/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        柱状图(bar)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="day01/section5.html">
+            
+                
+                    <a href="../day01/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        直方图(histogram)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="day01/section6.html">
+            
+                
+                    <a href="../day01/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        饼图(pie)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="day01/section7.html">
+            
+                
+                    <a href="../day01/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="day01/section8.html">
+            
+                
+                    <a href="../day01/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="day02/index.html">
+            
+                
+                    <a href="../day02/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Numpy
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="day02/section1.html">
+            
+                
+                    <a href="../day02/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Numpy的优势
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="day02/section2.html">
+            
+                
+                    <a href="../day02/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        N维数组-ndarray
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="day02/section3.html">
+            
+                
+                    <a href="../day02/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        基本操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="day02/section4.html">
+            
+                
+                    <a href="../day02/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        ndarray运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="day02/section5.html">
+            
+                
+                    <a href="../day02/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        数组间的运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="day02/section6.html">
+            
+                
+                    <a href="../day02/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        合并、分割
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="day02/section7.html">
+            
+                
+                    <a href="../day02/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        IO操作与数据处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="day02/section8.html">
+            
+                
+                    <a href="../day02/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="day02/section9.html">
+            
+                
+                    <a href="../day02/section9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="day0304/index.html">
+            
+                
+                    <a href="../day0304/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Pandas
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="day0304/section1.html">
+            
+                
+                    <a href="../day0304/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Pandas介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="day0304/section2.html">
+            
+                
+                    <a href="../day0304/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        基本数据操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="day0304/section3.html">
+            
+                
+                    <a href="../day0304/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        DataFrame运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="day0304/section4.html">
+            
+                
+                    <a href="../day0304/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Pandas画图
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="day0304/section5.html">
+            
+                
+                    <a href="../day0304/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        文件读取与存储
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="day0304/section6.html">
+            
+                
+                    <a href="../day0304/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        高级处理-缺失值处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="day0304/section7.html">
+            
+                
+                    <a href="../day0304/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        高级处理-数据离散化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="day0304/section8.html">
+            
+                
+                    <a href="../day0304/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        高级处理-合并
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="day0304/section9.html">
+            
+                
+                    <a href="../day0304/section9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        高级处理-交叉表与透视表
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="day0304/section10.html">
+            
+                
+                    <a href="../day0304/section10.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.</b>
+                        
+                        高级处理-分组与聚合
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="day0304/section11.html">
+            
+                
+                    <a href="../day0304/section11.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.11.</b>
+                        
+                        综合案例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.12" data-path="day0304/section12.html">
+            
+                
+                    <a href="../day0304/section12.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.12.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.13" data-path="day0304/section13.html">
+            
+                
+                    <a href="../day0304/section13.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.13.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="day05/index.html">
+            
+                
+                    <a href="../day05/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        金融数据分析与挖掘1
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="day05/section1.html">
+            
+                
+                    <a href="../day05/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        金融市场基础知识
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="day05/section2.html">
+            
+                
+                    <a href="../day05/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        股票基础知识
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="day05/section3.html">
+            
+                
+                    <a href="../day05/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        股票数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="day05/section4.html">
+            
+                
+                    <a href="../day05/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        时间序列数据处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="day05/section5.html">
+            
+                
+                    <a href="../day05/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="day05/section6.html">
+            
+                
+                    <a href="../day05/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="day06/index.html">
+            
+                
+                    <a href="../day06/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        金融数据分析与挖掘2
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="day06/section1.html">
+            
+                
+                    <a href="../day06/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        (量化)投资的方法基础分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="day06/section2.html">
+            
+                
+                    <a href="../day06/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        趋势追踪
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="day06/section3.html">
+            
+                
+                    <a href="../day06/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        MACD分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="day06/section4.html">
+            
+                
+                    <a href="../day06/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        RSI分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="day06/section5.html">
+            
+                
+                    <a href="../day06/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        布林线
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="day06/section6.html">
+            
+                
+                    <a href="../day06/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        行情软件演示
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="day06/section7.html">
+            
+                
+                    <a href="../day06/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="day06/section8.html">
+            
+                
+                    <a href="../day06/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >数据挖掘基础定位、目标</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="22-&#x6298;&#x7EBF;&#x56FE;plot&#x4E0E;&#x57FA;&#x7840;&#x7ED8;&#x56FE;&#x529F;&#x80FD;">2.2 &#x6298;&#x7EBF;&#x56FE;(plot)&#x4E0E;&#x57FA;&#x7840;&#x7ED8;&#x56FE;&#x529F;&#x80FD;</h1>
+<h2 id="&#x5B66;&#x4E60;&#x76EE;&#x6807;">&#x5B66;&#x4E60;&#x76EE;&#x6807;</h2>
+<ul>
+<li>&#x76EE;&#x6807;<ul>
+<li>&#x77E5;&#x9053;&#x5982;&#x4F55;&#x89E3;&#x51B3;&#x4E2D;&#x6587;&#x663E;&#x793A;&#x95EE;&#x9898;</li>
+<li>&#x77E5;&#x9053;matplotlib&#x7684;&#x56FE;&#x7ED3;&#x6784;</li>
+<li>&#x5E94;&#x7528;figure&#x5B9E;&#x73B0;&#x521B;&#x5EFA;&#x7ED8;&#x56FE;&#x533A;&#x57DF;&#x5927;&#x5C0F;</li>
+<li>&#x5E94;&#x7528;plot&#x5B9E;&#x73B0;&#x6298;&#x7EBF;&#x56FE;&#x7684;&#x7ED8;&#x5236;</li>
+<li>&#x5E94;&#x7528;title,xlabel,ylabel&#x5B9E;&#x73B0;&#x6807;&#x9898;&#x4EE5;&#x53CA;x,y&#x8F74;&#x540D;&#x8BBE;&#x7F6E;</li>
+<li>&#x5E94;&#x7528;xticks,yticks&#x5B9E;&#x73B0;axes&#x7684;&#x523B;&#x5EA6;&#x8BBE;&#x7F6E;&#x548C;&#x6807;&#x6CE8;</li>
+<li>&#x5E94;&#x7528;savefig&#x5B9E;&#x73B0;&#x56FE;&#x5F62;&#x7684;&#x672C;&#x5730;&#x4FDD;&#x5B58;</li>
+<li>&#x5E94;&#x7528;grid&#x5B9E;&#x73B0;&#x663E;&#x793A;&#x7F51;&#x683C;&#x5E94;&#x7528;axis&#x5B9E;&#x73B0;&#x56FE;&#x50CF;&#x5F62;&#x72B6;&#x4FEE;&#x6539;</li>
+<li>&#x5E94;&#x7528;legend&#x5B9E;&#x73B0;&#x56FE;&#x5F62;&#x6807;&#x6CE8;&#x4FE1;&#x606F;&#x663E;&#x793A;</li>
+<li>&#x5E94;&#x7528;plt.subplots&#x5B9E;&#x73B0;&#x591A;&#x5750;&#x6807;&#x7CFB;&#x7684;&#x521B;&#x5EFA;</li>
+<li>&#x77E5;&#x9053;&#x5982;&#x4F55;&#x8BBE;&#x7F6E;&#x591A;&#x4E2A;axes&#x7684;&#x6807;&#x9898;&#x3001;&#x523B;&#x5EA6;</li>
+<li>&#x77E5;&#x9053;&#x6298;&#x7EBF;&#x56FE;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;</li>
+</ul>
+</li>
+<li>&#x5E94;&#x7528;<ul>
+<li>&#x5929;&#x6C14;&#x7684;&#x6E29;&#x5EA6;&#x53D8;&#x5316;&#x663E;&#x793A;</li>
+</ul>
+</li>
+</ul>
+<h2 id="221-&#x6298;&#x7EBF;&#x56FE;&#x7ED8;&#x5236;&#x4E0E;&#x4FDD;&#x5B58;&#x56FE;&#x7247;">2.2.1 &#x6298;&#x7EBF;&#x56FE;&#x7ED8;&#x5236;&#x4E0E;&#x4FDD;&#x5B58;&#x56FE;&#x7247;</h2>
+<p>&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x5730;&#x7406;&#x89E3;&#x6240;&#x6709;&#x57FA;&#x7840;&#x7ED8;&#x56FE;&#x529F;&#x80FD;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x5929;&#x6C14;&#x6E29;&#x5EA6;&#x53D8;&#x5316;&#x7684;&#x7ED8;&#x56FE;&#x6765;&#x878D;&#x5408;&#x6240;&#x6709;&#x7684;&#x57FA;&#x7840;API&#x4F7F;&#x7528;</p>
+<h2 id="1-matplotlibpyplot&#x6A21;&#x5757;">1 matplotlib.pyplot&#x6A21;&#x5757;</h2>
+<p>matplotlib.pytplot&#x5305;&#x542B;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7C7B;&#x4F3C;&#x4E8E;matlab&#x7684;&#x753B;&#x56FE;&#x51FD;&#x6570;&#x3002; &#x5B83;&#x7684;&#x51FD;&#x6570;<strong>&#x4F5C;&#x7528;&#x4E8E;&#x5F53;&#x524D;&#x56FE;&#x5F62;(figure)&#x7684;&#x5F53;&#x524D;&#x5750;&#x6807;&#x7CFB;(axes)</strong>&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+</code></pre>
+<h2 id="2-&#x6298;&#x7EBF;&#x56FE;&#x7ED8;&#x5236;&#x4E0E;&#x663E;&#x793A;">2 &#x6298;&#x7EBF;&#x56FE;&#x7ED8;&#x5236;&#x4E0E;&#x663E;&#x793A;</h2>
+<h4 id="&#x5C55;&#x73B0;&#x4E0A;&#x6D77;&#x4E00;&#x5468;&#x7684;&#x5929;&#x6C14;&#x6BD4;&#x5982;&#x4ECE;&#x661F;&#x671F;&#x4E00;&#x5230;&#x661F;&#x671F;&#x65E5;&#x7684;&#x5929;&#x6C14;&#x6E29;&#x5EA6;&#x5982;&#x4E0B;">&#x5C55;&#x73B0;&#x4E0A;&#x6D77;&#x4E00;&#x5468;&#x7684;&#x5929;&#x6C14;,&#x6BD4;&#x5982;&#x4ECE;&#x661F;&#x671F;&#x4E00;&#x5230;&#x661F;&#x671F;&#x65E5;&#x7684;&#x5929;&#x6C14;&#x6E29;&#x5EA6;&#x5982;&#x4E0B;</h4>
+<pre><code class="lang-python"><span class="hljs-comment"># 1&#xFF09;&#x521B;&#x5EFA;&#x753B;&#x5E03;(&#x5BB9;&#x5668;&#x5C42;)</span>
+plt.figure(figsize=(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>))
+<span class="hljs-comment"># 2&#xFF09;&#x7ED8;&#x5236;&#x6298;&#x7EBF;&#x56FE;(&#x56FE;&#x50CF;&#x5C42;)</span>
+plt.plot([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span> ,<span class="hljs-number">7</span>], [<span class="hljs-number">17</span>, <span class="hljs-number">17</span>, <span class="hljs-number">18</span>, <span class="hljs-number">15</span>, <span class="hljs-number">11</span>, <span class="hljs-number">11</span>, <span class="hljs-number">13</span>])
+<span class="hljs-comment"># 3&#xFF09;&#x663E;&#x793A;&#x56FE;&#x50CF;</span>
+plt.show()
+</code></pre>
+<p><img src="../images/&#x6298;&#x7EBF;&#x56FE;.png" alt="&#x6298;&#x7EBF;&#x56FE;"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8FD9;&#x6837;&#x663E;&#x793A;&#x6548;&#x679C;&#x5E76;&#x4E0D;&#x597D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x52A0;&#x5165;&#x66F4;&#x591A;&#x7684;&#x529F;&#x80FD;&#xFF1A;</p>
+<h2 id="3-&#x8BBE;&#x7F6E;&#x753B;&#x5E03;&#x5C5E;&#x6027;&#x4E0E;&#x56FE;&#x7247;&#x4FDD;&#x5B58;">3 &#x8BBE;&#x7F6E;&#x753B;&#x5E03;&#x5C5E;&#x6027;&#x4E0E;&#x56FE;&#x7247;&#x4FDD;&#x5B58;</h2>
+<pre><code>plt.figure(figsize=(), dpi=)
+    figsize:&#x6307;&#x5B9A;&#x56FE;&#x7684;&#x957F;&#x5BBD;
+    dpi:&#x56FE;&#x50CF;&#x7684;&#x6E05;&#x6670;&#x5EA6;
+    &#x8FD4;&#x56DE;fig&#x5BF9;&#x8C61;
+plt.savefig(path)
+</code></pre><pre><code class="lang-python"><span class="hljs-comment"># 1&#xFF09;&#x521B;&#x5EFA;&#x753B;&#x5E03;&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x753B;&#x5E03;&#x5C5E;&#x6027;</span>
+plt.figure(figsize=(<span class="hljs-number">20</span>, <span class="hljs-number">8</span>), dpi=<span class="hljs-number">80</span>)
+<span class="hljs-comment"># 2&#xFF09;&#x4FDD;&#x5B58;&#x56FE;&#x7247;&#x5230;&#x6307;&#x5B9A;&#x8DEF;&#x5F84;</span>
+plt.savefig(<span class="hljs-string">&quot;test.png&quot;</span>)
+</code></pre>
+<ul>
+<li>&#x6CE8;&#x610F;&#xFF1A;plt.show()&#x4F1A;&#x91CA;&#x653E;figure&#x8D44;&#x6E90;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x663E;&#x793A;&#x56FE;&#x50CF;&#x4E4B;&#x540E;&#x4FDD;&#x5B58;&#x56FE;&#x7247;&#x5C06;&#x53EA;&#x80FD;&#x4FDD;&#x5B58;&#x7A7A;&#x56FE;&#x7247;&#x3002;</li>
+</ul>
+<h2 id="222-&#x5B8C;&#x5584;&#x539F;&#x59CB;&#x6298;&#x7EBF;&#x56FE;1&#x8F85;&#x52A9;&#x663E;&#x793A;&#x5C42;">2.2.2 &#x5B8C;&#x5584;&#x539F;&#x59CB;&#x6298;&#x7EBF;&#x56FE;1(&#x8F85;&#x52A9;&#x663E;&#x793A;&#x5C42;)</h2>
+<h3 id="&#x6848;&#x4F8B;&#xFF1A;&#x663E;&#x793A;&#x6E29;&#x5EA6;&#x53D8;&#x5316;&#x72B6;&#x51B5;">&#x6848;&#x4F8B;&#xFF1A;&#x663E;&#x793A;&#x6E29;&#x5EA6;&#x53D8;&#x5316;&#x72B6;&#x51B5;</h3>
+<p>&#x9700;&#x6C42;&#xFF1A;&#x753B;&#x51FA;&#x67D0;&#x57CE;&#x5E02;11&#x70B9;&#x5230;12&#x70B9;1&#x5C0F;&#x65F6;&#x5185;&#x6BCF;&#x5206;&#x949F;&#x7684;&#x6E29;&#x5EA6;&#x53D8;&#x5316;&#x6298;&#x7EBF;&#x56FE;&#xFF0C;&#x6E29;&#x5EA6;&#x8303;&#x56F4;&#x5728;15&#x5EA6;~18&#x5EA6;</p>
+<p>&#x6548;&#x679C;&#xFF1A;</p>
+<p><img src="../images/&#x56FE;&#x50CF;&#x5C42;&#x5B8C;&#x5584;&#x6298;&#x7EBF;&#x56FE;.png" alt=""></p>
+<h3 id="1-&#x51C6;&#x5907;&#x6570;&#x636E;&#x5E76;&#x753B;&#x51FA;&#x521D;&#x59CB;&#x6298;&#x7EBF;&#x56FE;">1 &#x51C6;&#x5907;&#x6570;&#x636E;&#x5E76;&#x753B;&#x51FA;&#x521D;&#x59CB;&#x6298;&#x7EBF;&#x56FE;</h3>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x753B;&#x51FA;&#x6E29;&#x5EA6;&#x53D8;&#x5316;&#x56FE;</span>
+
+<span class="hljs-comment"># &#x51C6;&#x5907;x, y&#x5750;&#x6807;&#x7684;&#x6570;&#x636E;</span>
+x = range(<span class="hljs-number">60</span>)
+y_shanghai = [random.uniform(<span class="hljs-number">15</span>, <span class="hljs-number">18</span>) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> x]
+
+<span class="hljs-comment"># 1&#xFF09;&#x521B;&#x5EFA;&#x753B;&#x5E03;</span>
+plt.figure(figsize=(<span class="hljs-number">20</span>, <span class="hljs-number">8</span>), dpi=<span class="hljs-number">80</span>)
+
+<span class="hljs-comment"># 2&#xFF09;&#x7ED8;&#x5236;&#x6298;&#x7EBF;&#x56FE;</span>
+plt.plot(x, y_shanghai)
+
+<span class="hljs-comment"># 3&#xFF09;&#x663E;&#x793A;&#x56FE;&#x50CF;</span>
+plt.show()
+</code></pre>
+<p><img src="../images/&#x4E0A;&#x6D77;2.png" alt="&#x4E0A;&#x6D77;2"></p>
+<h3 id="2-&#x6DFB;&#x52A0;&#x81EA;&#x5B9A;&#x4E49;xy&#x523B;&#x5EA6;">2 &#x6DFB;&#x52A0;&#x81EA;&#x5B9A;&#x4E49;x,y&#x523B;&#x5EA6;</h3>
+<ul>
+<li><p>plt.xticks(x, **kwargs)</p>
+<p>x:&#x8981;&#x663E;&#x793A;&#x7684;&#x523B;&#x5EA6;&#x503C;</p>
+</li>
+<li><p>plt.yticks(y, **kwargs)</p>
+<p>y:&#x8981;&#x663E;&#x793A;&#x7684;&#x523B;&#x5EA6;&#x503C;</p>
+</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x589E;&#x52A0;&#x4EE5;&#x4E0B;&#x4E24;&#x884C;&#x4EE3;&#x7801;</span>
+<span class="hljs-comment"># &#x6784;&#x9020;x&#x8F74;&#x523B;&#x5EA6;&#x6807;&#x7B7E;</span>
+x_ticks_label = [<span class="hljs-string">&quot;11&#x70B9;{}&#x5206;&quot;</span>.format(i) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> x]
+<span class="hljs-comment"># &#x6784;&#x9020;y&#x8F74;&#x523B;&#x5EA6;</span>
+y_ticks = range(<span class="hljs-number">40</span>)
+
+<span class="hljs-comment"># &#x4FEE;&#x6539;x,y&#x8F74;&#x5750;&#x6807;&#x7684;&#x523B;&#x5EA6;&#x663E;&#x793A;</span>
+plt.xticks(x[::<span class="hljs-number">5</span>], x_ticks_label[::<span class="hljs-number">5</span>])
+plt.yticks(y_ticks[::<span class="hljs-number">5</span>])
+</code></pre>
+<p><img src="../images/&#x81EA;&#x5B9A;&#x4E49;xy&#x8F74;&#x523B;&#x5EA6;.png" alt="&#x4E0A;&#x6D77;3"></p>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x89E3;&#x51B3;&#x8FC7;&#x4E2D;&#x6587;&#x95EE;&#x9898;&#x7684;&#x8BDD;&#xFF0C;&#x4F1A;&#x663E;&#x793A;&#x8FD9;&#x4E2A;&#x6837;&#x5B50;&#xFF1A;</p>
+<p><img src="../images/&#x4E2D;&#x6587;&#x95EE;&#x9898;.png" alt="&#x4E2D;&#x6587;&#x95EE;&#x9898;"></p>
+<h3 id="3-&#x4E2D;&#x6587;&#x663E;&#x793A;&#x95EE;&#x9898;&#x89E3;&#x51B3;">3 &#x4E2D;&#x6587;&#x663E;&#x793A;&#x95EE;&#x9898;&#x89E3;&#x51B3;</h3>
+<p>&#x4E0B;&#x8F7D;&#x4E2D;&#x6587;&#x5B57;&#x4F53;&#xFF08;&#x9ED1;&#x4F53;&#xFF0C;&#x770B;&#x51C6;&#x7CFB;&#x7EDF;&#x7248;&#x672C;&#xFF09;</p>
+<ul>
+<li><p>&#x4E0B;&#x8F7D; <a href="images/SimHei.ttf">SimHei</a> &#x5B57;&#x4F53;&#xFF08;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x7684;&#x652F;&#x6301;&#x4E2D;&#x6587;&#x663E;&#x793A;&#x7684;&#x5B57;&#x4F53;&#x4E5F;&#x884C;&#xFF09;</p>
+</li>
+<li><p>&#x5B89;&#x88C5;&#x5B57;&#x4F53;</p>
+<ul>
+<li><p>linux&#x4E0B;&#xFF1A;&#x62F7;&#x8D1D;&#x5B57;&#x4F53;&#x5230; usr/share/fonts &#x4E0B;&#xFF1A;</p>
+<pre><code>sudo cp ~/SimHei.ttf /usr/share/fonts/SimHei.ttf
+</code></pre></li>
+<li><p>windows&#x548C;mac&#x4E0B;&#xFF1A;&#x53CC;&#x51FB;&#x5B89;&#x88C5;</p>
+</li>
+</ul>
+</li>
+<li><p>&#x5220;&#x9664;~/.matplotlib&#x4E2D;&#x7684;&#x7F13;&#x5B58;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-python">cd ~/.matplotlib
+rm -r *
+</code></pre>
+</li>
+<li><p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;matplotlibrc </p>
+<pre><code class="lang-python">vi ~/.matplotlib/matplotlibrc
+</code></pre>
+<p>&#x5C06;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x4FEE;&#x6539;&#x4E3A;&#xFF1A;</p>
+<pre><code>font.family         : sans-serif
+font.sans-serif         : SimHei
+axes.unicode_minus  : False
+</code></pre></li>
+</ul>
+<h3 id="4-&#x6DFB;&#x52A0;&#x7F51;&#x683C;&#x663E;&#x793A;">4 &#x6DFB;&#x52A0;&#x7F51;&#x683C;&#x663E;&#x793A;</h3>
+<p>&#x4E3A;&#x4E86;&#x66F4;&#x52A0;&#x6E05;&#x695A;&#x5730;&#x89C2;&#x5BDF;&#x56FE;&#x5F62;&#x5BF9;&#x5E94;&#x7684;&#x503C;</p>
+<pre><code class="lang-python">plt.grid(<span class="hljs-keyword">True</span>, linestyle=<span class="hljs-string">&apos;--&apos;</span>, alpha=<span class="hljs-number">0.5</span>)
+</code></pre>
+<p><img src="../images/&#x6DFB;&#x52A0;&#x7F51;&#x683C;&#x663E;&#x793A;.png" alt=""></p>
+<h3 id="5-&#x6DFB;&#x52A0;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;">5 &#x6DFB;&#x52A0;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;</h3>
+<p>&#x6DFB;&#x52A0;x&#x8F74;&#x3001;y&#x8F74;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;&#x53CA;&#x6807;&#x9898;</p>
+<pre><code class="lang-python">plt.xlabel(<span class="hljs-string">&quot;&#x65F6;&#x95F4;&quot;</span>)
+plt.ylabel(<span class="hljs-string">&quot;&#x6E29;&#x5EA6;&quot;</span>)
+plt.title(<span class="hljs-string">&quot;&#x4E2D;&#x5348;11&#x70B9;0&#x5206;&#x5230;12&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x6E29;&#x5EA6;&#x53D8;&#x5316;&#x56FE;&#x793A;&quot;</span>)
+</code></pre>
+<p><img src="../images/&#x6DFB;&#x52A0;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;.png" alt=""></p>
+<h2 id="223-&#x5B8C;&#x5584;&#x539F;&#x59CB;&#x6298;&#x7EBF;&#x56FE;2&#x56FE;&#x50CF;&#x5C42;">2.2.3 &#x5B8C;&#x5584;&#x539F;&#x59CB;&#x6298;&#x7EBF;&#x56FE;2(&#x56FE;&#x50CF;&#x5C42;)</h2>
+<h3 id="1-&#x591A;&#x6B21;plot">1 &#x591A;&#x6B21;plot</h3>
+<p>&#x9700;&#x6C42;&#xFF1A;&#x518D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x57CE;&#x5E02;&#x7684;&#x6E29;&#x5EA6;&#x53D8;&#x5316;</p>
+<p>&#x6536;&#x96C6;&#x5230;&#x5317;&#x4EAC;&#x5F53;&#x5929;&#x6E29;&#x5EA6;&#x53D8;&#x5316;&#x60C5;&#x51B5;&#xFF0C;&#x6E29;&#x5EA6;&#x5728;1&#x5EA6;&#x5230;3&#x5EA6;&#x3002;&#x600E;&#x4E48;&#x53BB;&#x6DFB;&#x52A0;&#x53E6;&#x4E00;&#x4E2A;&#x5728;&#x540C;&#x4E00;&#x5750;&#x6807;&#x7CFB;&#x5F53;&#x4E2D;&#x7684;&#x4E0D;&#x540C;&#x56FE;&#x5F62;&#xFF0C;<strong>&#x5176;&#x5B9E;&#x5F88;&#x7B80;&#x5355;&#x53EA;&#x9700;&#x8981;&#x518D;&#x6B21;plot&#x5373;&#x53EF;</strong>&#xFF0C;&#x4F46;&#x662F;&#x9700;&#x8981;&#x533A;&#x5206;&#x7EBF;&#x6761;&#xFF0C;&#x5982;&#x4E0B;&#x663E;&#x793A;</p>
+<p><img src="../images/&#x56FE;&#x50CF;&#x5C42;&#x5B8C;&#x5584;&#x6298;&#x7EBF;&#x56FE;.png" alt=""></p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x589E;&#x52A0;&#x5317;&#x4EAC;&#x7684;&#x6E29;&#x5EA6;&#x6570;&#x636E;</span>
+y_beijing = [random.uniform(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> x]
+
+<span class="hljs-comment"># &#x7ED8;&#x5236;&#x6298;&#x7EBF;&#x56FE;</span>
+plt.plot(x, y_shanghai, label=<span class="hljs-string">&quot;&#x4E0A;&#x6D77;&quot;</span>)
+<span class="hljs-comment"># &#x4F7F;&#x7528;&#x591A;&#x6B21;plot&#x53EF;&#x4EE5;&#x753B;&#x591A;&#x4E2A;&#x6298;&#x7EBF;</span>
+plt.plot(x, y_beijing, color=<span class="hljs-string">&apos;r&apos;</span>, linestyle=<span class="hljs-string">&apos;--&apos;</span>, label=<span class="hljs-string">&quot;&#x5317;&#x4EAC;&quot;</span>)
+
+<span class="hljs-comment"># &#x663E;&#x793A;&#x56FE;&#x4F8B;</span>
+plt.legend(loc=<span class="hljs-string">&quot;best&quot;</span>)
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x4ED4;&#x7EC6;&#x89C2;&#x5BDF;&#xFF0C;&#x7528;&#x5230;&#x4E86;&#x4E24;&#x4E2A;&#x65B0;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x5BF9;&#x4E8E;&#x4E0D;&#x540C;&#x7684;&#x6298;&#x7EBF;&#x5C55;&#x793A;&#x6548;&#x679C;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x6DFB;&#x52A0;&#x56FE;&#x4F8B;&#x3002;</p>
+<h3 id="2-&#x8BBE;&#x7F6E;&#x56FE;&#x5F62;&#x98CE;&#x683C;">2 &#x8BBE;&#x7F6E;&#x56FE;&#x5F62;&#x98CE;&#x683C;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x989C;&#x8272;&#x5B57;&#x7B26;</th>
+<th style="text-align:center">&#x98CE;&#x683C;&#x5B57;&#x7B26;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">r &#x7EA2;&#x8272;</td>
+<td style="text-align:center">- &#x5B9E;&#x7EBF;</td>
+</tr>
+<tr>
+<td style="text-align:center">g &#x7EFF;&#x8272;</td>
+<td style="text-align:center">- - &#x865A;&#x7EBF;</td>
+</tr>
+<tr>
+<td style="text-align:center">b &#x84DD;&#x8272;</td>
+<td style="text-align:center">-. &#x70B9;&#x5212;&#x7EBF;</td>
+</tr>
+<tr>
+<td style="text-align:center">w &#x767D;&#x8272;</td>
+<td style="text-align:center">: &#x70B9;&#x865A;&#x7EBF;</td>
+</tr>
+<tr>
+<td style="text-align:center">c &#x9752;&#x8272;</td>
+<td style="text-align:center">&apos; &apos; &#x7559;&#x7A7A;&#x3001;&#x7A7A;&#x683C;</td>
+</tr>
+<tr>
+<td style="text-align:center">m &#x6D0B;&#x7EA2;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">y &#x9EC4;&#x8272;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">k &#x9ED1;&#x8272;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x663E;&#x793A;&#x56FE;&#x4F8B;">&#x663E;&#x793A;&#x56FE;&#x4F8B;</h4>
+<ul>
+<li>&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x53EA;&#x5728;plt.plot()&#x4E2D;&#x8BBE;&#x7F6E;label&#x8FD8;&#x4E0D;&#x80FD;&#x6700;&#x7EC8;&#x663E;&#x793A;&#x51FA;&#x56FE;&#x4F8B;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x901A;&#x8FC7;plt.legend()&#x5C06;&#x56FE;&#x4F8B;&#x663E;&#x793A;&#x51FA;&#x6765;&#x3002;</li>
+</ul>
+<pre><code>plt.legend(loc=&quot;best&quot;)
+</code></pre><p><img src="../images/legend.png" alt="legend"></p>
+<p>&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x753B;&#x51FA;&#x6E29;&#x5EA6;&#x53D8;&#x5316;&#x56FE;</span>
+<span class="hljs-keyword">import</span> random
+
+<span class="hljs-comment"># &#x51C6;&#x5907;x, y&#x5750;&#x6807;&#x7684;&#x6570;&#x636E;</span>
+x = range(<span class="hljs-number">60</span>)
+y_shanghai = [random.uniform(<span class="hljs-number">15</span>, <span class="hljs-number">18</span>) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> x]
+<span class="hljs-comment"># &#x589E;&#x52A0;&#x5317;&#x4EAC;&#x7684;&#x6E29;&#x5EA6;&#x6570;&#x636E;</span>
+y_beijing = [random.uniform(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> x]
+
+<span class="hljs-comment"># 1&#xFF09;&#x521B;&#x5EFA;&#x753B;&#x5E03;</span>
+plt.figure(figsize=(<span class="hljs-number">20</span>, <span class="hljs-number">8</span>), dpi=<span class="hljs-number">80</span>)
+
+<span class="hljs-comment"># 2&#xFF09;&#x7ED8;&#x5236;&#x6298;&#x7EBF;&#x56FE;</span>
+<span class="hljs-comment"># plt.plot(x, y_shanghai)</span>
+plt.plot(x, y_shanghai, label=<span class="hljs-string">&quot;&#x4E0A;&#x6D77;&quot;</span>)
+<span class="hljs-comment"># &#x4F7F;&#x7528;&#x591A;&#x6B21;plot&#x53EF;&#x4EE5;&#x753B;&#x591A;&#x4E2A;&#x6298;&#x7EBF;</span>
+plt.plot(x, y_beijing, color=<span class="hljs-string">&apos;r&apos;</span>, linestyle=<span class="hljs-string">&apos;--&apos;</span>, label=<span class="hljs-string">&quot;&#x5317;&#x4EAC;&quot;</span>)
+
+<span class="hljs-comment"># &#x663E;&#x793A;&#x56FE;&#x4F8B;</span>
+plt.legend(loc=<span class="hljs-string">&quot;best&quot;</span>)
+
+<span class="hljs-comment"># &#x589E;&#x52A0;&#x4EE5;&#x4E0B;&#x4E24;&#x884C;&#x4EE3;&#x7801;</span>
+<span class="hljs-comment"># &#x6784;&#x9020;x&#x8F74;&#x523B;&#x5EA6;&#x6807;&#x7B7E;</span>
+x_ticks_label = [<span class="hljs-string">&quot;11&#x70B9;{}&#x5206;&quot;</span>.format(i) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> x]
+<span class="hljs-comment"># &#x6784;&#x9020;y&#x8F74;&#x523B;&#x5EA6;</span>
+y_ticks = range(<span class="hljs-number">40</span>)
+
+<span class="hljs-comment"># &#x4FEE;&#x6539;x,y&#x8F74;&#x5750;&#x6807;&#x7684;&#x523B;&#x5EA6;&#x663E;&#x793A;</span>
+plt.xticks(x[::<span class="hljs-number">5</span>], x_ticks_label[::<span class="hljs-number">5</span>])
+plt.yticks(y_ticks[::<span class="hljs-number">5</span>])
+
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x7F51;&#x683C;&#x663E;&#x793A;</span>
+plt.grid(<span class="hljs-keyword">True</span>, linestyle=<span class="hljs-string">&apos;--&apos;</span>, alpha=<span class="hljs-number">0.5</span>)
+
+<span class="hljs-comment"># &#x6DFB;&#x52A0;x&#x8F74;&#x3001;y&#x8F74;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;&#x53CA;&#x6807;&#x9898;</span>
+plt.xlabel(<span class="hljs-string">&quot;&#x65F6;&#x95F4;&quot;</span>)
+plt.ylabel(<span class="hljs-string">&quot;&#x6E29;&#x5EA6;&quot;</span>)
+plt.title(<span class="hljs-string">&quot;&#x4E2D;&#x5348;11&#x70B9;0&#x5206;&#x5230;12&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x6E29;&#x5EA6;&#x53D8;&#x5316;&#x56FE;&#x793A;&quot;</span>)
+
+<span class="hljs-comment"># 3&#xFF09;&#x663E;&#x793A;&#x56FE;&#x50CF;</span>
+plt.show()
+</code></pre>
+<h3 id="224-&#x591A;&#x4E2A;&#x5750;&#x6807;&#x7CFB;&#x663E;&#x793A;pltsubplots&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x753B;&#x56FE;&#x65B9;&#x6CD5;">2.2.4 &#x591A;&#x4E2A;&#x5750;&#x6807;&#x7CFB;&#x663E;&#x793A;-plt.subplots(&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x753B;&#x56FE;&#x65B9;&#x6CD5;)</h3>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x5C06;&#x4E0A;&#x6D77;&#x548C;&#x5317;&#x4EAC;&#x7684;&#x5929;&#x6C14;&#x56FE;&#x663E;&#x793A;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x56FE;&#x7684;&#x4E0D;&#x540C;&#x5750;&#x6807;&#x7CFB;&#x5F53;&#x4E2D;&#xFF0C;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="../images/&#x591A;&#x6B21;plot.png" alt=""></p>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;subplots&#x51FD;&#x6570;&#x5B9E;&#x73B0;(&#x65E7;&#x7684;&#x7248;&#x672C;&#x4E2D;&#x6709;subplot&#xFF0C;&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x4E0D;&#x65B9;&#x4FBF;)&#xFF0C;&#x63A8;&#x8350;subplots&#x51FD;&#x6570;</p>
+<ul>
+<li><p>matplotlib.pyplot.subplots(nrows=1, ncols=1, **fig_kw)
+&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5E26;&#x6709;&#x591A;&#x4E2A;axes(&#x5750;&#x6807;&#x7CFB;/&#x7ED8;&#x56FE;&#x533A;)&#x7684;&#x56FE;</p>
+<pre><code>Parameters:    
+
+nrows, ncols : int, optional, default: 1, Number of rows/columns of the subplot grid.
+**fig_kw : All additional keyword arguments are passed to the figure() call.
+
+Returns:    
+fig : &#x56FE;&#x5BF9;&#x8C61;
+ax : 
+    &#x8BBE;&#x7F6E;&#x6807;&#x9898;&#x7B49;&#x65B9;&#x6CD5;&#x4E0D;&#x540C;&#xFF1A;
+    set_xticks
+    set_yticks
+    set_xlabel
+    set_ylabel
+</code></pre><p>&#x5173;&#x4E8E;axes&#x5B50;&#x5750;&#x6807;&#x7CFB;&#x7684;&#x66F4;&#x591A;&#x65B9;&#x6CD5;&#xFF1A;&#x53C2;&#x8003;<a href="https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes" target="_blank">https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes</a></p>
+</li>
+<li><p>&#x6CE8;&#x610F;&#xFF1A;<strong>plt.&#x51FD;&#x6570;&#x540D;()</strong>&#x76F8;&#x5F53;&#x4E8E;&#x9762;&#x5411;&#x8FC7;&#x7A0B;&#x7684;&#x753B;&#x56FE;&#x65B9;&#x6CD5;&#xFF0C;<strong>axes.set_&#x65B9;&#x6CD5;&#x540D;()</strong>&#x76F8;&#x5F53;&#x4E8E;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x753B;&#x56FE;&#x65B9;&#x6CD5;&#x3002;</p>
+</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x753B;&#x51FA;&#x6E29;&#x5EA6;&#x53D8;&#x5316;&#x56FE;</span>
+<span class="hljs-keyword">import</span> random
+
+<span class="hljs-comment"># &#x51C6;&#x5907;x, y&#x5750;&#x6807;&#x7684;&#x6570;&#x636E;</span>
+x = range(<span class="hljs-number">60</span>)
+y_shanghai = [random.uniform(<span class="hljs-number">15</span>, <span class="hljs-number">18</span>) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> x]
+<span class="hljs-comment"># &#x589E;&#x52A0;&#x5317;&#x4EAC;&#x7684;&#x6E29;&#x5EA6;&#x6570;&#x636E;</span>
+y_beijing = [random.uniform(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> x]
+
+<span class="hljs-comment"># 1&#xFF09;&#x521B;&#x5EFA;&#x753B;&#x5E03;</span>
+<span class="hljs-comment"># plt.figure(figsize=(20, 8), dpi=80)</span>
+fig, axes = plt.subplots(nrows=<span class="hljs-number">1</span>, ncols=<span class="hljs-number">2</span>, figsize=(<span class="hljs-number">20</span>, <span class="hljs-number">8</span>), dpi=<span class="hljs-number">80</span>)
+
+<span class="hljs-comment"># 2&#xFF09;&#x7ED8;&#x5236;&#x6298;&#x7EBF;&#x56FE;</span>
+<span class="hljs-comment"># plt.plot(x, y_shanghai)</span>
+<span class="hljs-comment"># plt.plot(x, y_shanghai, label=&quot;&#x4E0A;&#x6D77;&quot;)</span>
+axes[<span class="hljs-number">0</span>].plot(x, y_shanghai, label=<span class="hljs-string">&quot;&#x4E0A;&#x6D77;&quot;</span>)
+<span class="hljs-comment"># &#x4F7F;&#x7528;&#x591A;&#x6B21;plot&#x53EF;&#x4EE5;&#x753B;&#x591A;&#x4E2A;&#x6298;&#x7EBF;</span>
+<span class="hljs-comment"># plt.plot(x, y_beijing, color=&apos;r&apos;, linestyle=&apos;--&apos;, label=&quot;&#x5317;&#x4EAC;&quot;)</span>
+axes[<span class="hljs-number">1</span>].plot(x, y_beijing, color=<span class="hljs-string">&apos;r&apos;</span>, linestyle=<span class="hljs-string">&apos;--&apos;</span>, label=<span class="hljs-string">&quot;&#x5317;&#x4EAC;&quot;</span>)
+
+<span class="hljs-comment"># &#x663E;&#x793A;&#x56FE;&#x4F8B;</span>
+<span class="hljs-comment"># plt.legend(loc=&quot;best&quot;)</span>
+axes[<span class="hljs-number">0</span>].legend()
+axes[<span class="hljs-number">1</span>].legend()
+
+<span class="hljs-comment"># &#x589E;&#x52A0;&#x4EE5;&#x4E0B;&#x4E24;&#x884C;&#x4EE3;&#x7801;</span>
+<span class="hljs-comment"># &#x6784;&#x9020;x&#x8F74;&#x523B;&#x5EA6;&#x6807;&#x7B7E;</span>
+x_ticks_label = [<span class="hljs-string">&quot;11&#x70B9;{}&#x5206;&quot;</span>.format(i) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> x]
+<span class="hljs-comment"># &#x6784;&#x9020;y&#x8F74;&#x523B;&#x5EA6;</span>
+y_ticks = range(<span class="hljs-number">40</span>)
+
+<span class="hljs-comment"># &#x4FEE;&#x6539;x,y&#x8F74;&#x5750;&#x6807;&#x7684;&#x523B;&#x5EA6;&#x663E;&#x793A;</span>
+<span class="hljs-comment"># plt.xticks(x[::5], x_ticks_label[::5])</span>
+<span class="hljs-comment"># plt.yticks(y_ticks[::5])</span>
+axes[<span class="hljs-number">0</span>].set_xticks(x[::<span class="hljs-number">5</span>], x_ticks_label[::<span class="hljs-number">5</span>])
+axes[<span class="hljs-number">0</span>].set_yticks(y_ticks[::<span class="hljs-number">5</span>])
+axes[<span class="hljs-number">1</span>].set_xticks(x[::<span class="hljs-number">5</span>], x_ticks_label[::<span class="hljs-number">5</span>])
+axes[<span class="hljs-number">1</span>].set_yticks(y_ticks[::<span class="hljs-number">5</span>])
+
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x7F51;&#x683C;&#x663E;&#x793A;</span>
+<span class="hljs-comment"># plt.grid(True, linestyle=&apos;--&apos;, alpha=0.5)</span>
+axes[<span class="hljs-number">0</span>].grid(<span class="hljs-keyword">True</span>, linestyle=<span class="hljs-string">&apos;--&apos;</span>, alpha=<span class="hljs-number">0.5</span>)
+axes[<span class="hljs-number">1</span>].grid(<span class="hljs-keyword">True</span>, linestyle=<span class="hljs-string">&apos;--&apos;</span>, alpha=<span class="hljs-number">0.5</span>)
+
+<span class="hljs-comment"># &#x6DFB;&#x52A0;x&#x8F74;&#x3001;y&#x8F74;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;&#x53CA;&#x6807;&#x9898;</span>
+<span class="hljs-comment"># plt.xlabel(&quot;&#x65F6;&#x95F4;&quot;)</span>
+<span class="hljs-comment"># plt.ylabel(&quot;&#x6E29;&#x5EA6;&quot;)</span>
+<span class="hljs-comment"># plt.title(&quot;&#x4E2D;&#x5348;11&#x70B9;0&#x5206;&#x5230;12&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x6E29;&#x5EA6;&#x53D8;&#x5316;&#x56FE;&#x793A;&quot;)</span>
+axes[<span class="hljs-number">0</span>].set_xlabel(<span class="hljs-string">&quot;&#x65F6;&#x95F4;&quot;</span>)
+axes[<span class="hljs-number">0</span>].set_ylabel(<span class="hljs-string">&quot;&#x6E29;&#x5EA6;&quot;</span>)
+axes[<span class="hljs-number">0</span>].set_title(<span class="hljs-string">&quot;&#x4E0A;&#x6D77;&#x4E2D;&#x5348;11&#x70B9;0&#x5206;&#x5230;12&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x6E29;&#x5EA6;&#x53D8;&#x5316;&#x56FE;&#x793A;&quot;</span>)
+axes[<span class="hljs-number">1</span>].set_xlabel(<span class="hljs-string">&quot;&#x65F6;&#x95F4;&quot;</span>)
+axes[<span class="hljs-number">1</span>].set_ylabel(<span class="hljs-string">&quot;&#x6E29;&#x5EA6;&quot;</span>)
+axes[<span class="hljs-number">1</span>].set_title(<span class="hljs-string">&quot;&#x5317;&#x4EAC;&#x4E2D;&#x5348;11&#x70B9;0&#x5206;&#x5230;12&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x6E29;&#x5EA6;&#x53D8;&#x5316;&#x56FE;&#x793A;&quot;</span>)
+
+<span class="hljs-comment"># 3&#xFF09;&#x663E;&#x793A;&#x56FE;&#x50CF;</span>
+plt.show()
+</code></pre>
+<h3 id="224-&#x6298;&#x7EBF;&#x56FE;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;">2.2.4 &#x6298;&#x7EBF;&#x56FE;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;</h3>
+<ul>
+<li><p>&#x5448;&#x73B0;&#x516C;&#x53F8;&#x4EA7;&#x54C1;(&#x4E0D;&#x540C;&#x533A;&#x57DF;)&#x6BCF;&#x5929;&#x6D3B;&#x8DC3;&#x7528;&#x6237;&#x6570;</p>
+</li>
+<li><p>&#x5448;&#x73B0;app&#x6BCF;&#x5929;&#x4E0B;&#x8F7D;&#x6570;&#x91CF;</p>
+</li>
+<li><p>&#x5448;&#x73B0;&#x4EA7;&#x54C1;&#x65B0;&#x529F;&#x80FD;&#x4E0A;&#x7EBF;&#x540E;,&#x7528;&#x6237;&#x70B9;&#x51FB;&#x6B21;&#x6570;&#x968F;&#x65F6;&#x95F4;&#x7684;&#x53D8;&#x5316;</p>
+</li>
+<li><p>&#x62D3;&#x5C55;&#xFF1A;<strong>&#x753B;&#x5404;&#x79CD;&#x6570;&#x5B66;&#x51FD;&#x6570;&#x56FE;&#x50CF;</strong></p>
+<ul>
+<li><p>&#x6CE8;&#x610F;&#xFF1A;plt.plot()&#x9664;&#x4E86;&#x53EF;&#x4EE5;&#x753B;&#x6298;&#x7EBF;&#x56FE;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x753B;&#x5404;&#x79CD;&#x6570;&#x5B66;&#x51FD;&#x6570;&#x56FE;&#x50CF;</p>
+<p><img src="../images/sin&#x51FD;&#x6570;&#x56FE;&#x50CF;.png" alt=""></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+<span class="hljs-comment"># 1&#xFF09;&#x51C6;&#x5907;&#x6570;&#x636E;</span>
+x = np.linspace(-<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">1000</span>)
+y = np.sin(x)
+
+<span class="hljs-comment"># 2&#xFF09;&#x521B;&#x5EFA;&#x753B;&#x5E03;</span>
+plt.figure(figsize=(<span class="hljs-number">20</span>, <span class="hljs-number">8</span>), dpi=<span class="hljs-number">100</span>)
+
+<span class="hljs-comment"># 3&#xFF09;&#x7ED8;&#x5236;&#x51FD;&#x6570;&#x56FE;&#x50CF;</span>
+plt.plot(x, y)
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x7F51;&#x683C;&#x663E;&#x793A;</span>
+plt.grid()
+
+<span class="hljs-comment"># 4&#xFF09;&#x663E;&#x793A;&#x56FE;&#x50CF;</span>
+plt.show()
+</code></pre>
+<h2 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h2>
+<p><strong>&#x5F00;&#x5934;&#x7684;&#x8FD9;&#x51E0;&#x4E2A;&#x76EE;&#x6807;&#x5E94;&#x7528;&#x5168;&#x90FD;&#x5F88;&#x91CD;&#x8981;</strong></p>
+<ul>
+<li>&#x77E5;&#x9053;&#x5982;&#x4F55;&#x89E3;&#x51B3;&#x4E2D;&#x6587;&#x663E;&#x793A;&#x95EE;&#x9898;</li>
+<li>&#x77E5;&#x9053;matplotlib&#x7684;&#x56FE;&#x7ED3;&#x6784;</li>
+<li>&#x5E94;&#x7528;figure&#x5B9E;&#x73B0;&#x521B;&#x5EFA;&#x7ED8;&#x56FE;&#x533A;&#x57DF;&#x5927;&#x5C0F;</li>
+<li>&#x5E94;&#x7528;plot&#x5B9E;&#x73B0;&#x6298;&#x7EBF;&#x56FE;&#x7684;&#x7ED8;&#x5236;</li>
+<li>&#x5E94;&#x7528;title,xlabel,ylabel&#x5B9E;&#x73B0;&#x6807;&#x9898;&#x4EE5;&#x53CA;x,y&#x8F74;&#x540D;&#x8BBE;&#x7F6E;</li>
+<li>&#x5E94;&#x7528;xticks,yticks&#x5B9E;&#x73B0;axes&#x7684;&#x523B;&#x5EA6;&#x8BBE;&#x7F6E;&#x548C;&#x6807;&#x6CE8;</li>
+<li>&#x5E94;&#x7528;savefig&#x5B9E;&#x73B0;&#x56FE;&#x5F62;&#x7684;&#x672C;&#x5730;&#x4FDD;&#x5B58;</li>
+<li>&#x5E94;&#x7528;grid&#x5B9E;&#x73B0;&#x663E;&#x793A;&#x7F51;&#x683C;&#x5E94;&#x7528;axis&#x5B9E;&#x73B0;&#x56FE;&#x50CF;&#x5F62;&#x72B6;&#x4FEE;&#x6539;</li>
+<li>&#x5E94;&#x7528;legend&#x5B9E;&#x73B0;&#x56FE;&#x5F62;&#x6807;&#x6CE8;&#x4FE1;&#x606F;&#x663E;&#x793A;</li>
+<li>&#x5E94;&#x7528;plt.subplots&#x5B9E;&#x73B0;&#x591A;&#x5750;&#x6807;&#x7CFB;&#x7684;&#x521B;&#x5EFA;</li>
+<li>&#x77E5;&#x9053;&#x5982;&#x4F55;&#x8BBE;&#x7F6E;&#x591A;&#x4E2A;axes&#x7684;&#x6807;&#x9898;&#x3001;&#x523B;&#x5EA6;</li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../day01/section1.html" class="navigation navigation-prev " aria-label="Previous page: Matplotlib之HelloWorld"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../day01/section3.html" class="navigation navigation-next " aria-label="Next page: 散点图(scatter)"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"katex":{},"expandable-chapters-small":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

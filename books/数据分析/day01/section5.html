@@ -1,0 +1,1079 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>直方图(histogram) | 数据挖掘基础定位、目标</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../day01/section6.html" />
+    
+    
+    <link rel="prev" href="../day01/section4.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.5"
+        data-chapter-title="直方图(histogram)"
+        data-filepath="day01/section5.md"
+        data-basepath=".."
+        data-revision="Thu Jun 28 2018 22:40:55 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        数据挖掘基础
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="env/index.html">
+            
+                
+                    <a href="../env/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        数据挖掘基础环境安装与使用
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="env/section1.html">
+            
+                
+                    <a href="../env/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        库的安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="env/section2.html">
+            
+                
+                    <a href="../env/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        jupyter notebook使用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="day01/index.html">
+            
+                
+                    <a href="../day01/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Matplotlib
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="day01/section1.html">
+            
+                
+                    <a href="../day01/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Matplotlib之HelloWorld
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="day01/section2.html">
+            
+                
+                    <a href="../day01/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        折线图(plot)与基础绘图功能
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="day01/section3.html">
+            
+                
+                    <a href="../day01/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        散点图(scatter)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="day01/section4.html">
+            
+                
+                    <a href="../day01/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        柱状图(bar)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5" data-path="day01/section5.html">
+            
+                
+                    <a href="../day01/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        直方图(histogram)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="day01/section6.html">
+            
+                
+                    <a href="../day01/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        饼图(pie)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="day01/section7.html">
+            
+                
+                    <a href="../day01/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="day01/section8.html">
+            
+                
+                    <a href="../day01/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="day02/index.html">
+            
+                
+                    <a href="../day02/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Numpy
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="day02/section1.html">
+            
+                
+                    <a href="../day02/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Numpy的优势
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="day02/section2.html">
+            
+                
+                    <a href="../day02/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        N维数组-ndarray
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="day02/section3.html">
+            
+                
+                    <a href="../day02/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        基本操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="day02/section4.html">
+            
+                
+                    <a href="../day02/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        ndarray运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="day02/section5.html">
+            
+                
+                    <a href="../day02/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        数组间的运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="day02/section6.html">
+            
+                
+                    <a href="../day02/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        合并、分割
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="day02/section7.html">
+            
+                
+                    <a href="../day02/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        IO操作与数据处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="day02/section8.html">
+            
+                
+                    <a href="../day02/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="day02/section9.html">
+            
+                
+                    <a href="../day02/section9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="day0304/index.html">
+            
+                
+                    <a href="../day0304/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Pandas
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="day0304/section1.html">
+            
+                
+                    <a href="../day0304/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Pandas介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="day0304/section2.html">
+            
+                
+                    <a href="../day0304/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        基本数据操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="day0304/section3.html">
+            
+                
+                    <a href="../day0304/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        DataFrame运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="day0304/section4.html">
+            
+                
+                    <a href="../day0304/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Pandas画图
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="day0304/section5.html">
+            
+                
+                    <a href="../day0304/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        文件读取与存储
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="day0304/section6.html">
+            
+                
+                    <a href="../day0304/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        高级处理-缺失值处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="day0304/section7.html">
+            
+                
+                    <a href="../day0304/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        高级处理-数据离散化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="day0304/section8.html">
+            
+                
+                    <a href="../day0304/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        高级处理-合并
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="day0304/section9.html">
+            
+                
+                    <a href="../day0304/section9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        高级处理-交叉表与透视表
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="day0304/section10.html">
+            
+                
+                    <a href="../day0304/section10.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.</b>
+                        
+                        高级处理-分组与聚合
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="day0304/section11.html">
+            
+                
+                    <a href="../day0304/section11.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.11.</b>
+                        
+                        综合案例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.12" data-path="day0304/section12.html">
+            
+                
+                    <a href="../day0304/section12.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.12.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.13" data-path="day0304/section13.html">
+            
+                
+                    <a href="../day0304/section13.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.13.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="day05/index.html">
+            
+                
+                    <a href="../day05/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        金融数据分析与挖掘1
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="day05/section1.html">
+            
+                
+                    <a href="../day05/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        金融市场基础知识
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="day05/section2.html">
+            
+                
+                    <a href="../day05/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        股票基础知识
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="day05/section3.html">
+            
+                
+                    <a href="../day05/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        股票数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="day05/section4.html">
+            
+                
+                    <a href="../day05/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        时间序列数据处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="day05/section5.html">
+            
+                
+                    <a href="../day05/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="day05/section6.html">
+            
+                
+                    <a href="../day05/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="day06/index.html">
+            
+                
+                    <a href="../day06/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        金融数据分析与挖掘2
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="day06/section1.html">
+            
+                
+                    <a href="../day06/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        (量化)投资的方法基础分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="day06/section2.html">
+            
+                
+                    <a href="../day06/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        趋势追踪
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="day06/section3.html">
+            
+                
+                    <a href="../day06/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        MACD分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="day06/section4.html">
+            
+                
+                    <a href="../day06/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        RSI分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="day06/section5.html">
+            
+                
+                    <a href="../day06/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        布林线
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="day06/section6.html">
+            
+                
+                    <a href="../day06/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        行情软件演示
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="day06/section7.html">
+            
+                
+                    <a href="../day06/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="day06/section8.html">
+            
+                
+                    <a href="../day06/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >数据挖掘基础定位、目标</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="25-&#x76F4;&#x65B9;&#x56FE;histogram">2.5 &#x76F4;&#x65B9;&#x56FE;(histogram)</h1>
+<h2 id="&#x5B66;&#x4E60;&#x76EE;&#x6807;">&#x5B66;&#x4E60;&#x76EE;&#x6807;</h2>
+<ul>
+<li>&#x76EE;&#x6807;<ul>
+<li>&#x5E94;&#x7528;hist&#x5B9E;&#x73B0;&#x76F4;&#x65B9;&#x56FE;&#x7684;&#x7ED8;&#x5236;</li>
+<li>&#x77E5;&#x9053;&#x76F4;&#x65B9;&#x56FE;&#x56FE;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;</li>
+</ul>
+</li>
+<li><p>&#x5E94;&#x7528;</p>
+<p> &#x7535;&#x5F71;&#x65F6;&#x957F;&#x5206;&#x5E03;</p>
+</li>
+</ul>
+<h2 id="251-&#x76F4;&#x65B9;&#x56FE;&#x4ECB;&#x7ECD;">2.5.1 &#x76F4;&#x65B9;&#x56FE;&#x4ECB;&#x7ECD;</h2>
+<p>&#x76F4;&#x65B9;&#x56FE;&#xFF0C;&#x5F62;&#x72B6;&#x7C7B;&#x4F3C;&#x67F1;&#x72B6;&#x56FE;&#x5374;&#x6709;&#x7740;&#x4E0E;&#x67F1;&#x72B6;&#x56FE;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#x7684;&#x542B;&#x4E49;&#x3002;&#x76F4;&#x65B9;&#x56FE;&#x7275;&#x6D89;&#x7EDF;&#x8BA1;&#x5B66;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x9996;&#x5148;&#x8981;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#xFF0C;&#x7136;&#x540E;&#x7EDF;&#x8BA1;&#x6BCF;&#x4E2A;&#x5206;&#x7EC4;&#x5185;&#x6570;&#x636E;&#x5143;&#x7684;&#x6570;&#x91CF;&#x3002; &#x5728;&#x5750;&#x6807;&#x7CFB;&#x4E2D;&#xFF0C;&#x6A2A;&#x8F74;&#x6807;&#x51FA;&#x6BCF;&#x4E2A;&#x7EC4;&#x7684;&#x7AEF;&#x70B9;&#xFF0C;&#x7EB5;&#x8F74;&#x8868;&#x793A;&#x9891;&#x6570;&#xFF0C;&#x6BCF;&#x4E2A;&#x77E9;&#x5F62;&#x7684;&#x9AD8;&#x4EE3;&#x8868;&#x5BF9;&#x5E94;&#x7684;&#x9891;&#x6570;&#xFF0C;&#x79F0;&#x8FD9;&#x6837;&#x7684;&#x7EDF;&#x8BA1;&#x56FE;&#x4E3A;&#x9891;&#x6570;&#x5206;&#x5E03;&#x76F4;&#x65B9;&#x56FE;&#x3002;</p>
+<h3 id="&#x76F8;&#x5173;&#x6982;&#x5FF5;&#xFF1A;">&#x76F8;&#x5173;&#x6982;&#x5FF5;&#xFF1A;</h3>
+<ul>
+<li>&#x7EC4;&#x6570;&#xFF1A;&#x5728;&#x7EDF;&#x8BA1;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x628A;&#x6570;&#x636E;&#x6309;&#x7167;&#x4E0D;&#x540C;&#x7684;&#x8303;&#x56F4;&#x5206;&#x6210;&#x51E0;&#x4E2A;&#x7EC4;&#xFF0C;&#x5206;&#x6210;&#x7684;&#x7EC4;&#x7684;&#x4E2A;&#x6570;&#x79F0;&#x4E3A;&#x7EC4;&#x6570;</li>
+<li>&#x7EC4;&#x8DDD;&#xFF1A;&#x6BCF;&#x4E00;&#x7EC4;&#x4E24;&#x4E2A;&#x7AEF;&#x70B9;&#x7684;&#x5DEE;</li>
+</ul>
+<p><img src="../images/&#x76F4;&#x65B9;&#x56FE;.png" alt="&#x76F4;&#x65B9;&#x56FE;"></p>
+<h2 id="252-&#x76F4;&#x65B9;&#x56FE;&#x4E0E;&#x67F1;&#x72B6;&#x56FE;&#x7684;&#x5BF9;&#x6BD4;">2.5.2 &#x76F4;&#x65B9;&#x56FE;&#x4E0E;&#x67F1;&#x72B6;&#x56FE;&#x7684;&#x5BF9;&#x6BD4;</h2>
+<ul>
+<li>&#x67F1;&#x72B6;&#x56FE;&#x662F;&#x4EE5;&#x77E9;&#x5F62;&#x7684;&#x957F;&#x5EA6;&#x8868;&#x793A;&#x6BCF;&#x4E00;&#x7EC4;&#x7684;&#x9891;&#x6570;&#x6216;&#x6570;&#x91CF;&#xFF0C;&#x5176;&#x5BBD;&#x5EA6;(&#x8868;&#x793A;&#x7C7B;&#x522B;)&#x5219;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;<strong>&#x5229;&#x4E8E;&#x8F83;&#x5C0F;&#x7684;&#x6570;&#x636E;&#x96C6;&#x5206;&#x6790;</strong>&#x3002;</li>
+<li>&#x76F4;&#x65B9;&#x56FE;&#x662F;&#x4EE5;&#x77E9;&#x5F62;&#x7684;&#x957F;&#x5EA6;&#x8868;&#x793A;&#x6BCF;&#x4E00;&#x7EC4;&#x7684;&#x9891;&#x6570;&#x6216;&#x6570;&#x91CF;&#xFF0C;&#x5BBD;&#x5EA6;&#x5219;&#x8868;&#x793A;&#x5404;&#x7EC4;&#x7684;&#x7EC4;&#x8DDD;&#xFF0C;&#x56E0;&#x6B64;&#x5176;&#x9AD8;&#x5EA6;&#x4E0E;&#x5BBD;&#x5EA6;&#x5747;&#x6709;&#x610F;&#x4E49;&#xFF0C;&#x5229;&#x4E8E;<strong>&#x5C55;&#x793A;&#x5927;&#x91CF;&#x6570;&#x636E;&#x96C6;&#x7684;&#x7EDF;&#x8BA1;&#x7ED3;&#x679C;</strong>&#x3002;</li>
+<li>&#x7531;&#x4E8E;&#x5206;&#x7EC4;&#x6570;&#x636E;&#x5177;&#x6709;&#x8FDE;&#x7EED;&#x6027;&#xFF0C;<strong>&#x76F4;&#x65B9;&#x56FE;&#x7684;&#x5404;&#x77E9;&#x5F62;&#x901A;&#x5E38;&#x662F;&#x8FDE;&#x7EED;&#x6392;&#x5217;&#xFF0C;&#x800C;&#x67F1;&#x72B6;&#x56FE;&#x5219;&#x662F;&#x5206;&#x5F00;&#x6392;&#x5217;</strong>&#x3002;</li>
+</ul>
+<h2 id="253-&#x76F4;&#x65B9;&#x56FE;&#x7ED8;&#x5236;">2.5.3 &#x76F4;&#x65B9;&#x56FE;&#x7ED8;&#x5236;</h2>
+<h2 id="&#x9700;&#x6C42;&#xFF1A;&#x7535;&#x5F71;&#x65F6;&#x957F;&#x5206;&#x5E03;&#x72B6;&#x51B5;">&#x9700;&#x6C42;&#xFF1A;&#x7535;&#x5F71;&#x65F6;&#x957F;&#x5206;&#x5E03;&#x72B6;&#x51B5;</h2>
+<p>&#x73B0;&#x6709;250&#x90E8;&#x7535;&#x5F71;&#x7684;&#x65F6;&#x957F;&#xFF0C;&#x5E0C;&#x671B;&#x7EDF;&#x8BA1;&#x51FA;&#x8FD9;&#x4E9B;&#x7535;&#x5F71;&#x65F6;&#x957F;&#x7684;&#x5206;&#x5E03;&#x72B6;&#x6001;(&#x6BD4;&#x5982;&#x65F6;&#x957F;&#x4E3A;100&#x5206;&#x949F;&#x5230;120&#x5206;&#x949F;&#x7535;&#x5F71;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x51FA;&#x73B0;&#x7684;&#x9891;&#x7387;)&#x7B49;&#x4FE1;&#x606F;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5982;&#x4F55;&#x5448;&#x73B0;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#xFF1F;</p>
+<p>&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code>time = [131,  98, 125, 131, 124, 139, 131, 117, 128, 108, 135, 138, 131, 102, 107, 114, 119, 128, 121, 142, 127, 130, 124, 101, 110, 116, 117, 110, 128, 128, 115,  99, 136, 126, 134,  95, 138, 117, 111,78, 132, 124, 113, 150, 110, 117,  86,  95, 144, 105, 126, 130,126, 130, 126, 116, 123, 106, 112, 138, 123,  86, 101,  99, 136,123, 117, 119, 105, 137, 123, 128, 125, 104, 109, 134, 125, 127,105, 120, 107, 129, 116, 108, 132, 103, 136, 118, 102, 120, 114,105, 115, 132, 145, 119, 121, 112, 139, 125, 138, 109, 132, 134,156, 106, 117, 127, 144, 139, 139, 119, 140,  83, 110, 102,123,107, 143, 115, 136, 118, 139, 123, 112, 118, 125, 109, 119, 133,112, 114, 122, 109, 106, 123, 116, 131, 127, 115, 118, 112, 135,115, 146, 137, 116, 103, 144,  83, 123, 111, 110, 111, 100, 154,136, 100, 118, 119, 133, 134, 106, 129, 126, 110, 111, 109, 141,120, 117, 106, 149, 122, 122, 110, 118, 127, 121, 114, 125, 126,114, 140, 103, 130, 141, 117, 106, 114, 121, 114, 133, 137,  92,121, 112, 146,  97, 137, 105,  98, 117, 112,  81,  97, 139, 113,134, 106, 144, 110, 137, 137, 111, 104, 117, 100, 111, 101, 110,105, 129, 137, 112, 120, 113, 133, 112,  83,  94, 146, 133, 101,131, 116, 111,  84, 137, 115, 122, 106, 144, 109, 123, 116, 111,111, 133, 150]
+</code></pre><p>&#x6548;&#x679C;&#xFF1A;</p>
+<p><img src="../images/&#x7535;&#x5F71;&#x65F6;&#x957F;&#x5206;&#x5E03;.png" alt="&#x7535;&#x5F71;&#x65F6;&#x957F;&#x5206;&#x5E03;"></p>
+<h3 id="1-&#x76F4;&#x65B9;&#x56FE;&#x7ED8;&#x5236;api">1 &#x76F4;&#x65B9;&#x56FE;&#x7ED8;&#x5236;api</h3>
+<p>matplotlib.pyplot.hist(x, bins=None, normed=None, **kwargs)</p>
+<pre><code>Parameters:    
+x : (n,) array or sequence of (n,) arrays
+
+bins : integer or sequence or &#x2018;auto&#x2019;, optional
+&#x7EC4;&#x8DDD;
+</code></pre><h3 id="2-&#x7ED8;&#x5236;">2 &#x7ED8;&#x5236;</h3>
+<ul>
+<li>&#x8BBE;&#x7F6E;&#x7EC4;&#x8DDD;</li>
+<li>&#x8BBE;&#x7F6E;&#x7EC4;&#x6570;&#xFF08;&#x901A;&#x5E38;&#x5BF9;&#x4E8E;&#x6570;&#x636E;&#x8F83;&#x5C11;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5206;&#x4E3A;5~12&#x7EC4;&#xFF0C;&#x6570;&#x636E;&#x8F83;&#x591A;&#xFF0C;&#x66F4;&#x6362;&#x56FE;&#x5F62;&#x663E;&#x793A;&#x65B9;&#x5F0F;&#xFF09;<ul>
+<li>&#x901A;&#x5E38;&#x8BBE;&#x7F6E;&#x7EC4;&#x6570;&#x4F1A;&#x6709;&#x76F8;&#x5E94;&#x516C;&#x5F0F;&#xFF1A;&#x7EC4;&#x6570; = &#x6781;&#x5DEE;/&#x7EC4;&#x8DDD;= (max-min)/bins</li>
+</ul>
+</li>
+</ul>
+<p>&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># 1&#xFF09;&#x51C6;&#x5907;&#x6570;&#x636E;</span>
+time = [<span class="hljs-number">131</span>,  <span class="hljs-number">98</span>, <span class="hljs-number">125</span>, <span class="hljs-number">131</span>, <span class="hljs-number">124</span>, <span class="hljs-number">139</span>, <span class="hljs-number">131</span>, <span class="hljs-number">117</span>, <span class="hljs-number">128</span>, <span class="hljs-number">108</span>, <span class="hljs-number">135</span>, <span class="hljs-number">138</span>, <span class="hljs-number">131</span>, <span class="hljs-number">102</span>, <span class="hljs-number">107</span>, <span class="hljs-number">114</span>, <span class="hljs-number">119</span>, <span class="hljs-number">128</span>, <span class="hljs-number">121</span>, <span class="hljs-number">142</span>, <span class="hljs-number">127</span>, <span class="hljs-number">130</span>, <span class="hljs-number">124</span>, <span class="hljs-number">101</span>, <span class="hljs-number">110</span>, <span class="hljs-number">116</span>, <span class="hljs-number">117</span>, <span class="hljs-number">110</span>, <span class="hljs-number">128</span>, <span class="hljs-number">128</span>, <span class="hljs-number">115</span>,  <span class="hljs-number">99</span>, <span class="hljs-number">136</span>, <span class="hljs-number">126</span>, <span class="hljs-number">134</span>,  <span class="hljs-number">95</span>, <span class="hljs-number">138</span>, <span class="hljs-number">117</span>, <span class="hljs-number">111</span>,<span class="hljs-number">78</span>, <span class="hljs-number">132</span>, <span class="hljs-number">124</span>, <span class="hljs-number">113</span>, <span class="hljs-number">150</span>, <span class="hljs-number">110</span>, <span class="hljs-number">117</span>,  <span class="hljs-number">86</span>,  <span class="hljs-number">95</span>, <span class="hljs-number">144</span>, <span class="hljs-number">105</span>, <span class="hljs-number">126</span>, <span class="hljs-number">130</span>,<span class="hljs-number">126</span>, <span class="hljs-number">130</span>, <span class="hljs-number">126</span>, <span class="hljs-number">116</span>, <span class="hljs-number">123</span>, <span class="hljs-number">106</span>, <span class="hljs-number">112</span>, <span class="hljs-number">138</span>, <span class="hljs-number">123</span>,  <span class="hljs-number">86</span>, <span class="hljs-number">101</span>,  <span class="hljs-number">99</span>, <span class="hljs-number">136</span>,<span class="hljs-number">123</span>, <span class="hljs-number">117</span>, <span class="hljs-number">119</span>, <span class="hljs-number">105</span>, <span class="hljs-number">137</span>, <span class="hljs-number">123</span>, <span class="hljs-number">128</span>, <span class="hljs-number">125</span>, <span class="hljs-number">104</span>, <span class="hljs-number">109</span>, <span class="hljs-number">134</span>, <span class="hljs-number">125</span>, <span class="hljs-number">127</span>,<span class="hljs-number">105</span>, <span class="hljs-number">120</span>, <span class="hljs-number">107</span>, <span class="hljs-number">129</span>, <span class="hljs-number">116</span>, <span class="hljs-number">108</span>, <span class="hljs-number">132</span>, <span class="hljs-number">103</span>, <span class="hljs-number">136</span>, <span class="hljs-number">118</span>, <span class="hljs-number">102</span>, <span class="hljs-number">120</span>, <span class="hljs-number">114</span>,<span class="hljs-number">105</span>, <span class="hljs-number">115</span>, <span class="hljs-number">132</span>, <span class="hljs-number">145</span>, <span class="hljs-number">119</span>, <span class="hljs-number">121</span>, <span class="hljs-number">112</span>, <span class="hljs-number">139</span>, <span class="hljs-number">125</span>, <span class="hljs-number">138</span>, <span class="hljs-number">109</span>, <span class="hljs-number">132</span>, <span class="hljs-number">134</span>,<span class="hljs-number">156</span>, <span class="hljs-number">106</span>, <span class="hljs-number">117</span>, <span class="hljs-number">127</span>, <span class="hljs-number">144</span>, <span class="hljs-number">139</span>, <span class="hljs-number">139</span>, <span class="hljs-number">119</span>, <span class="hljs-number">140</span>,  <span class="hljs-number">83</span>, <span class="hljs-number">110</span>, <span class="hljs-number">102</span>,<span class="hljs-number">123</span>,<span class="hljs-number">107</span>, <span class="hljs-number">143</span>, <span class="hljs-number">115</span>, <span class="hljs-number">136</span>, <span class="hljs-number">118</span>, <span class="hljs-number">139</span>, <span class="hljs-number">123</span>, <span class="hljs-number">112</span>, <span class="hljs-number">118</span>, <span class="hljs-number">125</span>, <span class="hljs-number">109</span>, <span class="hljs-number">119</span>, <span class="hljs-number">133</span>,<span class="hljs-number">112</span>, <span class="hljs-number">114</span>, <span class="hljs-number">122</span>, <span class="hljs-number">109</span>, <span class="hljs-number">106</span>, <span class="hljs-number">123</span>, <span class="hljs-number">116</span>, <span class="hljs-number">131</span>, <span class="hljs-number">127</span>, <span class="hljs-number">115</span>, <span class="hljs-number">118</span>, <span class="hljs-number">112</span>, <span class="hljs-number">135</span>,<span class="hljs-number">115</span>, <span class="hljs-number">146</span>, <span class="hljs-number">137</span>, <span class="hljs-number">116</span>, <span class="hljs-number">103</span>, <span class="hljs-number">144</span>,  <span class="hljs-number">83</span>, <span class="hljs-number">123</span>, <span class="hljs-number">111</span>, <span class="hljs-number">110</span>, <span class="hljs-number">111</span>, <span class="hljs-number">100</span>, <span class="hljs-number">154</span>,<span class="hljs-number">136</span>, <span class="hljs-number">100</span>, <span class="hljs-number">118</span>, <span class="hljs-number">119</span>, <span class="hljs-number">133</span>, <span class="hljs-number">134</span>, <span class="hljs-number">106</span>, <span class="hljs-number">129</span>, <span class="hljs-number">126</span>, <span class="hljs-number">110</span>, <span class="hljs-number">111</span>, <span class="hljs-number">109</span>, <span class="hljs-number">141</span>,<span class="hljs-number">120</span>, <span class="hljs-number">117</span>, <span class="hljs-number">106</span>, <span class="hljs-number">149</span>, <span class="hljs-number">122</span>, <span class="hljs-number">122</span>, <span class="hljs-number">110</span>, <span class="hljs-number">118</span>, <span class="hljs-number">127</span>, <span class="hljs-number">121</span>, <span class="hljs-number">114</span>, <span class="hljs-number">125</span>, <span class="hljs-number">126</span>,<span class="hljs-number">114</span>, <span class="hljs-number">140</span>, <span class="hljs-number">103</span>, <span class="hljs-number">130</span>, <span class="hljs-number">141</span>, <span class="hljs-number">117</span>, <span class="hljs-number">106</span>, <span class="hljs-number">114</span>, <span class="hljs-number">121</span>, <span class="hljs-number">114</span>, <span class="hljs-number">133</span>, <span class="hljs-number">137</span>,  <span class="hljs-number">92</span>,<span class="hljs-number">121</span>, <span class="hljs-number">112</span>, <span class="hljs-number">146</span>,  <span class="hljs-number">97</span>, <span class="hljs-number">137</span>, <span class="hljs-number">105</span>,  <span class="hljs-number">98</span>, <span class="hljs-number">117</span>, <span class="hljs-number">112</span>,  <span class="hljs-number">81</span>,  <span class="hljs-number">97</span>, <span class="hljs-number">139</span>, <span class="hljs-number">113</span>,<span class="hljs-number">134</span>, <span class="hljs-number">106</span>, <span class="hljs-number">144</span>, <span class="hljs-number">110</span>, <span class="hljs-number">137</span>, <span class="hljs-number">137</span>, <span class="hljs-number">111</span>, <span class="hljs-number">104</span>, <span class="hljs-number">117</span>, <span class="hljs-number">100</span>, <span class="hljs-number">111</span>, <span class="hljs-number">101</span>, <span class="hljs-number">110</span>,<span class="hljs-number">105</span>, <span class="hljs-number">129</span>, <span class="hljs-number">137</span>, <span class="hljs-number">112</span>, <span class="hljs-number">120</span>, <span class="hljs-number">113</span>, <span class="hljs-number">133</span>, <span class="hljs-number">112</span>,  <span class="hljs-number">83</span>,  <span class="hljs-number">94</span>, <span class="hljs-number">146</span>, <span class="hljs-number">133</span>, <span class="hljs-number">101</span>,<span class="hljs-number">131</span>, <span class="hljs-number">116</span>, <span class="hljs-number">111</span>,  <span class="hljs-number">84</span>, <span class="hljs-number">137</span>, <span class="hljs-number">115</span>, <span class="hljs-number">122</span>, <span class="hljs-number">106</span>, <span class="hljs-number">144</span>, <span class="hljs-number">109</span>, <span class="hljs-number">123</span>, <span class="hljs-number">116</span>, <span class="hljs-number">111</span>,<span class="hljs-number">111</span>, <span class="hljs-number">133</span>, <span class="hljs-number">150</span>]
+
+<span class="hljs-comment"># 2&#xFF09;&#x521B;&#x5EFA;&#x753B;&#x5E03;</span>
+plt.figure(figsize=(<span class="hljs-number">20</span>, <span class="hljs-number">8</span>), dpi=<span class="hljs-number">100</span>)
+
+<span class="hljs-comment"># 3&#xFF09;&#x7ED8;&#x5236;&#x76F4;&#x65B9;&#x56FE;</span>
+<span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x7EC4;&#x8DDD;</span>
+distance = <span class="hljs-number">2</span>
+<span class="hljs-comment"># &#x8BA1;&#x7B97;&#x7EC4;&#x6570;</span>
+group_num = int((max(time) - min(time)) / distance)
+<span class="hljs-comment"># &#x7ED8;&#x5236;&#x76F4;&#x65B9;&#x56FE;</span>
+plt.hist(time, bins=group_num)
+
+<span class="hljs-comment"># &#x4FEE;&#x6539;x&#x8F74;&#x523B;&#x5EA6;&#x663E;&#x793A;</span>
+plt.xticks(range(min(time), max(time))[::<span class="hljs-number">2</span>])
+
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x7F51;&#x683C;&#x663E;&#x793A;</span>
+plt.grid(linestyle=<span class="hljs-string">&quot;--&quot;</span>, alpha=<span class="hljs-number">0.5</span>)
+
+<span class="hljs-comment"># &#x6DFB;&#x52A0;x, y&#x8F74;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;</span>
+plt.xlabel(<span class="hljs-string">&quot;&#x7535;&#x5F71;&#x65F6;&#x957F;&#x5927;&#x5C0F;&quot;</span>)
+plt.ylabel(<span class="hljs-string">&quot;&#x7535;&#x5F71;&#x7684;&#x6570;&#x636E;&#x91CF;&quot;</span>)
+
+<span class="hljs-comment"># 4&#xFF09;&#x663E;&#x793A;&#x56FE;&#x50CF;</span>
+plt.show()
+</code></pre>
+<h2 id="234-&#x76F4;&#x65B9;&#x56FE;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;">2.3.4 &#x76F4;&#x65B9;&#x56FE;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;</h2>
+<ul>
+<li>&#x7528;&#x4E8E;&#x8868;&#x793A;&#x5206;&#x5E03;&#x60C5;&#x51B5;</li>
+<li>&#x901A;&#x8FC7;&#x76F4;&#x65B9;&#x56FE;&#x8FD8;&#x53EF;&#x4EE5;&#x89C2;&#x5BDF;&#x548C;&#x4F30;&#x8BA1;&#x54EA;&#x4E9B;&#x6570;&#x636E;&#x6BD4;&#x8F83;&#x96C6;&#x4E2D;&#xFF0C;&#x5F02;&#x5E38;&#x6216;&#x8005;&#x5B64;&#x7ACB;&#x7684;&#x6570;&#x636E;&#x5206;&#x5E03;&#x5728;&#x4F55;&#x5904;</li>
+</ul>
+<p>&#x4F8B;&#x5982;&#xFF1A;&#x7528;&#x6237;&#x5E74;&#x9F84;&#x5206;&#x5E03;&#xFF0C;&#x5546;&#x54C1;&#x4EF7;&#x683C;&#x5206;&#x5E03;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../day01/section4.html" class="navigation navigation-prev " aria-label="Previous page: 柱状图(bar)"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../day01/section6.html" class="navigation navigation-next " aria-label="Next page: 饼图(pie)"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"katex":{},"expandable-chapters-small":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

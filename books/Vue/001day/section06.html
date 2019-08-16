@@ -1,0 +1,451 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    <!-- Start book 前端开发课程 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>列表渲染 | 前端开发课程</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-emphasize/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../001day/section07.html" />
+    
+    
+    <link rel="prev" href="../001day/section05.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="1.6"
+        data-chapter-title="列表渲染"
+        data-filepath="001day/section06.md"
+        data-basepath=".."
+        data-revision="Sun Dec 23 2018 01:18:22 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        介紹
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="001day/index.html">
+            
+                
+                    <a href="../001day/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        vue.js入门
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="001day/section01.html">
+            
+                
+                    <a href="../001day/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        vue.js简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="001day/section02.html">
+            
+                
+                    <a href="../001day/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        vue.js基本概念
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="001day/section03.html">
+            
+                
+                    <a href="../001day/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Vue.js模板语法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="001day/section04.html">
+            
+                
+                    <a href="../001day/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Class绑定
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="001day/section05.html">
+            
+                
+                    <a href="../001day/section05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        条件渲染
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="001day/section06.html">
+            
+                
+                    <a href="../001day/section06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        列表渲染
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="001day/section07.html">
+            
+                
+                    <a href="../001day/section07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        事件处理
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="002day/index.html">
+            
+                
+                    <a href="../002day/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        vue.js进阶
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="002day/section01.html">
+            
+                
+                    <a href="../002day/section01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        表单输入绑定
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="002day/section02.html">
+            
+                
+                    <a href="../002day/section02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        计算属性和侦听属性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="002day/section03.html">
+            
+                
+                    <a href="../002day/section03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        过滤器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="002day/section04.html">
+            
+                
+                    <a href="../002day/section04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        实例生命周期
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="002day/section05.html">
+            
+                
+                    <a href="../002day/section05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        数据交互
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="002day/section06.html">
+            
+                
+                    <a href="../002day/section06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        ES6语法
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本書使用 GitBook 釋出
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >前端开发课程</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x5217;&#x8868;&#x6E32;&#x67D3;">&#x5217;&#x8868;&#x6E32;&#x67D3;</h2>
+<p>&#x901A;&#x8FC7;v-for&#x6307;&#x4EE4;&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#x6E32;&#x67D3;&#x5230;&#x9875;&#x9762;&#x4E2D;&#xFF0C;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x662F;&#x6570;&#x7EC4;&#x6216;&#x8005;&#x5BF9;&#x8C61;&#xFF0C;v-for &#x6307;&#x4EE4;&#x9700;&#x8981;&#x4F7F;&#x7528; item in items &#x5F62;&#x5F0F;&#x7684;&#x7279;&#x6B8A;&#x8BED;&#x6CD5;&#xFF0C;items &#x662F;&#x6E90;&#x6570;&#x636E;&#x6570;&#x7EC4;&#x5E76;&#x4E14; item &#x662F;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x8FED;&#x4EE3;&#x7684;&#x522B;&#x540D;&#x3002;</p>
+<h4 id="&#x904D;&#x5386;&#x6570;&#x7EC4;">&#x904D;&#x5386;&#x6570;&#x7EC4;</h4>
+<pre><code>&lt;ul id=&quot;example-1&quot;&gt;
+  &lt;li v-for=&quot;item in items&quot;&gt;
+    {{ item}}
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><p>vue&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>var example1 = new Vue({
+  el: &apos;#example-1&apos;,
+  data: {
+    items: [&apos;foo&apos;,&apos;bar&apos;]
+  }
+})
+</code></pre><p>&#x5982;&#x679C;&#x60F3;&#x52A0;&#x4E0A;&#x7D22;&#x5F15;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x52A0;&#x4E0A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;</p>
+<pre><code>&lt;ul id=&quot;example-1&quot;&gt;
+  &lt;li v-for=&quot;(item, index) in items&quot;&gt;
+    {{ index }} - {{ item }}
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><h4 id="&#x904D;&#x5386;&#x5BF9;&#x8C61;">&#x904D;&#x5386;&#x5BF9;&#x8C61;</h4>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x7528; v-for &#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x6765;&#x8FED;&#x4EE3;</p>
+<pre><code>&lt;ul id=&quot;example-2&quot;&gt;
+  &lt;li v-for=&quot;value in object&quot;&gt;
+    {{ value }}
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><p>&#x5982;&#x679C;&#x60F3;&#x52A0;&#x4E0A;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x540D;&#xFF0C;&#x53EF;&#x4EE5;&#x52A0;&#x4E0A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;</p>
+<pre><code>&lt;ul id=&quot;example-2&quot;&gt;
+  &lt;li v-for=&quot;(value,key) in object&quot;&gt;
+    {{ key }}-{{ value }}
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><p>vue&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>var example2 = new Vue({
+  el: &apos;#example-2&apos;,
+  data: {
+    object: {name:&apos;tom&apos;,age:18,gender:&apos;male&apos;}
+  }
+})
+</code></pre>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../001day/section05.html" class="navigation navigation-prev " aria-label="Previous page: 条件渲染"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../001day/section07.html" class="navigation navigation-next " aria-label="Next page: 事件处理"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/fontsettings.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontsettings":{"family":"sans","size":2,"theme":"white"},"toggle-chapters":{},"splitter":{},"emphasize":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book 前端开发课程 -->
+</html>
