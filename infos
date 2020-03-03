@@ -1,1 +1,2 @@
 1. pip install xxxxx     --trusted-host mirrors.aliyun.com 使用阿里云源
+2.ubuntu16.04 关闭防火墙的有效指令 systemctl stop firewalld.service

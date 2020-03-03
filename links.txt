@@ -13,5 +13,8 @@ https://www.juhe.cn/docs/index
 # 学习资料 博客园
 https://www.cnblogs.com/derek1184405959/
 
+# shell学习资料
+https://www.linuxprobe.com/chapter-03.html
+
 
 
