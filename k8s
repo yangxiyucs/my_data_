@@ -1,3 +1,4 @@
+目标
 1.kubernetes: 构建 k8s 集群
 2.资源清单的语法 编写 pod 掌握pod 的生命周期
 3.各种 pod 控制器 的特点以及使用定义方式
@@ -6,4 +7,46 @@
 6.调度器: 原理   把pod 定义到 想要的 node 运行
 7.集群安全:  集群的认证 鉴权 访问控制 原理 和 流程
 8.HELM: 相当于 linux 的 yum  功能   helm 模板 部署常用的插件附件
-9.运维:
+9.运维: kubeadm 修改 达到 证书使用期限, kubernetes高可用集群
+
+
+组件
+1. APISERVER: 所有服务访问统一入口
+2. CrontrollerManager: 维持副本期望数目
+3. Scheduler: 负责介绍任务, 选择合适的节点进行分配任务
+4. ETCD: 键值对数据库, 存储k8s集群所有重要信息(持久化)  V2 memory V3 database
+5. kubelet: 直接跟容器引擎交互实现容器的生命周期
+6. kube-proxy: 负责写入规则至 IPVS， IPTABLES 实现服务映射访问   pod 与 pod 之间的
+
+插件
+1.COREDNS: 可以为集群中的SVC创建一个域名IP的对应关系解析
+2.DASHBOARD: 给K8S 集群提供一个 B/S 结构访问体系
+3.INGRESS CONTROLLER: 官方只能实现四层代理, INGRESS 可以实现七层代理
+4.FEDETATON: 提供一个可以跨集群中心多K8S统一管理功能
+5.prometheus: 提供一个K8S集群的监控
+6.ELK: 提供K8S集群日志统一分析介入平台
+
+具体
+1. pod:   一个 pod会启一个 pause, Pod里的 容器会共享网络和存储
+2. pod 的控制器类型 :  自动扩展， pod之间先后启动任务控制, 自动备份, 单个pod的运行控制 
+3. pod通讯: (1)内部通过 localhost, pause (2) 相同 node 内 pod 通过 docker0 网桥 
+            (3) 不同Node 通过 flannel 与etcd 结合 (4) pod 与 service 通过 lvs 
+            (5) pod 到 外网 snwt (6) 外网 到 pod  访问 service
+4.k8s 三层网络： service网络 pod网络 node网络  真实的只有 node 网络
+
+
+grafana
+1.添加 panel  
+2. plugins 
+3. ldap 怎么集成
+
+loki
+1.what
+2.how install
+3.how to use 
+
+
+
+
+
+
