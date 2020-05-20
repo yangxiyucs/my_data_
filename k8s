@@ -35,16 +35,6 @@
 4.k8s 三层网络： service网络 pod网络 node网络  真实的只有 node 网络
 
 
-grafana
-1.添加 panel  
-2. plugins 
-3. ldap 怎么集成
-
-loki
-1.what
-2.how install
-3.how to use 
-
 
 
 
