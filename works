@@ -1,0 +1,29 @@
+一.Devops
+0.kvm创建k8s集群虚拟机，vmware创建windows机器。
+1.虚拟机经过 ansible 处理成符合应用的环境加入k8s (centos)
+Ansible
+A: 命令行工作
+B: play 类似函数
+C: playbook 类似类
+(1)添加代理，初始化repo(repo管理git库)，yum更新,下载percona(数据库)
+(2)下载 kernel 设置默认启动项 重启
+(3)基础环境配置, 安装docker k8s , 加入集群
+2.k8s管理测试环境的node
+3.监控机器的存活,cpu,memory,disk,NetworkIo，
+4.监控node,pod,的cpu,memory,disk.......
+5.server down,这些出现问题触发报警邮件给相关人员。
+6.grafana可视化显示各种监控信息: 可以导入各种常见的数据源
+7.grafana 集成 LDAP  k8s集群Log 以 loki 形式集成到 grafana
+8.prometheus 监控alert 以后 编写 API 由webhook 调用
+9.API 使用 python ansible 模块控制 windows 机器做相应的操作
+10. Kubernetes 
+(1) Harbor: 容器存储的地方
+(2) Helm: 管理k8s项目
+(3) Dashboard:  k8s Dashboard
+(4) EFK: k8s日志系统
+(5) Prometheus: 监控系统
+(6) Rook + ceph
+(7) ingress
+(8) HA Master
+(9) kubevirt
+(10) CI CD
