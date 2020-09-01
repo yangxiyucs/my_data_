@@ -20,7 +20,7 @@ sudo apt install pycharm
 #################################################################
 sudo apt-get install python3-pip
 sudo pip3 install virtualenv virtualenvwrapper
-mkdir -p $WORKON_HOME
+sudo mkdir -p $WORKON_HOME
 
 #step1: open .bashrc 
 #step2: add 1.export WORKON_HOME=$HMOE/.virtualenvs 
